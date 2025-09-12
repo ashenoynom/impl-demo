@@ -1,0 +1,102 @@
+{
+  "step1_parse_logs": {
+    "completed": true,
+    "timestamp": "2025-09-03T11:54:22.060181",
+    "data": {
+      "25070001_pre_test": {
+        "battery_sn": "25070001",
+        "test_type": "pre_test",
+        "log_file_path": "/Users/ashenoy/Downloads/example_header/Muon_Charge_Logs_Pre_Temp/25070001.log",
+        "csv_path": "./real_test_output/25070001_pre_test.csv",
+        "single_csv_path": "./real_test_output/25070001_pre_test_single_values.csv",
+        "start_time": "2025-08-11T08:55:45",
+        "stop_time": "2025-08-11T13:30:55"
+      },
+      "25070001_post_test": {
+        "battery_sn": "25070001",
+        "test_type": "post_test",
+        "log_file_path": "/Users/ashenoy/Downloads/example_header/Muon_Charge_Logs_Post_Temp/25070001.log",
+        "csv_path": "./real_test_output/25070001_post_test.csv",
+        "single_csv_path": "./real_test_output/25070001_post_test_single_values.csv",
+        "start_time": "2025-08-11T08:55:45",
+        "stop_time": "2025-08-11T13:30:55"
+      },
+      "25070001_during_test": {
+        "battery_sn": "25070001",
+        "test_type": "during_test",
+        "log_file_path": "/Users/ashenoy/Downloads/example_header/Muon_Temp_Cycle_Logs/25070001.log",
+        "csv_path": "./real_test_output/25070001_during_test.csv",
+        "single_csv_path": "./real_test_output/25070001_during_test_single_values.csv",
+        "start_time": "2025-08-11T08:55:45",
+        "stop_time": "2025-08-11T13:30:55"
+      },
+      "25070002_pre_test": {
+        "battery_sn": "25070002",
+        "test_type": "pre_test",
+        "log_file_path": "/Users/ashenoy/Downloads/example_header/Muon_Charge_Logs_Pre_Temp/25070002.log",
+        "csv_path": "./real_test_output/25070002_pre_test.csv",
+        "single_csv_path": "./real_test_output/25070002_pre_test_single_values.csv",
+        "start_time": "2025-08-11T08:55:45",
+        "stop_time": "2025-08-11T13:30:55"
+      },
+      "25070002_post_test": {
+        "battery_sn": "25070002",
+        "test_type": "post_test",
+        "log_file_path": "/Users/ashenoy/Downloads/example_header/Muon_Charge_Logs_Post_Temp/25070002.log",
+        "csv_path": "./real_test_output/25070002_post_test.csv",
+        "single_csv_path": "./real_test_output/25070002_post_test_single_values.csv",
+        "start_time": "2025-08-11T08:55:45",
+        "stop_time": "2025-08-11T13:30:55"
+      },
+      "25070002_during_test": {
+        "battery_sn": "25070002",
+        "test_type": "during_test",
+        "log_file_path": "/Users/ashenoy/Downloads/example_header/Muon_Temp_Cycle_Logs/25070002.log",
+        "csv_path": "./real_test_output/25070002_during_test.csv",
+        "single_csv_path": "./real_test_output/25070002_during_test_single_values.csv",
+        "start_time": "2025-08-11T08:55:45",
+        "stop_time": "2025-08-11T13:30:55"
+      }
+    }
+  },
+  "step2_create_datasets_and_runs": {
+    "completed": true,
+    "timestamp": "2025-09-03T11:55:26.225477",
+    "data": {
+      "25070001_pre_test": {
+        "run_rid": "ri.scout.cerulean-staging.run.71854cce-2318-43c7-9452-18557d15ed0a",
+        "battery_sn": "25070001",
+        "test_type": "pre_test"
+      },
+      "25070001_post_test": {
+        "run_rid": "ri.scout.cerulean-staging.run.47ab9b6a-58c6-4a7f-adc0-12dd75018fbb",
+        "battery_sn": "25070001",
+        "test_type": "post_test"
+      },
+      "25070001_during_test": {
+        "run_rid": "ri.scout.cerulean-staging.run.c4beee10-b48e-4ebe-98fc-c09dece5db51",
+        "battery_sn": "25070001",
+        "test_type": "during_test"
+      },
+      "25070002_pre_test": {
+        "run_rid": "ri.scout.cerulean-staging.run.77746e3f-c8c7-42bf-b64f-3ea8f4cd6a29",
+        "battery_sn": "25070002",
+        "test_type": "pre_test"
+      },
+      "25070002_post_test": {
+        "run_rid": "ri.scout.cerulean-staging.run.fa948cef-e8c1-47b7-b218-3fe87bf1766a",
+        "battery_sn": "25070002",
+        "test_type": "post_test"
+      },
+      "25070002_during_test": {
+        "run_rid": "ri.scout.cerulean-staging.run.8aa89967-0579-42e1-a2ce-171e92c7e428",
+        "battery_sn": "25070002",
+        "test_type": "during_test"
+      }
+    }
+  },
+  "step3_execute_checklists": {
+    "completed": true,
+    "timestamp": "2025-09-03T11:55:26.230925"
+  }
+}

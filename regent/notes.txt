@@ -1,0 +1,84 @@
+oteb
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'noteb' is not defined
+notebook.content_v2.workbook.channel
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+AttributeError: 'WorkbookContent' object has no attribute 'channel'
+variables = notebook.content_v2.workbook.channel_variables
+variables['a']
+ChannelVariable(display_name='DAQ A PTP State', variable_name='a', compute_spec=ComputeSpec(v1='{"type":"fn","fn":{"functionId":"enumSeries","functionUuid":"733b4f9a-d643-432f-9790-0ce6a0223a9d","args":{"input":{"type":"enumSeriesType","provider":{"type":"channel","channel":{"channelName":"DAQ A PTP State","dataSourceRefName":"sim_room"}}}}}}'), compute_spec_v2=ComputeNodeWithContext(compute_node=ComputeNode(enum=EnumSeries(channel=ChannelSeries(asset=AssetChannel(asset_rid=StringConstant(variable='assetRid'), data_scope_name=StringConstant(literal='sim_room'), channel=StringConstant(literal='DAQ A PTP State'), additional_tags={}, tags_to_group_by=[])))), context=WorkbookContext(variables={})))
+variables[0]
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+KeyError: 0
+variables
+{'a': ChannelVariable(display_name='DAQ A PTP State', variable_name='a', compute_spec=Compu...), context=WorkbookContext(variables={}))), 'b': ChannelVariable(display_name='DAQ A PTP Grandmaster Clock ID', variable_name='b', com...), context=WorkbookContext(variables={})))}
+for variable in variables:
+    chanvar = variables[variable]
+chanvar.
+Traceback (most recent call last):
+  File "/Users/ashenoy/.vscode/extensions/ms-python.debugpy-2025.10.0-darwin-arm64/bundled/libs/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_comm.py", line 1245, in internal_evaluate_expression_json
+    pydevd_vars.evaluate_expression(py_db, frame, expression, is_exec=True)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ashenoy/.vscode/extensions/ms-python.debugpy-2025.10.0-darwin-arm64/bundled/libs/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_vars.py", line 368, in new_func
+    return _run_with_unblock_threads(original_func, py_db, curr_thread, frame, expression, is_exec)
+  File "/Users/ashenoy/.vscode/extensions/ms-python.debugpy-2025.10.0-darwin-arm64/bundled/libs/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_vars.py", line 333, in _run_with_unblock_threads
+    return _run_with_interrupt_thread(original_func, py_db, curr_thread, frame, expression, is_exec)
+  File "/Users/ashenoy/.vscode/extensions/ms-python.debugpy-2025.10.0-darwin-arm64/bundled/libs/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_vars.py", line 304, in _run_with_interrupt_thread
+    return original_func(py_db, frame, expression, is_exec)
+  File "/Users/ashenoy/.vscode/extensions/ms-python.debugpy-2025.10.0-darwin-arm64/bundled/libs/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_vars.py", line 547, in evaluate_expression
+    compiled = _compile_as_exec(expression)
+  File "/Users/ashenoy/.vscode/extensions/ms-python.debugpy-2025.10.0-darwin-arm64/bundled/libs/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_vars.py", line 411, in _compile_as_exec
+    return compile(expression_to_evaluate, "<string>", "exec", _ASYNC_COMPILE_FLAGS)
+  File "<string>", line 1
+    chanvar.
+            ^
+SyntaxError: invalid syntax
+chanvar.compute_spec_v2
+ComputeNodeWithContext(compute_node=ComputeNode(numeric=NumericSeries(channel=ChannelSeries(asset=AssetChannel(asset_rid=StringConstant(variable='assetRid'), data_scope_name=StringConstant(literal='sim_room'), channel=StringConstant(literal='DAQ A PTP Grandmaster Clock ID'), additional_tags={}, tags_to_group_by=[])))), context=WorkbookContext(variables={}))
+node = chanvar.compute_spec_v2
+getattr(node, node.type)
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+AttributeError: 'ComputeNodeWithContext' object has no attribute 'type'
+getattr(node.compute_node, node.compute_node.type)
+NumericSeries(channel=ChannelSeries(asset=AssetChannel(asset_rid=StringConstant(variable='assetRid'), data_scope_name=StringConstant(literal='sim_room'), channel=StringConstant(literal='DAQ A PTP Grandmaster Clock ID'), additional_tags={}, tags_to_group_by=[])))
+
+
+class scout_compute_api_AssetChannel(ConjureBeanType):
+
+    @builtins.classmethod
+    def _fields(cls) -> Dict[str, ConjureFieldDefinition]:
+        return {
+            'asset_rid': ConjureFieldDefinition('assetRid', scout_compute_api_StringConstant),
+            'data_scope_name': ConjureFieldDefinition('dataScopeName', scout_compute_api_StringConstant),
+            'channel': ConjureFieldDefinition('channel', scout_compute_api_StringConstant),
+            'additional_tags': ConjureFieldDefinition('additionalTags', Dict[str, scout_compute_api_StringConstant]),
+            'tags_to_group_by': ConjureFieldDefinition('tagsToGroupBy', List[str])
+        }
+
+class scout_compute_api_RunChannel(ConjureBeanType):
+
+    @builtins.classmethod
+    def _fields(cls) -> Dict[str, ConjureFieldDefinition]:
+        return {
+            'run_rid': ConjureFieldDefinition('runRid', scout_compute_api_StringConstant),
+            'data_scope_name': ConjureFieldDefinition('dataScopeName', scout_compute_api_StringConstant),
+            'channel': ConjureFieldDefinition('channel', scout_compute_api_StringConstant),
+            'additional_tags': ConjureFieldDefinition('additionalTags', Dict[str, scout_compute_api_StringConstant]),
+            'tags_to_group_by': ConjureFieldDefinition('tagsToGroupBy', List[str])
+        }
+
+class scout_compute_api_DataSourceChannel(ConjureBeanType):
+
+    @builtins.classmethod
+    def _fields(cls) -> Dict[str, ConjureFieldDefinition]:
+        return {
+            'data_source_rid': ConjureFieldDefinition('dataSourceRid', scout_compute_api_StringConstant),
+            'channel': ConjureFieldDefinition('channel', scout_compute_api_StringConstant),
+            'tags': ConjureFieldDefinition('tags', Dict[str, scout_compute_api_StringConstant]),
+            'tags_to_group_by': ConjureFieldDefinition('tagsToGroupBy', List[str])
+        }
+

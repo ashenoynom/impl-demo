@@ -1,0 +1,1937 @@
+Display Name,New Name
+DAQ A PTP State,17.DAQ_A_PTP_STATUS.state
+DAQ A PTP Grandmaster Clock ID,17.DAQ_A_PTP_STATUS.grandmaster_clock_id
+DAQ A PTP Master Clock ID,17.DAQ_A_PTP_STATUS.master_clock_id
+DAQ A PTP Steps From Grandmaster,17.DAQ_A_PTP_STATUS.steps_from_grandmaster
+DAQ A PTP Grandmaster Clock Class,17.DAQ_A_PTP_STATUS.grandmaster_clock_class
+DAQ A PTP Mean Path Delay,17.DAQ_A_PTP_STATUS.mean_path_delay
+DAQ A PTP Last Measured Offset,17.DAQ_A_PTP_STATUS.last_measured_offset
+DAQ A PTP Max Measured Offset,17.DAQ_A_PTP_STATUS.max_measured_offset
+DAQ A PTP Min Measured Offset,17.DAQ_A_PTP_STATUS.min_measured_offset
+DAQ A PTP Avg Measured Offset,17.DAQ_A_PTP_STATUS.avg_measured_offset
+DAQ B PTP State,17.DAQ_B_PTP_STATUS.state
+DAQ B PTP Grandmaster Clock ID,17.DAQ_B_PTP_STATUS.grandmaster_clock_id
+DAQ B PTP Master Clock ID,17.DAQ_B_PTP_STATUS.master_clock_id
+DAQ B PTP Steps From Grandmaster,17.DAQ_B_PTP_STATUS.steps_from_grandmaster
+DAQ B PTP Grandmaster Clock Class,17.DAQ_B_PTP_STATUS.grandmaster_clock_class
+DAQ B PTP Mean Path Delay,17.DAQ_B_PTP_STATUS.mean_path_delay
+DAQ B PTP Last Measured Offset,17.DAQ_B_PTP_STATUS.last_measured_offset
+DAQ B PTP Max Measured Offset,17.DAQ_B_PTP_STATUS.max_measured_offset
+DAQ B PTP Min Measured Offset,17.DAQ_B_PTP_STATUS.min_measured_offset
+DAQ B PTP Avg Measured Offset,17.DAQ_B_PTP_STATUS.avg_measured_offset
+DAQ A Analog Card 1 timestamp,17.DAQ_A_AI217_0_topic.timestamp
+DAQ A Analog Card 2 timestamp,17.DAQ_A_AI217_1_topic.timestamp
+DAQ B Analog Card 1 timestamp,17.DAQ_B_AI217_0_topic.timestamp
+DAQ B Analog Card 2 timestamp,17.DAQ_B_AI217_1_topic.timestamp
+DAQ B Thermistor Card timestamp,17.DAQ_B_AI222_2_topic.timestamp
+DAQ A Analog Card 1 Sequence Number,17.DAQ_A_AI217_0_topic.sequence_number
+DAQ A Analog Card 2 Sequence Number,17.DAQ_A_AI217_1_topic.sequence_number
+DAQ B Analog Card 1 Sequence Number,17.DAQ_B_AI217_0_topic.sequence_number
+DAQ B Analog Card 2 Sequence Number,17.DAQ_B_AI217_1_topic.sequence_number
+DAQ B Thermistor Card Sequence Number,17.DAQ_B_AI222_2_topic.sequence_number
+FOSS Sequence Number,17.FOSS_topic.raw_peaks.sequence_number
+Forward Starboard Wing Load Pin Sequence Number,17.load_pin_forward_starboard.sequence_number
+Forward Port Wing Load Pin Sequence Number,17.load_pin_forward_port.sequence_number
+Rear Starboard Wing Load Pin Sequence Number,17.load_pin_rear_starboard.sequence_number
+Rear Port Wing Load Pin Sequence Number,17.load_pin_rear_port.sequence_number
+Distribution 1 Current Amp,Distribution 1 Current Amp.0
+Distribution 2 Current Amp,Distribution 2 Current Amp.0
+Distribution 3 Current Amp,Distribution 3 Current Amp.0
+Distribution 4 Current Amp,Distribution 4 Current Amp.0
+Distribution 5 Current Amp,Distribution 5 Current Amp.0
+Distribution 6 Current Amp,Distribution 6 Current Amp.0
+Distribution 7 Current Amp,Distribution 7 Current Amp.0
+Distribution 8 Current Amp,Distribution 8 Current Amp.0
+Distribution 9 Current Amp,Distribution 9 Current Amp.0
+Distribution 10 Current Amp,Distribution 10 Current Amp.0
+Distribution 11 Current Amp,Distribution 11 Current Amp.0
+Distribution 12 Current Amp,Distribution 12 Current Amp.0
+Bus A Voltage,Bus A Voltage.0
+Bus B Voltage,Bus B Voltage.0
+Bus C Voltage,Bus C Voltage.0
+Bus D Voltage,Bus D Voltage.0
+String 1 Temp C,nan.nan
+String 2 Temp C,nan.nan
+String 3 Temp C,nan.nan
+String 4 Temp C,nan.nan
+String 5 Temp C,nan.nan
+String 6 Temp C,nan.nan
+String 7 Temp C,nan.nan
+String 8 Temp C,nan.nan
+Battery Cradle Temp C,nan.nan
+Battery Cradle X Max Accel G,nan.nan
+Battery Cradle Y Max Accel G,nan.nan
+Battery Cradle Z Max Accel G,nan.nan
+Battery Cradle X FFT,nan.nan
+Battery Cradle Y FFT,nan.nan
+Battery Cradle Z FFT,nan.nan
+HV Cell Vent Humidity,nan.high_voltage_vent_humidity
+HV Cell Vent Pressure,nan.high_voltage_vent_pressure
+HV Cell Vent Temp C,nan.nan
+Battery Bay Pressure,nan.battery_bay_pressure
+Battery Bay Temp C,nan.nan
+Battery Bay Humidity,nan.battery_bay_humidity
+Motor 1 X Max Accel G,Motor 1 Max Accel X.0
+Motor 1 Y Max Accel G,Motor 1 Max Accel Y.0
+Motor 1 Z Max Accel G,Motor 1 Max Accel Z.0
+Motor 1 X FFT,nan.nan
+Motor 1 Y FFT,nan.nan
+Motor 1 Z FFT,nan.nan
+Motor 12 X Max Accel G,Motor 12 Max Accel X.0
+Motor 12 Y Max Accel G,Motor 12 Max Accel Y.0
+Motor 12 Z Max Accel G,Motor 12 Max Accel Z.0
+Motor 12 X FFT,nan.nan
+Motor 12 Y FFT,nan.nan
+Motor 12 Z FFT,nan.nan
+Motor 1 Commanded RPM,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.motor_cmds.motor_1_rpm_cmd.motor_rpm
+Motor 1 Actual RPM,21.AGG_CONTEXT.block_B.motor_1.motor_feedback.motor_rpm.value
+Motor 1 Current Amp,21.AGG_CONTEXT.block_B.motor_1.motor_current_A
+Motor 1 Bus Voltage,21.AGG_CONTEXT.block_B.motor_1.bus_voltage_V
+Motor 1 Temp 1,21.AGG_CONTEXT.block_B.motor_1.motor_temp_1_degC
+Motor 1 Temp 2,21.AGG_CONTEXT.block_B.motor_1.motor_temp_2_degC
+Motor 1 Command Count,21.AGG_CONTEXT.block_B.motor_1.commander_metadata.command_count
+Motor 1 Packet Count,21.AGG_CONTEXT.block_B.motor_1.parser_metadata.good_packet_count
+Motor 1 Fault Word 0,21.AGG_CONTEXT.block_B.motor_1.fault_word_0
+Motor 1 Fault Word 1,21.AGG_CONTEXT.block_B.motor_1.fault_word_1
+Motor 1  Warning Word 0,21.AGG_CONTEXT.block_B.motor_1.warning_word_0
+Motor 1 Warning Word 1,21.AGG_CONTEXT.block_B.motor_1.warning_word_1
+Motor 1 Status Word 0,21.AGG_CONTEXT.block_B.motor_1.status_word_0
+Motor 1 Controller Temp C,21.AGG_CONTEXT.block_B.motor_1.controller_temp_degC
+Motor 2 Commanded RPM,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.motor_cmds.motor_2_rpm_cmd.motor_rpm
+Motor 2 Actual RPM,21.AGG_CONTEXT.block_C.motor_2.motor_feedback.motor_rpm.value
+Motor 2 Current Amp,21.AGG_CONTEXT.block_C.motor_2.motor_current_A
+Motor 2 Bus Voltage,21.AGG_CONTEXT.block_C.motor_2.bus_voltage_V
+Motor 2 Temp 1,21.AGG_CONTEXT.block_C.motor_2.motor_temp_1_degC
+Motor 2 Temp 2,21.AGG_CONTEXT.block_C.motor_2.motor_temp_2_degC
+Motor 2 Command Count,21.AGG_CONTEXT.block_C.motor_2.commander_metadata.command_count
+Motor 2 Packet Count,21.AGG_CONTEXT.block_C.motor_2.parser_metadata.good_packet_count
+Motor 2 Fault Word 0,21.AGG_CONTEXT.block_C.motor_2.fault_word_0
+Motor 2 Fault Word 1,21.AGG_CONTEXT.block_C.motor_2.fault_word_1
+Motor 2  Warning Word 0,21.AGG_CONTEXT.block_C.motor_2.warning_word_0
+Motor 2 Warning Word 1,21.AGG_CONTEXT.block_C.motor_2.warning_word_1
+Motor 2 Status Word 0,21.AGG_CONTEXT.block_C.motor_2.status_word_0
+Motor 2 Controller Temp C,21.AGG_CONTEXT.block_C.motor_2.controller_temp_degC
+Motor 3 Commanded RPM,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.motor_cmds.motor_3_rpm_cmd.motor_rpm
+Motor 3 Actual RPM,21.AGG_CONTEXT.block_A.motor_3.motor_feedback.motor_rpm.value
+Motor 3 Current Amp,21.AGG_CONTEXT.block_A.motor_3.motor_current_A
+Motor 3 Bus Voltage,21.AGG_CONTEXT.block_A.motor_3.bus_voltage_V
+Motor 3 Temp 1,21.AGG_CONTEXT.block_A.motor_3.motor_temp_1_degC
+Motor 3 Temp 2,21.AGG_CONTEXT.block_A.motor_3.motor_temp_2_degC
+Motor 3 Command Count,21.AGG_CONTEXT.block_A.motor_3.commander_metadata.command_count
+Motor 3 Packet Count,21.AGG_CONTEXT.block_A.motor_3.parser_metadata.good_packet_count
+Motor 3 Fault Word 0,21.AGG_CONTEXT.block_A.motor_3.fault_word_0
+Motor 3 Fault Word 1,21.AGG_CONTEXT.block_A.motor_3.fault_word_1
+Motor 3  Warning Word 0,21.AGG_CONTEXT.block_A.motor_3.warning_word_0
+Motor 3 Warning Word 1,21.AGG_CONTEXT.block_A.motor_3.warning_word_1
+Motor 3 Status Word 0,21.AGG_CONTEXT.block_A.motor_3.status_word_0
+Motor 3 Controller Temp C,21.AGG_CONTEXT.block_A.motor_3.controller_temp_degC
+Motor 4 Commanded RPM,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.motor_cmds.motor_4_rpm_cmd.motor_rpm
+Motor 4 Actual RPM,21.AGG_CONTEXT.block_A.motor_4.motor_feedback.motor_rpm.value
+Motor 4 Current Amp,21.AGG_CONTEXT.block_A.motor_4.motor_current_A
+Motor 4 Bus Voltage,21.AGG_CONTEXT.block_A.motor_4.bus_voltage_V
+Motor 4 Temp 1,21.AGG_CONTEXT.block_A.motor_4.motor_temp_1_degC
+Motor 4 Temp 2,21.AGG_CONTEXT.block_A.motor_4.motor_temp_2_degC
+Motor 4 Command Count,21.AGG_CONTEXT.block_A.motor_4.commander_metadata.command_count
+Motor 4 Packet Count,21.AGG_CONTEXT.block_A.motor_4.parser_metadata.good_packet_count
+Motor 4 Fault Word 0,21.AGG_CONTEXT.block_A.motor_4.fault_word_0
+Motor 4 Fault Word 1,21.AGG_CONTEXT.block_A.motor_4.fault_word_1
+Motor 4  Warning Word 0,21.AGG_CONTEXT.block_A.motor_4.warning_word_0
+Motor 4 Warning Word 1,21.AGG_CONTEXT.block_A.motor_4.warning_word_1
+Motor 4 Status Word 0,21.AGG_CONTEXT.block_A.motor_4.status_word_0
+Motor 4 Controller Temp C,21.AGG_CONTEXT.block_A.motor_4.controller_temp_degC
+Motor 5 Commanded RPM,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.motor_cmds.motor_5_rpm_cmd.motor_rpm
+Motor 5 Actual RPM,21.AGG_CONTEXT.block_C.motor_5.motor_feedback.motor_rpm.value
+Motor 5 Current Amp,21.AGG_CONTEXT.block_C.motor_5.motor_current_A
+Motor 5 Bus Voltage,21.AGG_CONTEXT.block_C.motor_5.bus_voltage_V
+Motor 5 Temp 1,21.AGG_CONTEXT.block_C.motor_5.motor_temp_1_degC
+Motor 5 Temp 2,21.AGG_CONTEXT.block_C.motor_5.motor_temp_2_degC
+Motor 5 Command Count,21.AGG_CONTEXT.block_C.motor_5.commander_metadata.command_count
+Motor 5 Packet Count,21.AGG_CONTEXT.block_C.motor_5.parser_metadata.good_packet_count
+Motor 5 Fault Word 0,21.AGG_CONTEXT.block_C.motor_5.fault_word_0
+Motor 5 Fault Word 1,21.AGG_CONTEXT.block_C.motor_5.fault_word_1
+Motor 5  Warning Word 0,21.AGG_CONTEXT.block_C.motor_5.warning_word_0
+Motor 5 Warning Word 1,21.AGG_CONTEXT.block_C.motor_5.warning_word_1
+Motor 5 Status Word 0,21.AGG_CONTEXT.block_C.motor_5.status_word_0
+Motor 5 Controller Temp C,21.AGG_CONTEXT.block_C.motor_5.controller_temp_degC
+Motor 6 Commanded RPM,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.motor_cmds.motor_6_rpm_cmd.motor_rpm
+Motor 6 Actual RPM,21.AGG_CONTEXT.block_B.motor_6.motor_feedback.motor_rpm.value
+Motor 6 Current Amp,21.AGG_CONTEXT.block_B.motor_6.motor_current_A
+Motor 6 Bus Voltage,21.AGG_CONTEXT.block_B.motor_6.bus_voltage_V
+Motor 6 Temp 1,21.AGG_CONTEXT.block_B.motor_6.motor_temp_1_degC
+Motor 6 Temp 2,21.AGG_CONTEXT.block_B.motor_6.motor_temp_2_degC
+Motor 6 Command Count,21.AGG_CONTEXT.block_B.motor_6.commander_metadata.command_count
+Motor 6 Packet Count,21.AGG_CONTEXT.block_B.motor_6.parser_metadata.good_packet_count
+Motor 6 Fault Word 0,21.AGG_CONTEXT.block_B.motor_6.fault_word_0
+Motor 6 Fault Word 1,21.AGG_CONTEXT.block_B.motor_6.fault_word_1
+Motor 6  Warning Word 0,21.AGG_CONTEXT.block_B.motor_6.warning_word_0
+Motor 6 Warning Word 1,21.AGG_CONTEXT.block_B.motor_6.warning_word_1
+Motor 6 Status Word 0,21.AGG_CONTEXT.block_B.motor_6.status_word_0
+Motor 6 Controller Temp C,21.AGG_CONTEXT.block_B.motor_6.controller_temp_degC
+Motor 7 Commanded RPM,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.motor_cmds.motor_7_rpm_cmd.motor_rpm
+Motor 7 Actual RPM,21.AGG_CONTEXT.block_B.motor_7.motor_feedback.motor_rpm.value
+Motor 7 Current Amp,21.AGG_CONTEXT.block_B.motor_7.motor_current_A
+Motor 7 Bus Voltage,21.AGG_CONTEXT.block_B.motor_7.bus_voltage_V
+Motor 7 Temp 1,21.AGG_CONTEXT.block_B.motor_7.motor_temp_1_degC
+Motor 7 Temp 2,21.AGG_CONTEXT.block_B.motor_7.motor_temp_2_degC
+Motor 7 Command Count,21.AGG_CONTEXT.block_B.motor_7.commander_metadata.command_count
+Motor 7 Packet Count,21.AGG_CONTEXT.block_B.motor_7.parser_metadata.good_packet_count
+Motor 7 Fault Word 0,21.AGG_CONTEXT.block_B.motor_7.fault_word_0
+Motor 7 Fault Word 1,21.AGG_CONTEXT.block_B.motor_7.fault_word_1
+Motor 7  Warning Word 0,21.AGG_CONTEXT.block_B.motor_7.warning_word_0
+Motor 7 Warning Word 1,21.AGG_CONTEXT.block_B.motor_7.warning_word_1
+Motor 7 Status Word 0,21.AGG_CONTEXT.block_B.motor_7.status_word_0
+Motor 7 Controller Temp C,21.AGG_CONTEXT.block_B.motor_7.controller_temp_degC
+Motor 8 Commanded RPM,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.motor_cmds.motor_8_rpm_cmd.motor_rpm
+Motor 8 Actual RPM,21.AGG_CONTEXT.block_C.motor_8.motor_feedback.motor_rpm.value
+Motor 8 Current Amp,21.AGG_CONTEXT.block_C.motor_8.motor_current_A
+Motor 8 Bus Voltage,21.AGG_CONTEXT.block_C.motor_8.bus_voltage_V
+Motor 8 Temp 1,21.AGG_CONTEXT.block_C.motor_8.motor_temp_1_degC
+Motor 8 Temp 2,21.AGG_CONTEXT.block_C.motor_8.motor_temp_2_degC
+Motor 8 Command Count,21.AGG_CONTEXT.block_C.motor_8.commander_metadata.command_count
+Motor 8 Packet Count,21.AGG_CONTEXT.block_C.motor_8.parser_metadata.good_packet_count
+Motor 8 Fault Word 0,21.AGG_CONTEXT.block_C.motor_8.fault_word_0
+Motor 8 Fault Word 1,21.AGG_CONTEXT.block_C.motor_8.fault_word_1
+Motor 8 Warning Word 0,21.AGG_CONTEXT.block_C.motor_8.warning_word_0
+Motor 8 Warning Word 1,21.AGG_CONTEXT.block_C.motor_8.warning_word_1
+Motor 8 Status Word 0,21.AGG_CONTEXT.block_C.motor_8.status_word_0
+Motor 8 Controller Temp C,21.AGG_CONTEXT.block_C.motor_8.controller_temp_degC
+Motor 9 Commanded RPM,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.motor_cmds.motor_9_rpm_cmd.motor_rpm
+Motor 9 Actual RPM,21.AGG_CONTEXT.block_A.motor_9.motor_feedback.motor_rpm.value
+Motor 9 Current Amp,21.AGG_CONTEXT.block_A.motor_9.motor_current_A
+Motor 9 Bus Voltage,21.AGG_CONTEXT.block_A.motor_9.bus_voltage_V
+Motor 9 Temp 1,21.AGG_CONTEXT.block_A.motor_9.motor_temp_1_degC
+Motor 9 Temp 2,21.AGG_CONTEXT.block_A.motor_9.motor_temp_2_degC
+Motor 9 Command Count,21.AGG_CONTEXT.block_A.motor_9.commander_metadata.command_count
+Motor 9 Packet Count,21.AGG_CONTEXT.block_A.motor_9.parser_metadata.good_packet_count
+Motor 9 Fault Word 0,21.AGG_CONTEXT.block_A.motor_9.fault_word_0
+Motor 9 Fault Word 1,21.AGG_CONTEXT.block_A.motor_9.fault_word_1
+Motor 9 Warning Word 0,21.AGG_CONTEXT.block_A.motor_9.warning_word_0
+Motor 9 Warning Word 1,21.AGG_CONTEXT.block_A.motor_9.warning_word_1
+Motor 9 Status Word 0,21.AGG_CONTEXT.block_A.motor_9.status_word_0
+Motor 9 Controller Temp C,21.AGG_CONTEXT.block_A.motor_9.controller_temp_degC
+Motor 10 Commanded RPM,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.motor_cmds.motor_10_rpm_cmd.motor_rpm
+Motor 10 Actual RPM,21.AGG_CONTEXT.block_A.motor_10.motor_feedback.motor_rpm.value
+Motor 10 Current Amp,21.AGG_CONTEXT.block_A.motor_10.motor_current_A
+Motor 10 Bus Voltage,21.AGG_CONTEXT.block_A.motor_10.bus_voltage_V
+Motor 10 Temp 1,21.AGG_CONTEXT.block_A.motor_10.motor_temp_1_degC
+Motor 10 Temp 2,21.AGG_CONTEXT.block_A.motor_10.motor_temp_2_degC
+Motor 10 Command Count,21.AGG_CONTEXT.block_A.motor_10.commander_metadata.command_count
+Motor 10 Packet Count,21.AGG_CONTEXT.block_A.motor_10.parser_metadata.good_packet_count
+Motor 10 Fault Word 0,21.AGG_CONTEXT.block_A.motor_10.fault_word_0
+Motor 10 Fault Word 1,21.AGG_CONTEXT.block_A.motor_10.fault_word_1
+Motor 10 Warning Word 0,21.AGG_CONTEXT.block_A.motor_10.warning_word_0
+Motor 10 Warning Word 1,21.AGG_CONTEXT.block_A.motor_10.warning_word_1
+Motor 10 Status Word 0,21.AGG_CONTEXT.block_A.motor_10.status_word_0
+Motor 10 Controller Temp C,21.AGG_CONTEXT.block_A.motor_10.controller_temp_degC
+Motor 11 Commanded RPM,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.motor_cmds.motor_11_rpm_cmd.motor_rpm
+Motor 11 Actual RPM,21.AGG_CONTEXT.block_C.motor_11.motor_feedback.motor_rpm.value
+Motor 11 Current Amp,21.AGG_CONTEXT.block_C.motor_11.motor_current_A
+Motor 11 Bus Voltage,21.AGG_CONTEXT.block_C.motor_11.bus_voltage_V
+Motor 11 Temp 1,21.AGG_CONTEXT.block_C.motor_11.motor_temp_1_degC
+Motor 11 Temp 2,21.AGG_CONTEXT.block_C.motor_11.motor_temp_2_degC
+Motor 11 Command Count,21.AGG_CONTEXT.block_C.motor_11.commander_metadata.command_count
+Motor 11 Packet Count,21.AGG_CONTEXT.block_C.motor_11.parser_metadata.good_packet_count
+Motor 11 Fault Word 0,21.AGG_CONTEXT.block_C.motor_11.fault_word_0
+Motor 11 Fault Word 1,21.AGG_CONTEXT.block_C.motor_11.fault_word_1
+Motor 11 Warning Word 0,21.AGG_CONTEXT.block_C.motor_11.warning_word_0
+Motor 11 Warning Word 1,21.AGG_CONTEXT.block_C.motor_11.warning_word_1
+Motor 11 Status Word 0,21.AGG_CONTEXT.block_C.motor_11.status_word_0
+Motor 11 Controller Temp C,21.AGG_CONTEXT.block_C.motor_11.controller_temp_degC
+Motor 12 Commanded RPM,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.motor_cmds.motor_12_rpm_cmd.motor_rpm
+Motor 12 Actual RPM,21.AGG_CONTEXT.block_B.motor_12.motor_feedback.motor_rpm.value
+Motor 12 Current Amp,21.AGG_CONTEXT.block_B.motor_12.motor_current_A
+Motor 12 Bus Voltage,21.AGG_CONTEXT.block_B.motor_12.bus_voltage_V
+Motor 12 Temp 1,21.AGG_CONTEXT.block_B.motor_12.motor_temp_1_degC
+Motor 12 Temp 2,21.AGG_CONTEXT.block_B.motor_12.motor_temp_2_degC
+Motor 12 Command Count,21.AGG_CONTEXT.block_B.motor_12.commander_metadata.command_count
+Motor 12 Packet Count,21.AGG_CONTEXT.block_B.motor_12.parser_metadata.good_packet_count
+Motor 12 Fault Word 0,21.AGG_CONTEXT.block_B.motor_12.fault_word_0
+Motor 12 Fault Word 1,21.AGG_CONTEXT.block_B.motor_12.fault_word_1
+Motor 12 Warning Word 0,21.AGG_CONTEXT.block_B.motor_12.warning_word_0
+Motor 12 Warning Word 1,21.AGG_CONTEXT.block_B.motor_12.warning_word_1
+Motor 12 Status Word 0,21.AGG_CONTEXT.block_B.motor_12.status_word_0
+Motor 12 Controller Temp C,21.AGG_CONTEXT.block_B.motor_12.controller_temp_degC
+Forward Starboard Wing Load Pin,17.load_pin_forward_starboard.load_t
+Forward Port Wing Load Pin,17.load_pin_forward_port.load_t
+Rear Starboard Wing Load Pin,17.load_pin_rear_starboard.load_t
+Rear Port Wing Load Pin,17.load_pin_rear_port.load_t
+FBG_RV_P1,FBG_RV_P1.0
+FBG_RV_P2,FBG_RV_P2.0
+FBG_RV_P3,FBG_RV_P3.0
+FBG_RV_P4,FBG_RV_P4.0
+FBG_RV_P5,FBG_RV_P5.0
+FBG_RV_P6,FBG_RV_P6.0
+FBG_RV_S6,FBG_RV_S6.0
+FBG_RV_S5,FBG_RV_S5.0
+FBG_RV_S4,FBG_RV_S4.0
+FBG_RV_S3,FBG_RV_S3.0
+FBG_RV_S2,FBG_RV_S2.0
+FBG_RV_S1,FBG_RV_S1.0
+FBG_Temp,FBG_Temp.0
+FBG_RE_PL1,FBG_RE_PL1.0
+FBG_RE_PL2,FBG_RE_PL2.0
+FBG_RE_PL3,FBG_RE_PL3.0
+FBG_RE_PL4,FBG_RE_PL4.0
+FBG_RE_PU4,FBG_RE_PU4.0
+FBG_RE_PU3,FBG_RE_PU3.0
+FBG_RE_PU2,FBG_RE_PU2.0
+FBG_RE_PU1,FBG_RE_PU1.0
+FBG_RE_SU1,FBG_RE_SU1.0
+FBG_RE_SU2,FBG_RE_SU2.0
+FBG_RE_SU3,FBG_RE_SU3.0
+FBG_RE_SU4,FBG_RE_SU4.0
+FBG_RE_SL4,FBG_RE_SL4.0
+FBG_RE_SL3,FBG_RE_SL3.0
+FBG_RE_SL2,FBG_RE_SL2.0
+FBG_RE_SL1,FBG_RE_SL1.0
+FBG_MV_P1,FBG_MV_P1.0
+FBG_MV_P2,FBG_MV_P2.0
+FBG_MV_P3,FBG_MV_P3.0
+FBG_MV_P4,FBG_MV_P4.0
+FBG_MV_S4,FBG_MV_S4.0
+FBG_MV_S3,FBG_MV_S3.0
+FBG_MV_S2,FBG_MV_S2.0
+FBG_MV_S1,FBG_MV_S1.0
+FBG_ME_PL1,FBG_ME_PL1.0
+FBG_ME_PL2,FBG_ME_PL2.0
+FBG_ME_PL3,FBG_ME_PL3.0
+FBG_ME_PL4,FBG_ME_PL4.0
+FBG_ME_PU4,FBG_ME_PU4.0
+FBG_ME_PU3,FBG_ME_PU3.0
+FBG_ME_PU2,FBG_ME_PU2.0
+FBG_ME_PU1,FBG_ME_PU1.0
+FBG_ME_SU1,FBG_ME_SU1.0
+FBG_ME_SU2,FBG_ME_SU2.0
+FBG_ME_SU3,FBG_ME_SU3.0
+FBG_ME_SU4,FBG_ME_SU4.0
+FBG_ME_SL4,FBG_ME_SL4.0
+FBG_ME_SL3,FBG_ME_SL3.0
+FBG_ME_SL2,FBG_ME_SL2.0
+FBG_ME_SL1,FBG_ME_SL1.0
+Hydro Rudder AoA rad,21.AGG_FS_OUTPUT.payload.state_block.paladin_state_estimator_debug.hydro_rudder_aoa_rad
+INS Shelf X Max Accel G,AHRS Shelf Accels.0
+INS Shelf Y Max Accel G,AHRS Shelf Accels.1
+INS Shelf Z Max Accel G,AHRS Shelf Accels.2
+INS Shelf X FFT,nan.nan
+INS Shelf Y FFT,nan.nan
+INS Shelf Z FFT,nan.nan
+INS Shelf X FFT,nan.nan
+INS Shelf Y FFT,nan.nan
+INS Shelf Z FFT,nan.nan
+48V Converter Temp A,17.DAQ_B_AI222_2_topic.DCDC_48V_converter_A_temp
+48V Converter Temp B,17.DAQ_B_AI222_2_topic.DCDC_48V_converter_B_temp
+ECBU A Temp,17.DAQ_B_AI222_2_topic.ecbu_a_temp
+ECBU B Temp,17.DAQ_B_AI222_2_topic.ecbu_b_temp
+ECBU C Temp,17.DAQ_B_AI222_2_topic.ecbu_c_temp
+VCS A Astronics Ecbu Context Left,nan.astronics_ecbu_context (left)
+VCS A Astronics Ecbu Context Right,nan.astronics_ecbu_context (right)
+[Hydro Rudder] Drive Temp (C),21.AGG_CONTEXT.block_A.hydro_rudder.driver_temperature_C
+[Hydro Rudder] Command (cts),21.AGG_CONTEXT.block_A.hydro_rudder.commanded_position_counts
+[Hydro Rudder] Actual (cts),21.AGG_CONTEXT.block_A.hydro_rudder.encoder_position_counts
+[Hydro Rudder] Torque (%),21.AGG_CONTEXT.block_A.hydro_rudder.motor_torque
+[Hydro Rudder] Bus Voltage (V),21.AGG_CONTEXT.block_A.hydro_rudder.dc_bus_voltage_V
+[Hydro Rudder] Alarm,21.AGG_CONTEXT.block_A.hydro_rudder.current_alarm
+[Hydro Rudder] Command Type,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.hydro_actuator_cmds.hydro_rudder_rad_cmd.command_type
+[Hydro Rudder] Status,21.AGG_CONTEXT.block_A.hydro_rudder.actuator_drive_feedback.status.status
+[Hydro Rudder] Motor Temp (C),17.DAQ_B_AI222_2_topic.hydro_rudder_actuator_temp
+[Hydro Rudder] Operation Status,21.AGG_CONTEXT.block_A.hydro_rudder.drive_operation_status
+[Hydrovator] Drive Temp (C),21.AGG_CONTEXT.block_B.hydro_elevator.driver_temperature_C
+[Hydrovator] Command (cts),21.AGG_CONTEXT.block_B.hydro_elevator.commanded_position_counts
+[Hydrovator] Actual (cts),21.AGG_CONTEXT.block_B.hydro_elevator.encoder_position_counts
+[Hydrovator] Torque (%),21.AGG_CONTEXT.block_B.hydro_elevator.motor_torque
+[Hydrovator] Bus Voltage (V),21.AGG_CONTEXT.block_B.hydro_elevator.dc_bus_voltage_V
+[Hydrovator] Alarm,21.AGG_CONTEXT.block_B.hydro_elevator.current_alarm
+[Hydrovator] Command Type,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.hydro_actuator_cmds.hydro_elevator_rad_cmd.command_type
+[Hydrovator] Status,21.AGG_CONTEXT.block_B.hydro_elevator.actuator_drive_feedback.status.status
+[Hydrovator] Motor Temp (C),17.DAQ_B_AI222_2_topic.rear_foil_flap_actuator_temp
+[Hydrovator] Operation Status,21.AGG_CONTEXT.block_B.hydro_elevator.drive_operation_status
+[Hydrovator] Homed,21.AGG_CONTEXT.block_B.hydro_elevator.actuator_drive_feedback.home_flag.value
+[Rear Deploy] Drive Temp (C),21.AGG_CONTEXT.block_A.rear_foil_extension.driver_temperature_C
+[Rear Deploy] Command (cts),21.AGG_CONTEXT.block_A.rear_foil_extension.commanded_position_counts
+[Rear Deploy] Actual (cts),21.AGG_CONTEXT.block_A.rear_foil_extension.encoder_position_counts
+[Rear Deploy] Torque (%),21.AGG_CONTEXT.block_A.rear_foil_extension.motor_torque
+[Rear Deploy] Bus Voltage (V),21.AGG_CONTEXT.block_A.rear_foil_extension.dc_bus_voltage_V
+[Rear Deploy] Alarm,21.AGG_CONTEXT.block_A.rear_foil_extension.current_alarm
+[Rear Deploy] Command Type,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.hydro_actuator_cmds.rear_foil_extension_norm_cmd.command_type
+[Rear Deploy] Status,21.AGG_CONTEXT.block_A.rear_foil_extension.actuator_drive_feedback.status.status
+[Rear Deploy] Operation Status,21.AGG_CONTEXT.block_A.rear_foil_extension.drive_operation_status
+[Rear Deploy] Location,21.AGG_MEASUREMENTS.payload.rear_foil_lock_norm.foil_location
+[Rear Deploy] Digital Inputs,21.AGG_CONTEXT.block_A.rear_foil_extension.digital_inputs
+[Rear Deploy] Analog Input,21.AGG_CONTEXT.block_A.rear_foil_extension.external_analog_1_V
+[Rear Lock] Drive Temp (C),21.AGG_CONTEXT.block_A.rear_foil_lock.driver_temperature_C
+[Rear Lock] Command (cts),21.AGG_CONTEXT.block_A.rear_foil_lock.commanded_position_counts
+[Rear Lock] Actual (cts),21.AGG_CONTEXT.block_A.rear_foil_lock.encoder_position_counts
+[Rear Lock] Torque (%),21.AGG_CONTEXT.block_A.rear_foil_lock.motor_torque
+[Rear Lock] Bus Voltage (V),21.AGG_CONTEXT.block_A.rear_foil_lock.dc_bus_voltage_V
+[Rear Lock] Alarm,21.AGG_CONTEXT.block_A.rear_foil_lock.current_alarm
+[Rear Lock] Command Type,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.hydro_actuator_cmds.rear_foil_lock_norm_cmd.command_type
+[Rear Lock] Status,21.AGG_CONTEXT.block_A.rear_foil_lock.actuator_drive_feedback.status.status
+[Rear Lock] Operation Status,21.AGG_CONTEXT.block_A.rear_foil_lock.drive_operation_status
+[Rear Lock] Location,21.AGG_MEASUREMENTS.payload.rear_foil_extension_norm.lock_location
+[Rear Lock] Digital Inputs,21.AGG_CONTEXT.block_A.rear_foil_lock.digital_inputs
+[Port Heaveron] Drive Temp (C),21.AGG_CONTEXT.block_A.hydro_port_flaperon.driver_temperature_C
+[Port Heaveron] Command (cts),21.AGG_CONTEXT.block_A.hydro_port_flaperon.commanded_position_counts
+[Port Heaveron] Actual (cts),21.AGG_CONTEXT.block_A.hydro_port_flaperon.encoder_position_counts
+[Port Heaveron] Torque (%),21.AGG_CONTEXT.block_A.hydro_port_flaperon.motor_torque
+[Port Heaveron] Bus Voltage (V),21.AGG_CONTEXT.block_A.hydro_port_flaperon.dc_bus_voltage_V
+[Port Heaveron] Alarm,21.AGG_CONTEXT.block_A.hydro_port_flaperon.current_alarm
+[Port Heaveron] Command Type,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.hydro_actuator_cmds.hydro_elevator_rad_cmd.command_type
+[Port Heaveron] Status,21.AGG_CONTEXT.block_A.hydro_port_flaperon.actuator_drive_feedback.status.status
+[Port Heaveron] Motor Temp (C),17.DAQ_B_AI222_2_topic.main_foil_port_flap_actuator_temp
+[Port Heaveron] Operation Status,21.AGG_CONTEXT.block_B.hydro_elevator.drive_operation_status
+[Port Heaveron] Homed,21.AGG_CONTEXT.block_B.hydro_elevator.actuator_drive_feedback.home_flag.value
+[Starboard Heaveron] Drive Temp (C),21.AGG_CONTEXT.block_B.hydro_stbd_flaperon.driver_temperature_C
+[Starboard Heaveron] Command (cts),21.AGG_CONTEXT.block_B.hydro_stbd_flaperon.commanded_position_counts
+[Starboard Heaveron] Actual (cts),21.AGG_CONTEXT.block_B.hydro_stbd_flaperon.encoder_position_counts
+[Starboard Heaveron] Torque (%),21.AGG_CONTEXT.block_B.hydro_stbd_flaperon.motor_torque
+[Starboard Heaveron] Bus Voltage (V),21.AGG_CONTEXT.block_B.hydro_stbd_flaperon.dc_bus_voltage_V
+[Starboard Heaveron] Alarm,21.AGG_CONTEXT.block_B.hydro_stbd_flaperon.current_alarm
+[Starboard Heaveron] Command Type,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.hydro_actuator_cmds.hydro_elevator_rad_cmd.command_type
+[Starboard Heaveron] Status,21.AGG_CONTEXT.block_B.hydro_stbd_flaperon.actuator_drive_feedback.status.status
+[Starboard Heaveron] Motor Temp (C),17.DAQ_B_AI222_2_topic.main_foil_stbd_flap_actuator_temp
+[Starboard Heaveron] Operation Status,21.AGG_CONTEXT.block_B.hydro_stbd_flaperon.drive_operation_status
+[Starboard Heaveron] Homed,21.AGG_CONTEXT.block_B.hydro_stbd_flaperon.actuator_drive_feedback.home_flag.value
+[Main Deploy] Drive Temp (C),21.AGG_CONTEXT.block_A.main_foil_extension.driver_temperature_C
+[Main Deploy] Command (cts),21.AGG_CONTEXT.block_A.main_foil_extension.commanded_position_counts
+[Main Deploy] Actual (cts),21.AGG_CONTEXT.block_A.main_foil_extension.encoder_position_counts
+[Main Deploy] Torque (%),21.AGG_CONTEXT.block_A.main_foil_extension.motor_torque
+[Main Deploy] Bus Voltage (V),21.AGG_CONTEXT.block_A.main_foil_extension.dc_bus_voltage_V
+[Main Deploy] Alarm,21.AGG_CONTEXT.block_A.main_foil_extension.current_alarm
+[Main Deploy] Command Type,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.hydro_actuator_cmds.main_foil_extension_norm_cmd.command_type
+[Main Deploy] Status,21.AGG_CONTEXT.block_A.main_foil_extension.actuator_drive_feedback.status.status
+[Main Deploy] Operation Status,21.AGG_CONTEXT.block_A.main_foil_extension.drive_operation_status
+[Main Deploy] Location,21.AGG_MEASUREMENTS.payload.main_foil_lock_norm.foil_location
+[Main Deploy] Digital Inputs,21.AGG_CONTEXT.block_A.main_foil_extension.digital_inputs
+[Main Deploy] Analog Input,21.AGG_CONTEXT.block_A.main_foil_extension.external_analog_1_V
+[Main Deploy] Motor Temp (C),17.DAQ_B_AI222_2_topic.main_foil_retraction_temp
+[Main Lock] Drive Temp (C),21.AGG_CONTEXT.block_A.main_foil_lock.driver_temperature_C
+[Main Lock] Command (cts),21.AGG_CONTEXT.block_A.main_foil_lock.commanded_position_counts
+[Main Lock] Actual (cts),21.AGG_CONTEXT.block_A.main_foil_lock.encoder_position_counts
+[Main Lock] Torque (%),21.AGG_CONTEXT.block_A.main_foil_lock.motor_torque
+[Main Lock] Bus Voltage (V),21.AGG_CONTEXT.block_A.main_foil_lock.dc_bus_voltage_V
+[Main Lock] Alarm,21.AGG_CONTEXT.block_A.main_foil_lock.current_alarm
+[Main Lock] Command Type,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.hydro_actuator_cmds.main_foil_lock_norm_cmd.command_type
+[Main Lock] Status,21.AGG_CONTEXT.block_A.main_foil_lock.actuator_drive_feedback.status.status
+[Main Lock] Operation Status,21.AGG_CONTEXT.block_A.main_foil_lock.drive_operation_status
+[Main Lock] Location,21.AGG_MEASUREMENTS.payload.main_foil_extension_norm.lock_location
+[Main Lock] Digital Inputs,21.AGG_CONTEXT.block_A.main_foil_lock.digital_inputs
+Control Mode,21.AGG_FS_OUTPUT.payload.command_block.control_mode
+ADB Dynamic Press,nan.nan
+ADB Static Press,nan.nan
+ADB AOA Corrected,nan.nan
+ADB AOS Corrected,nan.nan
+ADB KCAS,nan.nan
+ADB KTAS,nan.nan
+ADB Static Temp C,nan.nan
+ADB Total Temp C,nan.nan
+ADB Total Press,nan.nan
+ADB Dynamic Press Uncorrected,nan.nan
+ADB Static Press Uncorrected,nan.nan
+ADU A Computed Airspeed m/s,21.AGG_MEASUREMENTS.payload.air_data_sensor_A.computed_air_speed.value
+ADU A True Airspeed m/s,21.AGG_MEASUREMENTS.payload.air_data_sensor_A.true_air_speed.value
+ADU A Computed Airspeed valid,21.AGG_MEASUREMENTS.payload.air_data_sensor_A.computed_air_speed.valid
+ADU A True Airspeed valid,21.AGG_MEASUREMENTS.payload.air_data_sensor_A.true_air_speed.valid
+ADU A Computed Airspeed count,21.AGG_MEASUREMENTS.payload.air_data_sensor_A.computed_air_speed.count
+ADU A True Airspeed count,21.AGG_MEASUREMENTS.payload.air_data_sensor_A.true_air_speed.count
+ADU B Computed Airspeed m/s,21.AGG_MEASUREMENTS.payload.air_data_sensor_B.computed_air_speed.value
+ADU B True Airspeed m/s,21.AGG_MEASUREMENTS.payload.air_data_sensor_B.true_air_speed.value
+ADU B Computed Airspeed valid,21.AGG_MEASUREMENTS.payload.air_data_sensor_B.computed_air_speed.valid
+ADU B True Airspeed valid,21.AGG_MEASUREMENTS.payload.air_data_sensor_B.true_air_speed.valid
+ADU B Computed Airspeed count,21.AGG_MEASUREMENTS.payload.air_data_sensor_B.computed_air_speed.count
+ADU B True Airspeed count,21.AGG_MEASUREMENTS.payload.air_data_sensor_B.true_air_speed.count
+ADU C Computed Airspeed m/s,21.AGG_MEASUREMENTS.payload.air_data_sensor_C.computed_air_speed.value
+ADU C True Airspeed m/s,21.AGG_MEASUREMENTS.payload.air_data_sensor_C.true_air_speed.value
+ADU C Computed Airspeed valid,21.AGG_MEASUREMENTS.payload.air_data_sensor_C.computed_air_speed.valid
+ADU C True Airspeed valid,21.AGG_MEASUREMENTS.payload.air_data_sensor_C.true_air_speed.valid
+ADU C Computed Airspeed count,21.AGG_MEASUREMENTS.payload.air_data_sensor_C.computed_air_speed.count
+ADU C True Airspeed count,21.AGG_MEASUREMENTS.payload.air_data_sensor_C.true_air_speed.count
+ADU A Altitude,21.AGG_CONTEXT.block_A.adu_a.standard_altitude
+ADU A Altitude Rate,21.AGG_CONTEXT.block_A.adu_a.altitude_rate
+ADU A Air Temp,21.AGG_CONTEXT.block_A.adu_a.static_air_temperature
+ADU A Impact Pressure,21.AGG_CONTEXT.block_A.adu_a.impact_pressure
+ADU A Corrected Static Pressure,21.AGG_CONTEXT.block_A.adu_a.corrected_static_pressure
+ADU A Corrected Total Pressure,21.AGG_CONTEXT.block_A.adu_a.corrected_total_pressure
+ADU A Maintenance Word 1,21.AGG_CONTEXT.block_A.adu_a.maintenance_word_1
+ADU A Maintenance Word 2,21.AGG_CONTEXT.block_A.adu_a.maintenance_word_2
+ADU B Altitude,21.AGG_CONTEXT.block_B.adu_b.standard_altitude
+ADU B Altitude Rate,21.AGG_CONTEXT.block_B.adu_b.altitude_rate
+ADU B Air Temp,21.AGG_CONTEXT.block_B.adu_b.static_air_temperature
+ADU B Impact Pressure,21.AGG_CONTEXT.block_B.adu_b.impact_pressure
+ADU B Corrected Static Pressure,21.AGG_CONTEXT.block_B.adu_b.corrected_static_pressure
+ADU B Corrected Total Pressure,21.AGG_CONTEXT.block_B.adu_b.corrected_total_pressure
+ADU B Maintenance Word 1,21.AGG_CONTEXT.block_B.adu_b.maintenance_word_1
+ADU B Maintenance Word 2,21.AGG_CONTEXT.block_B.adu_b.maintenance_word_2
+ADU C Altitude,21.AGG_CONTEXT.block_C.adu_c.standard_altitude
+ADU C Altitude Rate,21.AGG_CONTEXT.block_C.adu_c.altitude_rate
+ADU C Air Temp,21.AGG_CONTEXT.block_C.adu_c.static_air_temperature
+ADU C Impact Pressure,21.AGG_CONTEXT.block_C.adu_c.impact_pressure
+ADU C Corrected Static Pressure,21.AGG_CONTEXT.block_C.adu_c.corrected_static_pressure
+ADU C Corrected Total Pressure,21.AGG_CONTEXT.block_C.adu_c.corrected_total_pressure
+ADU C Maintenance Word 1,21.AGG_CONTEXT.block_C.adu_c.maintenance_word_1
+ADU C Maintenance Word 2,21.AGG_CONTEXT.block_C.adu_c.maintenance_word_2
+Aggregate FS Output VCC Source Bitmap,21.AGG_FS_OUTPUT.header.vcc_source_bitmap
+Aggregate FS Output VCC A Major Frame Count,21.AGG_FS_OUTPUT.header.vcc_a_major_frame_count
+Aggregate FS Output VCC B Major Frame Count,21.AGG_FS_OUTPUT.header.vcc_b_major_frame_count
+Aggregate FS Output VCC C Major Frame Count,21.AGG_FS_OUTPUT.header.vcc_c_major_frame_count
+Aggregate FS Output VCC Production Timestamp,21.AGG_FS_OUTPUT.header.vcc_production_time_ns
+Vehicle Mode,21.AGG_FS_OUTPUT.payload.command_block.vehicle_mode
+VCS-VMS Alert Bitmap 1 Lower,vcs_health_status_one.0
+VCS-VMS Alert Bitmap 1 Upper,vcs_health_status_one.1
+VCS-VMS Alert Bitmap 2 Lower,vcs_health_status_two.0
+VCS-VMS Alert Bitmap 2 Upper,vcs_health_status_two.1
+Aggregate Measurements VCC Source Bitmap,21.AGG_MEASUREMENTS.header.vcc_source_bitmap
+Aggregate Measurements VCC A Major Frame Count,21.AGG_MEASUREMENTS.header.vcc_a_major_frame_count
+Aggregate Measurements VCC B Major Frame Count,21.AGG_MEASUREMENTS.header.vcc_b_major_frame_count
+Aggregate Measurements VCC C Major Frame Count,21.AGG_MEASUREMENTS.header.vcc_c_major_frame_count
+Aggregate Context VCC Source Bitmap,21.AGG_CONTEXT.header.vcc_source_bitmap
+Aggregate Context VCC A Major Frame Count,21.AGG_CONTEXT.header.vcc_a_major_frame_count
+Aggregate Context VCC B Major Frame Count,21.AGG_CONTEXT.header.vcc_b_major_frame_count
+Aggregate Context VCC C Major Frame Count,21.AGG_CONTEXT.header.vcc_c_major_frame_count
+Aggregate Context VCC Production Timestamp,21.AGG_CONTEXT.header.vcc_production_time_ns
+Aggregate External Inputs VMC Source ID,21.AGG_EXTERN_INPUTS.vmc_source_id
+Aggregate External Inputs VMC Sync ID,21.AGG_EXTERN_INPUTS.payload.sync_id
+Aggregate External Inputs Mode Request Input,21.AGG_EXTERN_INPUTS.payload.ext_request_inputs.mode_req_input
+Aggregate External Inputs Checkout BIT Request Input,21.AGG_EXTERN_INPUTS.payload.ext_request_inputs.checkout_built_in_test_req_input
+External Inputs VMC Sync ID,20.EXTERN_INPUTS.sync_id
+External Inputs VMC Source ID,20.EXTERN_INPUTS.source_id
+External Inputs Mode Request Input,20.EXTERN_INPUTS.ext_request_inputs.mode_req_input
+External Inputs Checkout BIT Request Input,20.EXTERN_INPUTS.ext_request_inputs.checkout_built_in_test_req_input
+Alert Acknowledgement ID,20.ALERT_ACK.id
+Alert Acknowledgement Source,20.ALERT_ACK.ack_source
+Alert Acknowledgement Time,20.ALERT_ACK.ack_time_utc_ms
+Active Alert 0 ID,21.ACTIVE_ALERT_LIST.alerts[0].id
+Active Alert 1 ID,21.ACTIVE_ALERT_LIST.alerts[1].id
+Active Alert 2 ID,21.ACTIVE_ALERT_LIST.alerts[2].id
+Active Alert 3 ID,21.ACTIVE_ALERT_LIST.alerts[3].id
+Active Alert 4 ID,21.ACTIVE_ALERT_LIST.alerts[4].id
+Active Alert 5 ID,21.ACTIVE_ALERT_LIST.alerts[5].id
+Active Alert 6 ID,21.ACTIVE_ALERT_LIST.alerts[6].id
+Active Alert 7 ID,21.ACTIVE_ALERT_LIST.alerts[7].id
+Active Alert 8 ID,21.ACTIVE_ALERT_LIST.alerts[8].id
+Active Alert 9 ID,21.ACTIVE_ALERT_LIST.alerts[9].id
+Active Alert 10 ID,21.ACTIVE_ALERT_LIST.alerts[10].id
+Active Alert 11 ID,21.ACTIVE_ALERT_LIST.alerts[11].id
+Active Alert 12 ID,21.ACTIVE_ALERT_LIST.alerts[12].id
+Active Alert 13 ID,21.ACTIVE_ALERT_LIST.alerts[13].id
+Active Alert 14 ID,21.ACTIVE_ALERT_LIST.alerts[14].id
+Active Alert 15 ID,21.ACTIVE_ALERT_LIST.alerts[15].id
+Active Alert 16 ID,21.ACTIVE_ALERT_LIST.alerts[16].id
+Active Alert 17 ID,21.ACTIVE_ALERT_LIST.alerts[17].id
+Active Alert 18 ID,21.ACTIVE_ALERT_LIST.alerts[18].id
+Active Alert 19 ID,21.ACTIVE_ALERT_LIST.alerts[19].id
+Active Alert 20 ID,21.ACTIVE_ALERT_LIST.alerts[20].id
+Active Alert 21 ID,21.ACTIVE_ALERT_LIST.alerts[21].id
+Active Alert 22 ID,21.ACTIVE_ALERT_LIST.alerts[22].id
+Active Alert 23 ID,21.ACTIVE_ALERT_LIST.alerts[23].id
+Active Alert 24 ID,21.ACTIVE_ALERT_LIST.alerts[24].id
+Active Alert 25 ID,21.ACTIVE_ALERT_LIST.alerts[25].id
+Active Alert 26 ID,21.ACTIVE_ALERT_LIST.alerts[26].id
+Active Alert 27 ID,21.ACTIVE_ALERT_LIST.alerts[27].id
+Active Alert 28 ID,21.ACTIVE_ALERT_LIST.alerts[28].id
+Active Alert 29 ID,21.ACTIVE_ALERT_LIST.alerts[29].id
+Active Alert 30 ID,21.ACTIVE_ALERT_LIST.alerts[30].id
+Active Alert 31 ID,21.ACTIVE_ALERT_LIST.alerts[31].id
+Active Alert 32 ID,21.ACTIVE_ALERT_LIST.alerts[32].id
+Active Alert 33 ID,21.ACTIVE_ALERT_LIST.alerts[33].id
+Active Alert 34 ID,21.ACTIVE_ALERT_LIST.alerts[34].id
+Active Alert 35 ID,21.ACTIVE_ALERT_LIST.alerts[35].id
+Active Alert 36 ID,21.ACTIVE_ALERT_LIST.alerts[36].id
+Active Alert 37 ID,21.ACTIVE_ALERT_LIST.alerts[37].id
+Active Alert 38 ID,21.ACTIVE_ALERT_LIST.alerts[38].id
+Active Alert 39 ID,21.ACTIVE_ALERT_LIST.alerts[39].id
+Active Alert 40 ID,21.ACTIVE_ALERT_LIST.alerts[40].id
+Active Alert 41 ID,21.ACTIVE_ALERT_LIST.alerts[41].id
+Active Alert 42 ID,21.ACTIVE_ALERT_LIST.alerts[42].id
+Active Alert 43 ID,21.ACTIVE_ALERT_LIST.alerts[43].id
+Active Alert 44 ID,21.ACTIVE_ALERT_LIST.alerts[44].id
+Active Alert 45 ID,21.ACTIVE_ALERT_LIST.alerts[45].id
+Active Alert 46 ID,21.ACTIVE_ALERT_LIST.alerts[46].id
+Active Alert 47 ID,21.ACTIVE_ALERT_LIST.alerts[47].id
+Active Alert 48 ID,21.ACTIVE_ALERT_LIST.alerts[48].id
+Active Alert 49 ID,21.ACTIVE_ALERT_LIST.alerts[49].id
+Active Alert 50 ID,21.ACTIVE_ALERT_LIST.alerts[50].id
+Active Alert 51 ID,21.ACTIVE_ALERT_LIST.alerts[51].id
+Active Alert 52 ID,21.ACTIVE_ALERT_LIST.alerts[52].id
+Active Alert 53 ID,21.ACTIVE_ALERT_LIST.alerts[53].id
+Active Alert 54 ID,21.ACTIVE_ALERT_LIST.alerts[54].id
+Active Alert 55 ID,21.ACTIVE_ALERT_LIST.alerts[55].id
+Active Alert 56 ID,21.ACTIVE_ALERT_LIST.alerts[56].id
+Active Alert 57 ID,21.ACTIVE_ALERT_LIST.alerts[57].id
+Active Alert 58 ID,21.ACTIVE_ALERT_LIST.alerts[58].id
+Active Alert 59 ID,21.ACTIVE_ALERT_LIST.alerts[59].id
+Active Alert 60 ID,21.ACTIVE_ALERT_LIST.alerts[60].id
+Active Alert 61 ID,21.ACTIVE_ALERT_LIST.alerts[61].id
+Active Alert 62 ID,21.ACTIVE_ALERT_LIST.alerts[62].id
+Active Alert 63 ID,21.ACTIVE_ALERT_LIST.alerts[63].id
+Active Alert 0 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[0].origination_time_utc_ms
+Active Alert 1 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[1].origination_time_utc_ms
+Active Alert 2 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[2].origination_time_utc_ms
+Active Alert 3 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[3].origination_time_utc_ms
+Active Alert 4 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[4].origination_time_utc_ms
+Active Alert 5 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[5].origination_time_utc_ms
+Active Alert 6 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[6].origination_time_utc_ms
+Active Alert 7 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[7].origination_time_utc_ms
+Active Alert 8 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[8].origination_time_utc_ms
+Active Alert 9 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[9].origination_time_utc_ms
+Active Alert 10 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[10].origination_time_utc_ms
+Active Alert 11 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[11].origination_time_utc_ms
+Active Alert 12 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[12].origination_time_utc_ms
+Active Alert 13 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[13].origination_time_utc_ms
+Active Alert 14 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[14].origination_time_utc_ms
+Active Alert 15 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[15].origination_time_utc_ms
+Active Alert 16 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[16].origination_time_utc_ms
+Active Alert 17 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[17].origination_time_utc_ms
+Active Alert 18 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[18].origination_time_utc_ms
+Active Alert 19 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[19].origination_time_utc_ms
+Active Alert 20 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[20].origination_time_utc_ms
+Active Alert 21 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[21].origination_time_utc_ms
+Active Alert 22 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[22].origination_time_utc_ms
+Active Alert 23 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[23].origination_time_utc_ms
+Active Alert 24 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[24].origination_time_utc_ms
+Active Alert 25 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[25].origination_time_utc_ms
+Active Alert 26 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[26].origination_time_utc_ms
+Active Alert 27 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[27].origination_time_utc_ms
+Active Alert 28 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[28].origination_time_utc_ms
+Active Alert 29 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[29].origination_time_utc_ms
+Active Alert 30 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[30].origination_time_utc_ms
+Active Alert 31 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[31].origination_time_utc_ms
+Active Alert 32 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[32].origination_time_utc_ms
+Active Alert 33 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[33].origination_time_utc_ms
+Active Alert 34 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[34].origination_time_utc_ms
+Active Alert 35 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[35].origination_time_utc_ms
+Active Alert 36 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[36].origination_time_utc_ms
+Active Alert 37 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[37].origination_time_utc_ms
+Active Alert 38 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[38].origination_time_utc_ms
+Active Alert 39 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[39].origination_time_utc_ms
+Active Alert 40 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[40].origination_time_utc_ms
+Active Alert 41 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[41].origination_time_utc_ms
+Active Alert 42 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[42].origination_time_utc_ms
+Active Alert 43 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[43].origination_time_utc_ms
+Active Alert 44 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[44].origination_time_utc_ms
+Active Alert 45 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[45].origination_time_utc_ms
+Active Alert 46 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[46].origination_time_utc_ms
+Active Alert 47 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[47].origination_time_utc_ms
+Active Alert 48 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[48].origination_time_utc_ms
+Active Alert 49 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[49].origination_time_utc_ms
+Active Alert 50 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[50].origination_time_utc_ms
+Active Alert 51 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[51].origination_time_utc_ms
+Active Alert 52 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[52].origination_time_utc_ms
+Active Alert 53 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[53].origination_time_utc_ms
+Active Alert 54 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[54].origination_time_utc_ms
+Active Alert 55 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[55].origination_time_utc_ms
+Active Alert 56 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[56].origination_time_utc_ms
+Active Alert 57 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[57].origination_time_utc_ms
+Active Alert 58 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[58].origination_time_utc_ms
+Active Alert 59 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[59].origination_time_utc_ms
+Active Alert 60 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[60].origination_time_utc_ms
+Active Alert 61 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[61].origination_time_utc_ms
+Active Alert 62 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[62].origination_time_utc_ms
+Active Alert 63 Origination Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[63].origination_time_utc_ms
+Active Alert 0 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[0].acked_port_time_utc_ms
+Active Alert 1 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[1].acked_port_time_utc_ms
+Active Alert 2 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[2].acked_port_time_utc_ms
+Active Alert 3 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[3].acked_port_time_utc_ms
+Active Alert 4 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[4].acked_port_time_utc_ms
+Active Alert 5 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[5].acked_port_time_utc_ms
+Active Alert 6 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[6].acked_port_time_utc_ms
+Active Alert 7 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[7].acked_port_time_utc_ms
+Active Alert 8 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[8].acked_port_time_utc_ms
+Active Alert 9 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[9].acked_port_time_utc_ms
+Active Alert 10 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[10].acked_port_time_utc_ms
+Active Alert 11 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[11].acked_port_time_utc_ms
+Active Alert 12 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[12].acked_port_time_utc_ms
+Active Alert 13 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[13].acked_port_time_utc_ms
+Active Alert 14 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[14].acked_port_time_utc_ms
+Active Alert 15 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[15].acked_port_time_utc_ms
+Active Alert 16 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[16].acked_port_time_utc_ms
+Active Alert 17 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[17].acked_port_time_utc_ms
+Active Alert 18 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[18].acked_port_time_utc_ms
+Active Alert 19 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[19].acked_port_time_utc_ms
+Active Alert 20 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[20].acked_port_time_utc_ms
+Active Alert 21 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[21].acked_port_time_utc_ms
+Active Alert 22 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[22].acked_port_time_utc_ms
+Active Alert 23 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[23].acked_port_time_utc_ms
+Active Alert 24 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[24].acked_port_time_utc_ms
+Active Alert 25 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[25].acked_port_time_utc_ms
+Active Alert 26 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[26].acked_port_time_utc_ms
+Active Alert 27 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[27].acked_port_time_utc_ms
+Active Alert 28 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[28].acked_port_time_utc_ms
+Active Alert 29 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[29].acked_port_time_utc_ms
+Active Alert 30 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[30].acked_port_time_utc_ms
+Active Alert 31 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[31].acked_port_time_utc_ms
+Active Alert 32 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[32].acked_port_time_utc_ms
+Active Alert 33 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[33].acked_port_time_utc_ms
+Active Alert 34 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[34].acked_port_time_utc_ms
+Active Alert 35 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[35].acked_port_time_utc_ms
+Active Alert 36 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[36].acked_port_time_utc_ms
+Active Alert 37 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[37].acked_port_time_utc_ms
+Active Alert 38 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[38].acked_port_time_utc_ms
+Active Alert 39 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[39].acked_port_time_utc_ms
+Active Alert 40 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[40].acked_port_time_utc_ms
+Active Alert 41 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[41].acked_port_time_utc_ms
+Active Alert 42 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[42].acked_port_time_utc_ms
+Active Alert 43 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[43].acked_port_time_utc_ms
+Active Alert 44 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[44].acked_port_time_utc_ms
+Active Alert 45 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[45].acked_port_time_utc_ms
+Active Alert 46 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[46].acked_port_time_utc_ms
+Active Alert 47 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[47].acked_port_time_utc_ms
+Active Alert 48 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[48].acked_port_time_utc_ms
+Active Alert 49 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[49].acked_port_time_utc_ms
+Active Alert 50 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[50].acked_port_time_utc_ms
+Active Alert 51 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[51].acked_port_time_utc_ms
+Active Alert 52 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[52].acked_port_time_utc_ms
+Active Alert 53 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[53].acked_port_time_utc_ms
+Active Alert 54 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[54].acked_port_time_utc_ms
+Active Alert 55 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[55].acked_port_time_utc_ms
+Active Alert 56 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[56].acked_port_time_utc_ms
+Active Alert 57 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[57].acked_port_time_utc_ms
+Active Alert 58 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[58].acked_port_time_utc_ms
+Active Alert 59 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[59].acked_port_time_utc_ms
+Active Alert 60 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[60].acked_port_time_utc_ms
+Active Alert 61 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[61].acked_port_time_utc_ms
+Active Alert 62 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[62].acked_port_time_utc_ms
+Active Alert 63 Acked Port Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[63].acked_port_time_utc_ms
+Active Alert 0 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[0].acked_stbd_time_utc_ms
+Active Alert 1 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[1].acked_stbd_time_utc_ms
+Active Alert 2 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[2].acked_stbd_time_utc_ms
+Active Alert 3 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[3].acked_stbd_time_utc_ms
+Active Alert 4 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[4].acked_stbd_time_utc_ms
+Active Alert 5 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[5].acked_stbd_time_utc_ms
+Active Alert 6 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[6].acked_stbd_time_utc_ms
+Active Alert 7 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[7].acked_stbd_time_utc_ms
+Active Alert 8 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[8].acked_stbd_time_utc_ms
+Active Alert 9 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[9].acked_stbd_time_utc_ms
+Active Alert 10 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[10].acked_stbd_time_utc_ms
+Active Alert 11 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[11].acked_stbd_time_utc_ms
+Active Alert 12 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[12].acked_stbd_time_utc_ms
+Active Alert 13 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[13].acked_stbd_time_utc_ms
+Active Alert 14 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[14].acked_stbd_time_utc_ms
+Active Alert 15 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[15].acked_stbd_time_utc_ms
+Active Alert 16 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[16].acked_stbd_time_utc_ms
+Active Alert 17 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[17].acked_stbd_time_utc_ms
+Active Alert 18 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[18].acked_stbd_time_utc_ms
+Active Alert 19 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[19].acked_stbd_time_utc_ms
+Active Alert 20 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[20].acked_stbd_time_utc_ms
+Active Alert 21 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[21].acked_stbd_time_utc_ms
+Active Alert 22 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[22].acked_stbd_time_utc_ms
+Active Alert 23 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[23].acked_stbd_time_utc_ms
+Active Alert 24 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[24].acked_stbd_time_utc_ms
+Active Alert 25 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[25].acked_stbd_time_utc_ms
+Active Alert 26 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[26].acked_stbd_time_utc_ms
+Active Alert 27 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[27].acked_stbd_time_utc_ms
+Active Alert 28 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[28].acked_stbd_time_utc_ms
+Active Alert 29 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[29].acked_stbd_time_utc_ms
+Active Alert 30 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[30].acked_stbd_time_utc_ms
+Active Alert 31 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[31].acked_stbd_time_utc_ms
+Active Alert 32 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[32].acked_stbd_time_utc_ms
+Active Alert 33 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[33].acked_stbd_time_utc_ms
+Active Alert 34 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[34].acked_stbd_time_utc_ms
+Active Alert 35 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[35].acked_stbd_time_utc_ms
+Active Alert 36 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[36].acked_stbd_time_utc_ms
+Active Alert 37 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[37].acked_stbd_time_utc_ms
+Active Alert 38 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[38].acked_stbd_time_utc_ms
+Active Alert 39 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[39].acked_stbd_time_utc_ms
+Active Alert 40 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[40].acked_stbd_time_utc_ms
+Active Alert 41 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[41].acked_stbd_time_utc_ms
+Active Alert 42 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[42].acked_stbd_time_utc_ms
+Active Alert 43 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[43].acked_stbd_time_utc_ms
+Active Alert 44 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[44].acked_stbd_time_utc_ms
+Active Alert 45 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[45].acked_stbd_time_utc_ms
+Active Alert 46 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[46].acked_stbd_time_utc_ms
+Active Alert 47 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[47].acked_stbd_time_utc_ms
+Active Alert 48 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[48].acked_stbd_time_utc_ms
+Active Alert 49 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[49].acked_stbd_time_utc_ms
+Active Alert 50 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[50].acked_stbd_time_utc_ms
+Active Alert 51 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[51].acked_stbd_time_utc_ms
+Active Alert 52 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[52].acked_stbd_time_utc_ms
+Active Alert 53 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[53].acked_stbd_time_utc_ms
+Active Alert 54 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[54].acked_stbd_time_utc_ms
+Active Alert 55 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[55].acked_stbd_time_utc_ms
+Active Alert 56 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[56].acked_stbd_time_utc_ms
+Active Alert 57 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[57].acked_stbd_time_utc_ms
+Active Alert 58 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[58].acked_stbd_time_utc_ms
+Active Alert 59 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[59].acked_stbd_time_utc_ms
+Active Alert 60 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[60].acked_stbd_time_utc_ms
+Active Alert 61 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[61].acked_stbd_time_utc_ms
+Active Alert 62 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[62].acked_stbd_time_utc_ms
+Active Alert 63 Acked Starboard Time UTC MS,21.ACTIVE_ALERT_LIST.alerts[63].acked_stbd_time_utc_ms
+Aggregate Health Process Health VEHICLE_HEALTH_MANAGER Process Source ID,21.AGG_HEALTH.process_health[0].process_source_id
+Aggregate Health Process Health HARDWARE_HEALTH_MONITOR Process Source ID,21.AGG_HEALTH.process_health[1].process_source_id
+Aggregate Health Process Health VCS_INTERFACE Process Source ID,21.AGG_HEALTH.process_health[2].process_source_id
+Aggregate Health Process Health PRIORITY_ARBITER Process Source ID,21.AGG_HEALTH.process_health[3].process_source_id
+Aggregate Health Process Health PTP_TIME_KEEPER Process Source ID,21.AGG_HEALTH.process_health[4].process_source_id
+Aggregate Health Process Health PTP_HEALTH_MONITOR Process Source ID,21.AGG_HEALTH.process_health[5].process_source_id
+Aggregate Health Process Health CAMERA_SYSTEM_FRONT Process Source ID,21.AGG_HEALTH.process_health[6].process_source_id
+Aggregate Health Process Health CAMERA_SYSTEM_REAR Process Source ID,21.AGG_HEALTH.process_health[7].process_source_id
+Aggregate Health Process Health AUDIO_MANAGER Process Source ID,21.AGG_HEALTH.process_health[8].process_source_id
+Aggregate Health Process Health VEHICLE_HEALTH_MANAGER Process Running State,21.AGG_HEALTH.process_health[0].process_running_state
+Aggregate Health Process Health HARDWARE_HEALTH_MONITOR Process Running State,21.AGG_HEALTH.process_health[1].process_running_state
+Aggregate Health Process Health VCS_INTERFACE Process Running State,21.AGG_HEALTH.process_health[2].process_running_state
+Aggregate Health Process Health PRIORITY_ARBITER Process Running State,21.AGG_HEALTH.process_health[3].process_running_state
+Aggregate Health Process Health PTP_TIME_KEEPER Process Running State,21.AGG_HEALTH.process_health[4].process_running_state
+Aggregate Health Process Health PTP_HEALTH_MONITOR Process Running State,21.AGG_HEALTH.process_health[5].process_running_state
+Aggregate Health Process Health CAMERA_SYSTEM_FRONT Process Running State,21.AGG_HEALTH.process_health[6].process_running_state
+Aggregate Health Process Health CAMERA_SYSTEM_REAR Process Running State,21.AGG_HEALTH.process_health[7].process_running_state
+Aggregate Health Process Health AUDIO_MANAGER Process Running State,21.AGG_HEALTH.process_health[8].process_running_state
+Aggregate Health Process Health VEHICLE_HEALTH_MANAGER Health,21.AGG_HEALTH.process_health[0].health
+Aggregate Health Process Health HARDWARE_HEALTH_MONITOR Health,21.AGG_HEALTH.process_health[1].health
+Aggregate Health Process Health VCS_INTERFACE Health,21.AGG_HEALTH.process_health[2].health
+Aggregate Health Process Health PRIORITY_ARBITER Health,21.AGG_HEALTH.process_health[3].health
+Aggregate Health Process Health PTP_TIME_KEEPER Health,21.AGG_HEALTH.process_health[4].health
+Aggregate Health Process Health PTP_HEALTH_MONITOR Health,21.AGG_HEALTH.process_health[5].health
+Aggregate Health Process Health CAMERA_SYSTEM_FRONT Health,21.AGG_HEALTH.process_health[6].health
+Aggregate Health Process Health CAMERA_SYSTEM_REAR Health,21.AGG_HEALTH.process_health[7].health
+Aggregate Health Process Health AUDIO_MANAGER Health,21.AGG_HEALTH.process_health[8].health
+Aggregate Health Process Health VEHICLE_HEALTH_MANAGER Unhealthy Count,21.AGG_HEALTH.process_health[0].unhealthy_count
+Aggregate Health Process Health HARDWARE_HEALTH_MONITOR Unhealthy Count,21.AGG_HEALTH.process_health[1].unhealthy_count
+Aggregate Health Process Health VCS_INTERFACE Unhealthy Count,21.AGG_HEALTH.process_health[2].unhealthy_count
+Aggregate Health Process Health PRIORITY_ARBITER Unhealthy Count,21.AGG_HEALTH.process_health[3].unhealthy_count
+Aggregate Health Process Health PTP_TIME_KEEPER Unhealthy Count,21.AGG_HEALTH.process_health[4].unhealthy_count
+Aggregate Health Process Health PTP_HEALTH_MONITOR Unhealthy Count,21.AGG_HEALTH.process_health[5].unhealthy_count
+Aggregate Health Process Health CAMERA_SYSTEM_FRONT Unhealthy Count,21.AGG_HEALTH.process_health[6].unhealthy_count
+Aggregate Health Process Health CAMERA_SYSTEM_REAR Unhealthy Count,21.AGG_HEALTH.process_health[7].unhealthy_count
+Aggregate Health Process Health AUDIO_MANAGER Unhealthy Count,21.AGG_HEALTH.process_health[8].unhealthy_count
+Aggregate Health Process Health VEHICLE_HEALTH_MANAGER Num Beats Success,21.AGG_HEALTH.process_health[0].num_beats_success
+Aggregate Health Process Health HARDWARE_HEALTH_MONITOR Num Beats Success,21.AGG_HEALTH.process_health[1].num_beats_success
+Aggregate Health Process Health VCS_INTERFACE Num Beats Success,21.AGG_HEALTH.process_health[2].num_beats_success
+Aggregate Health Process Health PRIORITY_ARBITER Num Beats Success,21.AGG_HEALTH.process_health[3].num_beats_success
+Aggregate Health Process Health PTP_TIME_KEEPER Num Beats Success,21.AGG_HEALTH.process_health[4].num_beats_success
+Aggregate Health Process Health PTP_HEALTH_MONITOR Num Beats Success,21.AGG_HEALTH.process_health[5].num_beats_success
+Aggregate Health Process Health CAMERA_SYSTEM_FRONT Num Beats Success,21.AGG_HEALTH.process_health[6].num_beats_success
+Aggregate Health Process Health CAMERA_SYSTEM_REAR Num Beats Success,21.AGG_HEALTH.process_health[7].num_beats_success
+Aggregate Health Process Health AUDIO_MANAGER Num Beats Success,21.AGG_HEALTH.process_health[8].num_beats_success
+Aggregate Health Process Health VEHICLE_HEALTH_MANAGER Num Beats Failure Slow,21.AGG_HEALTH.process_health[0].num_beats_failure_slow
+Aggregate Health Process Health HARDWARE_HEALTH_MONITOR Num Beats Failure Slow,21.AGG_HEALTH.process_health[1].num_beats_failure_slow
+Aggregate Health Process Health VCS_INTERFACE Num Beats Failure Slow,21.AGG_HEALTH.process_health[2].num_beats_failure_slow
+Aggregate Health Process Health PRIORITY_ARBITER Num Beats Failure Slow,21.AGG_HEALTH.process_health[3].num_beats_failure_slow
+Aggregate Health Process Health PTP_TIME_KEEPER Num Beats Failure Slow,21.AGG_HEALTH.process_health[4].num_beats_failure_slow
+Aggregate Health Process Health PTP_HEALTH_MONITOR Num Beats Failure Slow,21.AGG_HEALTH.process_health[5].num_beats_failure_slow
+Aggregate Health Process Health CAMERA_SYSTEM_FRONT Num Beats Failure Slow,21.AGG_HEALTH.process_health[6].num_beats_failure_slow
+Aggregate Health Process Health CAMERA_SYSTEM_REAR Num Beats Failure Slow,21.AGG_HEALTH.process_health[7].num_beats_failure_slow
+Aggregate Health Process Health AUDIO_MANAGER Num Beats Failure Slow,21.AGG_HEALTH.process_health[8].num_beats_failure_slow
+Aggregate Health Process Health VEHICLE_HEALTH_MANAGER Num Beats Failure Fast,21.AGG_HEALTH.process_health[0].num_beats_failure_fast
+Aggregate Health Process Health HARDWARE_HEALTH_MONITOR Num Beats Failure Fast,21.AGG_HEALTH.process_health[1].num_beats_failure_fast
+Aggregate Health Process Health VCS_INTERFACE Num Beats Failure Fast,21.AGG_HEALTH.process_health[2].num_beats_failure_fast
+Aggregate Health Process Health PRIORITY_ARBITER Num Beats Failure Fast,21.AGG_HEALTH.process_health[3].num_beats_failure_fast
+Aggregate Health Process Health PTP_TIME_KEEPER Num Beats Failure Fast,21.AGG_HEALTH.process_health[4].num_beats_failure_fast
+Aggregate Health Process Health PTP_HEALTH_MONITOR Num Beats Failure Fast,21.AGG_HEALTH.process_health[5].num_beats_failure_fast
+Aggregate Health Process Health CAMERA_SYSTEM_FRONT Num Beats Failure Fast,21.AGG_HEALTH.process_health[6].num_beats_failure_fast
+Aggregate Health Process Health CAMERA_SYSTEM_REAR Num Beats Failure Fast,21.AGG_HEALTH.process_health[7].num_beats_failure_fast
+Aggregate Health Process Health AUDIO_MANAGER Num Beats Failure Fast,21.AGG_HEALTH.process_health[8].num_beats_failure_fast
+Aggregate Health 0 Alert Context ID,21.AGG_HEALTH.alert_context[0].id
+Aggregate Health 1 Alert Context ID,21.AGG_HEALTH.alert_context[1].id
+Aggregate Health 2 Alert Context ID,21.AGG_HEALTH.alert_context[2].id
+Aggregate Health 3 Alert Context ID,21.AGG_HEALTH.alert_context[3].id
+Aggregate Health 4 Alert Context ID,21.AGG_HEALTH.alert_context[4].id
+Aggregate Health 5 Alert Context ID,21.AGG_HEALTH.alert_context[5].id
+Aggregate Health 6 Alert Context ID,21.AGG_HEALTH.alert_context[6].id
+Aggregate Health 7 Alert Context ID,21.AGG_HEALTH.alert_context[7].id
+Aggregate Health 8 Alert Context ID,21.AGG_HEALTH.alert_context[8].id
+Aggregate Health 9 Alert Context ID,21.AGG_HEALTH.alert_context[9].id
+Aggregate Health 10 Alert Context ID,21.AGG_HEALTH.alert_context[10].id
+Aggregate Health 11 Alert Context ID,21.AGG_HEALTH.alert_context[11].id
+Aggregate Health 12 Alert Context ID,21.AGG_HEALTH.alert_context[12].id
+Aggregate Health 13 Alert Context ID,21.AGG_HEALTH.alert_context[13].id
+Aggregate Health 14 Alert Context ID,21.AGG_HEALTH.alert_context[14].id
+Aggregate Health 15 Alert Context ID,21.AGG_HEALTH.alert_context[15].id
+Aggregate Health 16 Alert Context ID,21.AGG_HEALTH.alert_context[16].id
+Aggregate Health 17 Alert Context ID,21.AGG_HEALTH.alert_context[17].id
+Aggregate Health 18 Alert Context ID,21.AGG_HEALTH.alert_context[18].id
+Aggregate Health 19 Alert Context ID,21.AGG_HEALTH.alert_context[19].id
+Aggregate Health 20 Alert Context ID,21.AGG_HEALTH.alert_context[20].id
+Aggregate Health 21 Alert Context ID,21.AGG_HEALTH.alert_context[21].id
+Aggregate Health 22 Alert Context ID,21.AGG_HEALTH.alert_context[22].id
+Aggregate Health 23 Alert Context ID,21.AGG_HEALTH.alert_context[23].id
+Aggregate Health 24 Alert Context ID,21.AGG_HEALTH.alert_context[24].id
+Aggregate Health 25 Alert Context ID,21.AGG_HEALTH.alert_context[25].id
+Aggregate Health 26 Alert Context ID,21.AGG_HEALTH.alert_context[26].id
+Aggregate Health 27 Alert Context ID,21.AGG_HEALTH.alert_context[27].id
+Aggregate Health 28 Alert Context ID,21.AGG_HEALTH.alert_context[28].id
+Aggregate Health 29 Alert Context ID,21.AGG_HEALTH.alert_context[29].id
+Aggregate Health 30 Alert Context ID,21.AGG_HEALTH.alert_context[30].id
+Aggregate Health 31 Alert Context ID,21.AGG_HEALTH.alert_context[31].id
+Aggregate Health 32 Alert Context ID,21.AGG_HEALTH.alert_context[32].id
+Aggregate Health 33 Alert Context ID,21.AGG_HEALTH.alert_context[33].id
+Aggregate Health 34 Alert Context ID,21.AGG_HEALTH.alert_context[34].id
+Aggregate Health 35 Alert Context ID,21.AGG_HEALTH.alert_context[35].id
+Aggregate Health 36 Alert Context ID,21.AGG_HEALTH.alert_context[36].id
+Aggregate Health 37 Alert Context ID,21.AGG_HEALTH.alert_context[37].id
+Aggregate Health 38 Alert Context ID,21.AGG_HEALTH.alert_context[38].id
+Aggregate Health 39 Alert Context ID,21.AGG_HEALTH.alert_context[39].id
+Aggregate Health 40 Alert Context ID,21.AGG_HEALTH.alert_context[40].id
+Aggregate Health 41 Alert Context ID,21.AGG_HEALTH.alert_context[41].id
+Aggregate Health 42 Alert Context ID,21.AGG_HEALTH.alert_context[42].id
+Aggregate Health 43 Alert Context ID,21.AGG_HEALTH.alert_context[43].id
+Aggregate Health 44 Alert Context ID,21.AGG_HEALTH.alert_context[44].id
+Aggregate Health 45 Alert Context ID,21.AGG_HEALTH.alert_context[45].id
+Aggregate Health 46 Alert Context ID,21.AGG_HEALTH.alert_context[46].id
+Aggregate Health 47 Alert Context ID,21.AGG_HEALTH.alert_context[47].id
+Aggregate Health 48 Alert Context ID,21.AGG_HEALTH.alert_context[48].id
+Aggregate Health 49 Alert Context ID,21.AGG_HEALTH.alert_context[49].id
+Aggregate Health 50 Alert Context ID,21.AGG_HEALTH.alert_context[50].id
+Aggregate Health 51 Alert Context ID,21.AGG_HEALTH.alert_context[51].id
+Aggregate Health 52 Alert Context ID,21.AGG_HEALTH.alert_context[52].id
+Aggregate Health 53 Alert Context ID,21.AGG_HEALTH.alert_context[53].id
+Aggregate Health 54 Alert Context ID,21.AGG_HEALTH.alert_context[54].id
+Aggregate Health 55 Alert Context ID,21.AGG_HEALTH.alert_context[55].id
+Aggregate Health 56 Alert Context ID,21.AGG_HEALTH.alert_context[56].id
+Aggregate Health 57 Alert Context ID,21.AGG_HEALTH.alert_context[57].id
+Aggregate Health 58 Alert Context ID,21.AGG_HEALTH.alert_context[58].id
+Aggregate Health 59 Alert Context ID,21.AGG_HEALTH.alert_context[59].id
+Aggregate Health 60 Alert Context ID,21.AGG_HEALTH.alert_context[60].id
+Aggregate Health 61 Alert Context ID,21.AGG_HEALTH.alert_context[61].id
+Aggregate Health 62 Alert Context ID,21.AGG_HEALTH.alert_context[62].id
+Aggregate Health 63 Alert Context ID,21.AGG_HEALTH.alert_context[63].id
+Aggregate Health Alert Context 0 Activation Count,21.AGG_HEALTH.alert_context[0].activation_count
+Aggregate Health Alert Context 1 Activation Count,21.AGG_HEALTH.alert_context[1].activation_count
+Aggregate Health Alert Context 2 Activation Count,21.AGG_HEALTH.alert_context[2].activation_count
+Aggregate Health Alert Context 3 Activation Count,21.AGG_HEALTH.alert_context[3].activation_count
+Aggregate Health Alert Context 4 Activation Count,21.AGG_HEALTH.alert_context[4].activation_count
+Aggregate Health Alert Context 5 Activation Count,21.AGG_HEALTH.alert_context[5].activation_count
+Aggregate Health Alert Context 6 Activation Count,21.AGG_HEALTH.alert_context[6].activation_count
+Aggregate Health Alert Context 7 Activation Count,21.AGG_HEALTH.alert_context[7].activation_count
+Aggregate Health Alert Context 8 Activation Count,21.AGG_HEALTH.alert_context[8].activation_count
+Aggregate Health Alert Context 9 Activation Count,21.AGG_HEALTH.alert_context[9].activation_count
+Aggregate Health Alert Context 10 Activation Count,21.AGG_HEALTH.alert_context[10].activation_count
+Aggregate Health Alert Context 11 Activation Count,21.AGG_HEALTH.alert_context[11].activation_count
+Aggregate Health Alert Context 12 Activation Count,21.AGG_HEALTH.alert_context[12].activation_count
+Aggregate Health Alert Context 13 Activation Count,21.AGG_HEALTH.alert_context[13].activation_count
+Aggregate Health Alert Context 14 Activation Count,21.AGG_HEALTH.alert_context[14].activation_count
+Aggregate Health Alert Context 15 Activation Count,21.AGG_HEALTH.alert_context[15].activation_count
+Aggregate Health Alert Context 16 Activation Count,21.AGG_HEALTH.alert_context[16].activation_count
+Aggregate Health Alert Context 17 Activation Count,21.AGG_HEALTH.alert_context[17].activation_count
+Aggregate Health Alert Context 18 Activation Count,21.AGG_HEALTH.alert_context[18].activation_count
+Aggregate Health Alert Context 19 Activation Count,21.AGG_HEALTH.alert_context[19].activation_count
+Aggregate Health Alert Context 20 Activation Count,21.AGG_HEALTH.alert_context[20].activation_count
+Aggregate Health Alert Context 21 Activation Count,21.AGG_HEALTH.alert_context[21].activation_count
+Aggregate Health Alert Context 22 Activation Count,21.AGG_HEALTH.alert_context[22].activation_count
+Aggregate Health Alert Context 23 Activation Count,21.AGG_HEALTH.alert_context[23].activation_count
+Aggregate Health Alert Context 24 Activation Count,21.AGG_HEALTH.alert_context[24].activation_count
+Aggregate Health Alert Context 25 Activation Count,21.AGG_HEALTH.alert_context[25].activation_count
+Aggregate Health Alert Context 26 Activation Count,21.AGG_HEALTH.alert_context[26].activation_count
+Aggregate Health Alert Context 27 Activation Count,21.AGG_HEALTH.alert_context[27].activation_count
+Aggregate Health Alert Context 28 Activation Count,21.AGG_HEALTH.alert_context[28].activation_count
+Aggregate Health Alert Context 29 Activation Count,21.AGG_HEALTH.alert_context[29].activation_count
+Aggregate Health Alert Context 30 Activation Count,21.AGG_HEALTH.alert_context[30].activation_count
+Aggregate Health Alert Context 31 Activation Count,21.AGG_HEALTH.alert_context[31].activation_count
+Aggregate Health Alert Context 32 Activation Count,21.AGG_HEALTH.alert_context[32].activation_count
+Aggregate Health Alert Context 33 Activation Count,21.AGG_HEALTH.alert_context[33].activation_count
+Aggregate Health Alert Context 34 Activation Count,21.AGG_HEALTH.alert_context[34].activation_count
+Aggregate Health Alert Context 35 Activation Count,21.AGG_HEALTH.alert_context[35].activation_count
+Aggregate Health Alert Context 36 Activation Count,21.AGG_HEALTH.alert_context[36].activation_count
+Aggregate Health Alert Context 37 Activation Count,21.AGG_HEALTH.alert_context[37].activation_count
+Aggregate Health Alert Context 38 Activation Count,21.AGG_HEALTH.alert_context[38].activation_count
+Aggregate Health Alert Context 39 Activation Count,21.AGG_HEALTH.alert_context[39].activation_count
+Aggregate Health Alert Context 40 Activation Count,21.AGG_HEALTH.alert_context[40].activation_count
+Aggregate Health Alert Context 41 Activation Count,21.AGG_HEALTH.alert_context[41].activation_count
+Aggregate Health Alert Context 42 Activation Count,21.AGG_HEALTH.alert_context[42].activation_count
+Aggregate Health Alert Context 43 Activation Count,21.AGG_HEALTH.alert_context[43].activation_count
+Aggregate Health Alert Context 44 Activation Count,21.AGG_HEALTH.alert_context[44].activation_count
+Aggregate Health Alert Context 45 Activation Count,21.AGG_HEALTH.alert_context[45].activation_count
+Aggregate Health Alert Context 46 Activation Count,21.AGG_HEALTH.alert_context[46].activation_count
+Aggregate Health Alert Context 47 Activation Count,21.AGG_HEALTH.alert_context[47].activation_count
+Aggregate Health Alert Context 48 Activation Count,21.AGG_HEALTH.alert_context[48].activation_count
+Aggregate Health Alert Context 49 Activation Count,21.AGG_HEALTH.alert_context[49].activation_count
+Aggregate Health Alert Context 50 Activation Count,21.AGG_HEALTH.alert_context[50].activation_count
+Aggregate Health Alert Context 51 Activation Count,21.AGG_HEALTH.alert_context[51].activation_count
+Aggregate Health Alert Context 52 Activation Count,21.AGG_HEALTH.alert_context[52].activation_count
+Aggregate Health Alert Context 53 Activation Count,21.AGG_HEALTH.alert_context[53].activation_count
+Aggregate Health Alert Context 54 Activation Count,21.AGG_HEALTH.alert_context[54].activation_count
+Aggregate Health Alert Context 55 Activation Count,21.AGG_HEALTH.alert_context[55].activation_count
+Aggregate Health Alert Context 56 Activation Count,21.AGG_HEALTH.alert_context[56].activation_count
+Aggregate Health Alert Context 57 Activation Count,21.AGG_HEALTH.alert_context[57].activation_count
+Aggregate Health Alert Context 58 Activation Count,21.AGG_HEALTH.alert_context[58].activation_count
+Aggregate Health Alert Context 59 Activation Count,21.AGG_HEALTH.alert_context[59].activation_count
+Aggregate Health Alert Context 60 Activation Count,21.AGG_HEALTH.alert_context[60].activation_count
+Aggregate Health Alert Context 61 Activation Count,21.AGG_HEALTH.alert_context[61].activation_count
+Aggregate Health Alert Context 62 Activation Count,21.AGG_HEALTH.alert_context[62].activation_count
+Aggregate Health Alert Context 63 Activation Count,21.AGG_HEALTH.alert_context[63].activation_count
+Aggregate Health Alert Context 0 Deactivation Count,21.AGG_HEALTH.alert_context[0].deactivation_count
+Aggregate Health Alert Context 1 Deactivation Count,21.AGG_HEALTH.alert_context[1].deactivation_count
+Aggregate Health Alert Context 2 Deactivation Count,21.AGG_HEALTH.alert_context[2].deactivation_count
+Aggregate Health Alert Context 3 Deactivation Count,21.AGG_HEALTH.alert_context[3].deactivation_count
+Aggregate Health Alert Context 4 Deactivation Count,21.AGG_HEALTH.alert_context[4].deactivation_count
+Aggregate Health Alert Context 5 Deactivation Count,21.AGG_HEALTH.alert_context[5].deactivation_count
+Aggregate Health Alert Context 6 Deactivation Count,21.AGG_HEALTH.alert_context[6].deactivation_count
+Aggregate Health Alert Context 7 Deactivation Count,21.AGG_HEALTH.alert_context[7].deactivation_count
+Aggregate Health Alert Context 8 Deactivation Count,21.AGG_HEALTH.alert_context[8].deactivation_count
+Aggregate Health Alert Context 9 Deactivation Count,21.AGG_HEALTH.alert_context[9].deactivation_count
+Aggregate Health Alert Context 10 Deactivation Count,21.AGG_HEALTH.alert_context[10].deactivation_count
+Aggregate Health Alert Context 11 Deactivation Count,21.AGG_HEALTH.alert_context[11].deactivation_count
+Aggregate Health Alert Context 12 Deactivation Count,21.AGG_HEALTH.alert_context[12].deactivation_count
+Aggregate Health Alert Context 13 Deactivation Count,21.AGG_HEALTH.alert_context[13].deactivation_count
+Aggregate Health Alert Context 14 Deactivation Count,21.AGG_HEALTH.alert_context[14].deactivation_count
+Aggregate Health Alert Context 15 Deactivation Count,21.AGG_HEALTH.alert_context[15].deactivation_count
+Aggregate Health Alert Context 16 Deactivation Count,21.AGG_HEALTH.alert_context[16].deactivation_count
+Aggregate Health Alert Context 17 Deactivation Count,21.AGG_HEALTH.alert_context[17].deactivation_count
+Aggregate Health Alert Context 18 Deactivation Count,21.AGG_HEALTH.alert_context[18].deactivation_count
+Aggregate Health Alert Context 19 Deactivation Count,21.AGG_HEALTH.alert_context[19].deactivation_count
+Aggregate Health Alert Context 20 Deactivation Count,21.AGG_HEALTH.alert_context[20].deactivation_count
+Aggregate Health Alert Context 21 Deactivation Count,21.AGG_HEALTH.alert_context[21].deactivation_count
+Aggregate Health Alert Context 22 Deactivation Count,21.AGG_HEALTH.alert_context[22].deactivation_count
+Aggregate Health Alert Context 23 Deactivation Count,21.AGG_HEALTH.alert_context[23].deactivation_count
+Aggregate Health Alert Context 24 Deactivation Count,21.AGG_HEALTH.alert_context[24].deactivation_count
+Aggregate Health Alert Context 25 Deactivation Count,21.AGG_HEALTH.alert_context[25].deactivation_count
+Aggregate Health Alert Context 26 Deactivation Count,21.AGG_HEALTH.alert_context[26].deactivation_count
+Aggregate Health Alert Context 27 Deactivation Count,21.AGG_HEALTH.alert_context[27].deactivation_count
+Aggregate Health Alert Context 28 Deactivation Count,21.AGG_HEALTH.alert_context[28].deactivation_count
+Aggregate Health Alert Context 29 Deactivation Count,21.AGG_HEALTH.alert_context[29].deactivation_count
+Aggregate Health Alert Context 30 Deactivation Count,21.AGG_HEALTH.alert_context[30].deactivation_count
+Aggregate Health Alert Context 31 Deactivation Count,21.AGG_HEALTH.alert_context[31].deactivation_count
+Aggregate Health Alert Context 32 Deactivation Count,21.AGG_HEALTH.alert_context[32].deactivation_count
+Aggregate Health Alert Context 33 Deactivation Count,21.AGG_HEALTH.alert_context[33].deactivation_count
+Aggregate Health Alert Context 34 Deactivation Count,21.AGG_HEALTH.alert_context[34].deactivation_count
+Aggregate Health Alert Context 35 Deactivation Count,21.AGG_HEALTH.alert_context[35].deactivation_count
+Aggregate Health Alert Context 36 Deactivation Count,21.AGG_HEALTH.alert_context[36].deactivation_count
+Aggregate Health Alert Context 37 Deactivation Count,21.AGG_HEALTH.alert_context[37].deactivation_count
+Aggregate Health Alert Context 38 Deactivation Count,21.AGG_HEALTH.alert_context[38].deactivation_count
+Aggregate Health Alert Context 39 Deactivation Count,21.AGG_HEALTH.alert_context[39].deactivation_count
+Aggregate Health Alert Context 40 Deactivation Count,21.AGG_HEALTH.alert_context[40].deactivation_count
+Aggregate Health Alert Context 41 Deactivation Count,21.AGG_HEALTH.alert_context[41].deactivation_count
+Aggregate Health Alert Context 42 Deactivation Count,21.AGG_HEALTH.alert_context[42].deactivation_count
+Aggregate Health Alert Context 43 Deactivation Count,21.AGG_HEALTH.alert_context[43].deactivation_count
+Aggregate Health Alert Context 44 Deactivation Count,21.AGG_HEALTH.alert_context[44].deactivation_count
+Aggregate Health Alert Context 45 Deactivation Count,21.AGG_HEALTH.alert_context[45].deactivation_count
+Aggregate Health Alert Context 46 Deactivation Count,21.AGG_HEALTH.alert_context[46].deactivation_count
+Aggregate Health Alert Context 47 Deactivation Count,21.AGG_HEALTH.alert_context[47].deactivation_count
+Aggregate Health Alert Context 48 Deactivation Count,21.AGG_HEALTH.alert_context[48].deactivation_count
+Aggregate Health Alert Context 49 Deactivation Count,21.AGG_HEALTH.alert_context[49].deactivation_count
+Aggregate Health Alert Context 50 Deactivation Count,21.AGG_HEALTH.alert_context[50].deactivation_count
+Aggregate Health Alert Context 51 Deactivation Count,21.AGG_HEALTH.alert_context[51].deactivation_count
+Aggregate Health Alert Context 52 Deactivation Count,21.AGG_HEALTH.alert_context[52].deactivation_count
+Aggregate Health Alert Context 53 Deactivation Count,21.AGG_HEALTH.alert_context[53].deactivation_count
+Aggregate Health Alert Context 54 Deactivation Count,21.AGG_HEALTH.alert_context[54].deactivation_count
+Aggregate Health Alert Context 55 Deactivation Count,21.AGG_HEALTH.alert_context[55].deactivation_count
+Aggregate Health Alert Context 56 Deactivation Count,21.AGG_HEALTH.alert_context[56].deactivation_count
+Aggregate Health Alert Context 57 Deactivation Count,21.AGG_HEALTH.alert_context[57].deactivation_count
+Aggregate Health Alert Context 58 Deactivation Count,21.AGG_HEALTH.alert_context[58].deactivation_count
+Aggregate Health Alert Context 59 Deactivation Count,21.AGG_HEALTH.alert_context[59].deactivation_count
+Aggregate Health Alert Context 60 Deactivation Count,21.AGG_HEALTH.alert_context[60].deactivation_count
+Aggregate Health Alert Context 61 Deactivation Count,21.AGG_HEALTH.alert_context[61].deactivation_count
+Aggregate Health Alert Context 62 Deactivation Count,21.AGG_HEALTH.alert_context[62].deactivation_count
+Aggregate Health Alert Context 63 Deactivation Count,21.AGG_HEALTH.alert_context[63].deactivation_count
+VMC HW Info Measurement Parse Time UTC MS,21.VMC_HW_INFO_MEAS.parse_time_utc_ms
+VMC HW Info Measurement Disk EMMC Total Space MB,21.VMC_HW_INFO_MEAS.disks[0].total_space_MB
+VMC HW Info Measurement Disk EMMC Free Space MB,21.VMC_HW_INFO_MEAS.disks[0].free_space_MB
+VMC HW Info Measurement Disk EMMC Used Space MB,21.VMC_HW_INFO_MEAS.disks[0].used_space_MB
+VMC HW Info Measurement Disk EMMC Usage Perc,21.VMC_HW_INFO_MEAS.disks[0].usage_perc
+VMC HW Info Measurement Network ETH0 Up,21.VMC_HW_INFO_MEAS.networks[0].up
+VMC HW Info Measurement Network ETH1 Up,21.VMC_HW_INFO_MEAS.networks[1].up
+VMC HW Info Measurement Network ETH2 Up,21.VMC_HW_INFO_MEAS.networks[2].up
+VMC HW Info Measurement Network ETH3 Up,21.VMC_HW_INFO_MEAS.networks[3].up
+VMC HW Info Measurement Network ETH0 Thru RX MBps,21.VMC_HW_INFO_MEAS.networks[0].thru_rx_MBps
+VMC HW Info Measurement Network ETH1 Thru RX MBps,21.VMC_HW_INFO_MEAS.networks[1].thru_rx_MBps
+VMC HW Info Measurement Network ETH2 Thru RX MBps,21.VMC_HW_INFO_MEAS.networks[2].thru_rx_MBps
+VMC HW Info Measurement Network ETH3 Thru RX MBps,21.VMC_HW_INFO_MEAS.networks[3].thru_rx_MBps
+VMC HW Info Measurement Network ETH0 Thru TX MBps,21.VMC_HW_INFO_MEAS.networks[0].thru_tx_MBps
+VMC HW Info Measurement Network ETH1 Thru TX MBps,21.VMC_HW_INFO_MEAS.networks[1].thru_tx_MBps
+VMC HW Info Measurement Network ETH2 Thru TX MBps,21.VMC_HW_INFO_MEAS.networks[2].thru_tx_MBps
+VMC HW Info Measurement Network ETH3 Thru TX MBps,21.VMC_HW_INFO_MEAS.networks[3].thru_tx_MBps
+VMC HW Info Measurement Network ETH0 Thru Total MBps,21.VMC_HW_INFO_MEAS.networks[0].thru_total_MBps
+VMC HW Info Measurement Network ETH1 Thru Total MBps,21.VMC_HW_INFO_MEAS.networks[1].thru_total_MBps
+VMC HW Info Measurement Network ETH2 Thru Total MBps,21.VMC_HW_INFO_MEAS.networks[2].thru_total_MBps
+VMC HW Info Measurement Network ETH3 Thru Total MBps,21.VMC_HW_INFO_MEAS.networks[3].thru_total_MBps
+VMC HW Info Measurement Network ETH0 Thru Util Perc,21.VMC_HW_INFO_MEAS.networks[0].thru_util_perc
+VMC HW Info Measurement Network ETH1 Thru Util Perc,21.VMC_HW_INFO_MEAS.networks[1].thru_util_perc
+VMC HW Info Measurement Network ETH2 Thru Util Perc,21.VMC_HW_INFO_MEAS.networks[2].thru_util_perc
+VMC HW Info Measurement Network ETH3 Thru Util Perc,21.VMC_HW_INFO_MEAS.networks[3].thru_util_perc
+VMC HW Info Measurement CPU 0 ON,21.VMC_HW_INFO_MEAS.cpu_cores[0].on
+VMC HW Info Measurement CPU 1 ON,21.VMC_HW_INFO_MEAS.cpu_cores[1].on
+VMC HW Info Measurement CPU 2 ON,21.VMC_HW_INFO_MEAS.cpu_cores[2].on
+VMC HW Info Measurement CPU 3 ON,21.VMC_HW_INFO_MEAS.cpu_cores[3].on
+VMC HW Info Measurement CPU 4 ON,21.VMC_HW_INFO_MEAS.cpu_cores[4].on
+VMC HW Info Measurement CPU 5 ON,21.VMC_HW_INFO_MEAS.cpu_cores[5].on
+VMC HW Info Measurement CPU 6 ON,21.VMC_HW_INFO_MEAS.cpu_cores[6].on
+VMC HW Info Measurement CPU 7 ON,21.VMC_HW_INFO_MEAS.cpu_cores[7].on
+VMC HW Info Measurement CPU 8 ON,21.VMC_HW_INFO_MEAS.cpu_cores[8].on
+VMC HW Info Measurement CPU 9 ON,21.VMC_HW_INFO_MEAS.cpu_cores[9].on
+VMC HW Info Measurement CPU 10 ON,21.VMC_HW_INFO_MEAS.cpu_cores[10].on
+VMC HW Info Measurement CPU 11 ON,21.VMC_HW_INFO_MEAS.cpu_cores[11].on
+VMC HW Info Measurement CPU 0 ID,21.VMC_HW_INFO_MEAS.cpu_cores[0].id
+VMC HW Info Measurement CPU 1 ID,21.VMC_HW_INFO_MEAS.cpu_cores[1].id
+VMC HW Info Measurement CPU 2 ID,21.VMC_HW_INFO_MEAS.cpu_cores[2].id
+VMC HW Info Measurement CPU 3 ID,21.VMC_HW_INFO_MEAS.cpu_cores[3].id
+VMC HW Info Measurement CPU 4 ID,21.VMC_HW_INFO_MEAS.cpu_cores[4].id
+VMC HW Info Measurement CPU 5 ID,21.VMC_HW_INFO_MEAS.cpu_cores[5].id
+VMC HW Info Measurement CPU 6 ID,21.VMC_HW_INFO_MEAS.cpu_cores[6].id
+VMC HW Info Measurement CPU 7 ID,21.VMC_HW_INFO_MEAS.cpu_cores[7].id
+VMC HW Info Measurement CPU 8 ID,21.VMC_HW_INFO_MEAS.cpu_cores[8].id
+VMC HW Info Measurement CPU 9 ID,21.VMC_HW_INFO_MEAS.cpu_cores[9].id
+VMC HW Info Measurement CPU 10 ID,21.VMC_HW_INFO_MEAS.cpu_cores[10].id
+VMC HW Info Measurement CPU 11 ID,21.VMC_HW_INFO_MEAS.cpu_cores[11].id
+VMC HW Info Measurement CPU 0 Load Perc,21.VMC_HW_INFO_MEAS.cpu_cores[0].load_perc
+VMC HW Info Measurement CPU 1 Load Perc,21.VMC_HW_INFO_MEAS.cpu_cores[1].load_perc
+VMC HW Info Measurement CPU 2 Load Perc,21.VMC_HW_INFO_MEAS.cpu_cores[2].load_perc
+VMC HW Info Measurement CPU 3 Load Perc,21.VMC_HW_INFO_MEAS.cpu_cores[3].load_perc
+VMC HW Info Measurement CPU 4 Load Perc,21.VMC_HW_INFO_MEAS.cpu_cores[4].load_perc
+VMC HW Info Measurement CPU 5 Load Perc,21.VMC_HW_INFO_MEAS.cpu_cores[5].load_perc
+VMC HW Info Measurement CPU 6 Load Perc,21.VMC_HW_INFO_MEAS.cpu_cores[6].load_perc
+VMC HW Info Measurement CPU 7 Load Perc,21.VMC_HW_INFO_MEAS.cpu_cores[7].load_perc
+VMC HW Info Measurement CPU 8 Load Perc,21.VMC_HW_INFO_MEAS.cpu_cores[8].load_perc
+VMC HW Info Measurement CPU 9 Load Perc,21.VMC_HW_INFO_MEAS.cpu_cores[9].load_perc
+VMC HW Info Measurement CPU 10 Load Perc,21.VMC_HW_INFO_MEAS.cpu_cores[10].load_perc
+VMC HW Info Measurement CPU 11 Load Perc,21.VMC_HW_INFO_MEAS.cpu_cores[11].load_perc
+VMC HW Info Measurement CPU 0 Freq MHz,21.VMC_HW_INFO_MEAS.cpu_cores[0].freq_mhz
+VMC HW Info Measurement CPU 1 Freq MHz,21.VMC_HW_INFO_MEAS.cpu_cores[1].freq_mhz
+VMC HW Info Measurement CPU 2 Freq MHz,21.VMC_HW_INFO_MEAS.cpu_cores[2].freq_mhz
+VMC HW Info Measurement CPU 3 Freq MHz,21.VMC_HW_INFO_MEAS.cpu_cores[3].freq_mhz
+VMC HW Info Measurement CPU 4 Freq MHz,21.VMC_HW_INFO_MEAS.cpu_cores[4].freq_mhz
+VMC HW Info Measurement CPU 5 Freq MHz,21.VMC_HW_INFO_MEAS.cpu_cores[5].freq_mhz
+VMC HW Info Measurement CPU 6 Freq MHz,21.VMC_HW_INFO_MEAS.cpu_cores[6].freq_mhz
+VMC HW Info Measurement CPU 7 Freq MHz,21.VMC_HW_INFO_MEAS.cpu_cores[7].freq_mhz
+VMC HW Info Measurement CPU 8 Freq MHz,21.VMC_HW_INFO_MEAS.cpu_cores[8].freq_mhz
+VMC HW Info Measurement CPU 9 Freq MHz,21.VMC_HW_INFO_MEAS.cpu_cores[9].freq_mhz
+VMC HW Info Measurement CPU 10 Freq MHz,21.VMC_HW_INFO_MEAS.cpu_cores[10].freq_mhz
+VMC HW Info Measurement CPU 11 Freq MHz,21.VMC_HW_INFO_MEAS.cpu_cores[11].freq_mhz
+VMC HW Info Measurement RAM Used MB,21.VMC_HW_INFO_MEAS.ram_used_MB
+VMC HW Info Measurement RAM Available MB,21.VMC_HW_INFO_MEAS.ram_available_MB
+VMC HW Info Measurement RAM Largest Free Block,21.VMC_HW_INFO_MEAS.ram_largest_free_block
+VMC HW Info Measurement RAM Num Free Block,21.VMC_HW_INFO_MEAS.ram_num_free_blocks
+VMC HW Info Measurement SWAP Used MB,21.VMC_HW_INFO_MEAS.swap_used_MB
+VMC HW Info Measurement SWAP Available MB,21.VMC_HW_INFO_MEAS.swap_available_MB
+VMC HW Info Measurement SWAP Cached MB,21.VMC_HW_INFO_MEAS.swap_cached_MB
+VMC HW Info Measurement IRAM Used KB,21.VMC_HW_INFO_MEAS.iram_used_kb
+VMC HW Info Measurement IRAM Available KB,21.VMC_HW_INFO_MEAS.iram_available_kb
+VMC HW Info Measurement Largest Free Block,21.VMC_HW_INFO_MEAS.iram_largest_free_block
+VMC HW Info Measurement EMC Mem Bandw Perc,21.VMC_HW_INFO_MEAS.emc_mem_bandw_perc
+VMC HW Info Measurement EMC Freq MHz,21.VMC_HW_INFO_MEAS.emc_freq_mhz
+VMC HW Info Measurement GR3D Load Perc,21.VMC_HW_INFO_MEAS.gr3d_load_perc
+VMC HW Info Measurement GR3D 1 Freq MHz,21.VMC_HW_INFO_MEAS.gr3d_1_freq_mhz
+VMC HW Info Measurement GR3D 2 Freq MHz,21.VMC_HW_INFO_MEAS.gr3d_2_freq_mhz
+VMC HW Info Measurement VIC Freq MHz,21.VMC_HW_INFO_MEAS.vic_freq_mhz
+VMC HW Info Measurement APE Freq MHz,21.VMC_HW_INFO_MEAS.ape_freq_mhz
+VMC HW Info Measurement Temp CPU Deg C,21.VMC_HW_INFO_MEAS.temp_cpu_degc
+VMC HW Info Measurement Temp GPU Deg C,21.VMC_HW_INFO_MEAS.temp_gpu_degc
+VMC HW Info Measurement Temp TJ Deg C,21.VMC_HW_INFO_MEAS.temp_tj_degc
+VMC HW Info Measurement Temp CV0 Deg C,21.VMC_HW_INFO_MEAS.temp_cv0_degc
+VMC HW Info Measurement Temp CV 1 Deg C,21.VMC_HW_INFO_MEAS.temp_cv1_degc
+VMC HW Info Measurement Temp CV2 Deg C,21.VMC_HW_INFO_MEAS.temp_cv2_degc
+VMC HW Info Measurement Temp SOC 0 Deg C,21.VMC_HW_INFO_MEAS.temp_soc0_degc
+VMC HW Info Measurement Temp SOC 1 Deg C,21.VMC_HW_INFO_MEAS.temp_soc1_degc
+VMC HW Info Measurement Temp SOC 2 Deg C,21.VMC_HW_INFO_MEAS.temp_soc2_degc
+VMC HW Info Measurement TBoard Deg C,21.VMC_HW_INFO_MEAS.temp_tboard_degc
+VMC HW Info Measurement TDiode Deg C,21.VMC_HW_INFO_MEAS.temp_tdiode_degc
+VMC HW Info Measurement Power Inst GPU SOC mW,21.VMC_HW_INFO_MEAS.pwr_inst_gpu_soc_mw
+VMC HW Info Measurement Power Avrg GPU SOC mW,21.VMC_HW_INFO_MEAS.pwr_avrg_gpu_soc_mw
+VMC HW Info Measurement Power Inst CPU CV mW,21.VMC_HW_INFO_MEAS.pwr_inst_cpu_cv_mw
+VMC HW Info Measurement Power Avrg CPU CV mW,21.VMC_HW_INFO_MEAS.pwr_avrg_cpu_cv_mw
+VMC HW Info Measurement Power Inst VIN Sys 5v0 mW,21.VMC_HW_INFO_MEAS.pwr_inst_vin_sys_5v0_mw
+VMC HW Info Measurement Power Avrg VIN Sys 5v0 mW,21.VMC_HW_INFO_MEAS.pwr_avrg_vin_sys_5v0_mw
+VMC HW Info Measurement Power Inst Q VDD2 1v8AO mW,21.VMC_HW_INFO_MEAS.pwr_inst_q_vdd2_1v8ao_mw
+VMC HW Info Measurement Power Avrg Q VDD2 1v8AO mW,21.VMC_HW_INFO_MEAS.pwr_avrg_q_vdd2_1v8ao_mw
+VMC HW Info Measurement Power Inst NC 0 mW,21.VMC_HW_INFO_MEAS.pwr_inst_nc_0_mw
+VMC HW Info Measurement Power Avrg NC 0 mW,21.VMC_HW_INFO_MEAS.pwr_avrg_nc_0_mw
+VMC HW Info Measurement Power Inst NC 1 mW,21.VMC_HW_INFO_MEAS.pwr_inst_nc_1_mw
+VMC HW Info Measurement Power Avrg NC 1 mW,21.VMC_HW_INFO_MEAS.pwr_avrg_nc_1_mw
+VCSI Health Context EI Coordination State,21.VCSI_HEALTH_CONTEXT.ei_coordination_state
+VCSI Health Context VCS FS Output Queue Health Context Size,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_fs_output.size
+VCSI Health Context VCS FS Output Queue Health Context Capacity,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_fs_output.capacity
+VCSI Health Context VCS FS Output Queue Health Context Num Times Full,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_fs_output.num_times_full
+VCSI Health Context VCS FS Output Queue Health Context Num Times Empty,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_fs_output.num_times_empty
+VCSI Health Context VCS FS Output Queue Health Context Count Inserts,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_fs_output.count_inserts
+VCSI Health Context VCS FS Output Queue Health Context Count Pops,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_fs_output.count_pops
+VCSI Health Context VCS FS Output Queue Block Health Context A Valid,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_fs_output.vcc_a_queue_block_health_context.valid
+VCSI Health Context VCS FS Output Queue Block Health Context A Receive Timestamp MS,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_fs_output.vcc_a_queue_block_health_context.receive_timestamp_ns
+VCSI Health Context VCS FS Output Queue Block Health Context A MFC,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_fs_output.vcc_a_queue_block_health_context.major_frame_count
+VCSI Health Context VCS FS Output Queue Block Health Context A MFC Drops,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_fs_output.vcc_a_queue_block_health_context.major_frame_count_drops
+VCSI Health Context VCS FS Output Queue Block Health Context A Desync Offset,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_fs_output.vcc_a_queue_block_health_context.desync_offset
+VCSI Health Context VCS FS Output Queue Block Health Context B Valid,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_fs_output.vcc_b_queue_block_health_context.valid
+VCSI Health Context VCS FS Output Queue Block Health Context B Receive Timestamp MS,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_fs_output.vcc_b_queue_block_health_context.receive_timestamp_ns
+VCSI Health Context VCS FS Output Queue Block Health Context B MFC,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_fs_output.vcc_b_queue_block_health_context.major_frame_count
+VCSI Health Context VCS FS Output Queue Block Health Context B MFC Drops,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_fs_output.vcc_b_queue_block_health_context.major_frame_count_drops
+VCSI Health Context VCS FS Output Queue Block Health Context B Desync Offset,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_fs_output.vcc_b_queue_block_health_context.desync_offset
+VCSI Health Context VCS FS Output Queue Block Health Context C Valid,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_fs_output.vcc_c_queue_block_health_context.valid
+VCSI Health Context VCS FS Output Queue Block Health Context C Receive Timestamp MS,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_fs_output.vcc_c_queue_block_health_context.receive_timestamp_ns
+VCSI Health Context VCS FS Output Queue Block Health Context C MFC,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_fs_output.vcc_c_queue_block_health_context.major_frame_count
+VCSI Health Context VCS FS Output Queue Block Health Context C MFC Drops,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_fs_output.vcc_c_queue_block_health_context.major_frame_count_drops
+VCSI Health Context VCS FS Output Queue Block Health Context C Desync Offset,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_fs_output.vcc_c_queue_block_health_context.desync_offset
+VCSI Health Context VCS Measurements Queue Health Context Size,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_measurements.size
+VCSI Health Context VCS Measurements Queue Health Context Capacity,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_measurements.capacity
+VCSI Health Context VCS Measurements Queue Health Context Num Times Full,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_measurements.num_times_full
+VCSI Health Context VCS Measurements Queue Health Context Num Times Empty,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_measurements.num_times_empty
+VCSI Health Context VCS Measurements Queue Health Context Count Inserts,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_measurements.count_inserts
+VCSI Health Context VCS Measurements Queue Health Context Count Pops,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_measurements.count_pops
+VCSI Health Context VCS Measurements Queue Block Health Context A Valid,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_measurements.vcc_a_queue_block_health_context.valid
+VCSI Health Context VCS Measurements Queue Block Health Context A Receive Timestamp MS,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_measurements.vcc_a_queue_block_health_context.receive_timestamp_ns
+VCSI Health Context VCS Measurements Queue Block Health Context A MFC,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_measurements.vcc_a_queue_block_health_context.major_frame_count
+VCSI Health Context VCS Measurements Queue Block Health Context A MFC Drops,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_measurements.vcc_a_queue_block_health_context.major_frame_count_drops
+VCSI Health Context VCS Measurements Queue Block Health Context A Desync Offset,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_measurements.vcc_a_queue_block_health_context.desync_offset
+VCSI Health Context VCS Measurements Queue Block Health Context B Valid,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_measurements.vcc_b_queue_block_health_context.valid
+VCSI Health Context VCS Measurements Queue Block Health Context B Receive Timestamp MS,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_measurements.vcc_b_queue_block_health_context.receive_timestamp_ns
+VCSI Health Context VCS Measurements Queue Block Health Context B MFC,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_measurements.vcc_b_queue_block_health_context.major_frame_count
+VCSI Health Context VCS Measurements Queue Block Health Context B MFC Drops,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_measurements.vcc_b_queue_block_health_context.major_frame_count_drops
+VCSI Health Context VCS Measurements Queue Block Health Context B Desync Offset,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_measurements.vcc_b_queue_block_health_context.desync_offset
+VCSI Health Context VCS Measurements Queue Block Health Context C Valid,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_measurements.vcc_c_queue_block_health_context.valid
+VCSI Health Context VCS Measurements Queue Block Health Context C Receive Timestamp MS,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_measurements.vcc_c_queue_block_health_context.receive_timestamp_ns
+VCSI Health Context VCS Measurements Queue Block Health Context C MFC,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_measurements.vcc_c_queue_block_health_context.major_frame_count
+VCSI Health Context VCS Measurements Queue Block Health Context C MFC Drops,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_measurements.vcc_c_queue_block_health_context.major_frame_count_drops
+VCSI Health Context VCS Measurements Queue Block Health Context C Desync Offset,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_measurements.vcc_c_queue_block_health_context.desync_offset
+VCSI Health Context VCS Context Queue Health Context Size,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_context.size
+VCSI Health Context VCS Context Queue Health Context Capacity,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_context.capacity
+VCSI Health Context VCS Context Queue Health Context Num Times Full,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_context.num_times_full
+VCSI Health Context VCS Context Queue Health Context Num Times Empty,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_context.num_times_empty
+VCSI Health Context VCS Context Queue Health Context Count Inserts,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_context.count_inserts
+VCSI Health Context VCS Context Queue Health Context Count Pops,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_context.count_pops
+VCSI Health Context VCS Context Queue Block Health Context A Valid,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_context.vcc_a_queue_block_health_context.valid
+VCSI Health Context VCS Context Queue Block Health Context A Receive Timestamp MS,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_context.vcc_a_queue_block_health_context.receive_timestamp_ns
+VCSI Health Context VCS Context Queue Block Health Context A MFC,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_context.vcc_a_queue_block_health_context.major_frame_count
+VCSI Health Context VCS Context Queue Block Health Context A MFC Drops,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_context.vcc_a_queue_block_health_context.major_frame_count_drops
+VCSI Health Context VCS Context Queue Block Health Context A Desync Offset,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_context.vcc_a_queue_block_health_context.desync_offset
+VCSI Health Context VCS Context Queue Block Health Context B Valid,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_context.vcc_b_queue_block_health_context.valid
+VCSI Health Context VCS Context Queue Block Health Context B Receive Timestamp MS,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_context.vcc_b_queue_block_health_context.receive_timestamp_ns
+VCSI Health Context VCS Context Queue Block Health Context B MFC,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_context.vcc_b_queue_block_health_context.major_frame_count
+VCSI Health Context VCS Context Queue Block Health Context B MFC Drops,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_context.vcc_b_queue_block_health_context.major_frame_count_drops
+VCSI Health Context VCS Context Queue Block Health Context B Desync Offset,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_context.vcc_b_queue_block_health_context.desync_offset
+VCSI Health Context VCS Context Queue Block Health Context C Valid,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_context.vcc_c_queue_block_health_context.valid
+VCSI Health Context VCS Context Queue Block Health Context C Receive Timestamp MS,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_context.vcc_c_queue_block_health_context.receive_timestamp_ns
+VCSI Health Context VCS Context Queue Block Health Context C MFC,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_context.vcc_c_queue_block_health_context.major_frame_count
+VCSI Health Context VCS Context Queue Block Health Context C MFC Drops,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_context.vcc_c_queue_block_health_context.major_frame_count_drops
+VCSI Health Context VCS Context Queue Block Health Context C Desync Offset,21.VCSI_HEALTH_CONTEXT.queue_health_context_vcs_context.vcc_c_queue_block_health_context.desync_offset
+Diagnostics Heatbeat VMC Source ID,20.DIAGNOSTICS_HEARTBEAT.vmc_source_id
+Diagnostics Heatbeat Laptop Ready,20.DIAGNOSTICS_HEARTBEAT.laptop_ready
+Diagnostics Heatbeat Alive,20.DIAGNOSTICS_HEARTBEAT.alive
+Diagnostics Handover VMC Source ID,20.DIAGNOSTICS_HANDOVER.vmc_source_id
+Diagnostics Handover Cockpit Ready,20.DIAGNOSTICS_HANDOVER.cockpit_ready
+VMC Phc2sys context validity,17.PTP_HEALTH_MONITOR_CONTEXT.phc2sys_context.validity
+VMC ptp4l context validity,17.PTP_HEALTH_MONITOR_CONTEXT.ptp4l_context.validity
+VMC grandmaster present,17.PTP_HEALTH_MONITOR_CONTEXT.ptp4l_context.grandmaster_present
+VMC grandmaster id,17.PTP_HEALTH_MONITOR_CONTEXT.ptp4l_context.grandmaster_id
+VMC PTP Master offset,17.PTP_HEALTH_MONITOR_CONTEXT.ptp4l_context.master_offset
+VMC PTP Mean Path Delay,17.PTP_HEALTH_MONITOR_CONTEXT.ptp4l_context.mean_path_delay
+VMC Port State,17.PTP_HEALTH_MONITOR_CONTEXT.ptp4l_context.port_state
+VMC PHC offset from system clock,17.PTP_HEALTH_MONITOR_CONTEXT.phc2sys_context.offset_from_sys_clock
+VMC PTP State Machine Current State,21.PTP_TIME_KEEPER_CONTEXT.state
+VTC Phc2sys context validity,17.PTP_HEALTH_MONITOR_CONTEXT.phc2sys_context.validity
+VTC ptp4l context validity,17.PTP_HEALTH_MONITOR_CONTEXT.ptp4l_context.validity
+VTC grandmaster present,17.PTP_HEALTH_MONITOR_CONTEXT.ptp4l_context.grandmaster_present
+VTC grandmaster id,17.PTP_HEALTH_MONITOR_CONTEXT.ptp4l_context.grandmaster_id
+VTC PTP Master offset,17.PTP_HEALTH_MONITOR_CONTEXT.ptp4l_context.master_offset
+VTC PTP Mean Path Delay,17.PTP_HEALTH_MONITOR_CONTEXT.ptp4l_context.mean_path_delay
+VTC Port State,17.PTP_HEALTH_MONITOR_CONTEXT.ptp4l_context.port_state
+VTC PHC offset from system clock,17.PTP_HEALTH_MONITOR_CONTEXT.phc2sys_context.offset_from_sys_clock
+VCS A Sync Context Synchronized,21.AGG_CONTEXT.block_A.sync_data_A.synchronized
+VCS A Sync Context Left Dist Value,21.AGG_CONTEXT.block_A.sync_data_A.left_dist.value
+VCS A Sync Context Left Dist Count,21.AGG_CONTEXT.block_A.sync_data_A.left_dist.count
+VCS A Sync Context Right Dist Value,21.AGG_CONTEXT.block_A.sync_data_A.right_dist.value
+VCS A Sync Context Right Dist Count,21.AGG_CONTEXT.block_A.sync_data_A.left_dist.count
+VCS A CCDL Meas Unanimous Vote Count,21.AGG_CONTEXT.block_A.cross_channel_context_A.measurement_reconcilliation_context.num_unanimous_votes
+VCS A CCDL Meas Discrepant Vote Count,21.AGG_CONTEXT.block_A.cross_channel_context_A.measurement_reconcilliation_context.num_discrepant_votes
+VCS A CCDL Meas Failed Vote Count,21.AGG_CONTEXT.block_A.cross_channel_context_A.measurement_reconcilliation_context.num_failed_votes
+VCS A CCDL Cmd Unanimous Vote Count,21.AGG_CONTEXT.block_A.cross_channel_context_A.command_reconcilliation_context.num_unanimous_votes
+VCS A CCDL Cmd Discrepant Vote Count,21.AGG_CONTEXT.block_A.cross_channel_context_A.command_reconcilliation_context.num_discrepant_votes
+VCS A CCDL Cmd Failed Vote Count,21.AGG_CONTEXT.block_A.cross_channel_context_A.command_reconcilliation_context.num_failed_votes
+VCS A UDP Max Cycle Reception Count,21.AGG_CONTEXT.block_A.vcs_udp_A.max_cycle_reception_count
+VCS A UDP Good Packet Count,21.AGG_CONTEXT.block_A.vcs_udp_A.parser_metadata.good_packet_count
+VCS A UDP Bad Packet Count,21.AGG_CONTEXT.block_A.vcs_udp_A.parser_metadata.bad_packet_count
+VCS A Inceptor Port X Voltage V,21.AGG_CONTEXT.block_A.inceptor_A.sidestick_port_X_voltage_V
+VCS A Inceptor Port Y Voltage V,21.AGG_CONTEXT.block_A.inceptor_A.sidestick_port_Y_voltage_V
+VCS A Inceptor Stbd X Voltage V,21.AGG_CONTEXT.block_A.inceptor_A.sidestick_stbd_X_voltage_V
+VCS A Inceptor Stbd Y Voltage V,21.AGG_CONTEXT.block_A.inceptor_A.sidestick_stbd_Y_voltage_V
+VCS A Inceptor Power Lever Voltage V,21.AGG_CONTEXT.block_A.inceptor_A.power_lever_voltage_V
+VCS A Switch Button Bitmap Value,21.AGG_CONTEXT.block_A.switch_A.switch_button_measurement.switch_button_feedback_bitmap.value
+VCS A Switch Button Bitmap Count,21.AGG_CONTEXT.block_A.switch_A.switch_button_measurement.switch_button_feedback_bitmap.count
+VCS A True Blue Battery Voltage (V),21.AGG_CONTEXT.block_A.avionics_battery_A.dc_voltage_V
+VCS A True Blue Battery Current (A),21.AGG_CONTEXT.block_A.avionics_battery_A.dc_current_A
+VCS A True Blue Battery SoC,21.AGG_CONTEXT.block_A.avionics_battery_A.battery_SOC
+VCS A True Blue Battery Life Remaining (%),21.AGG_CONTEXT.block_A.avionics_battery_A.percent_life_remaining
+VCS A True Blue Battery Fault Status,21.AGG_CONTEXT.block_A.avionics_battery_A.fault_status
+VCS A True Blue Battery Op Status,21.AGG_CONTEXT.block_A.avionics_battery_A.operational_status
+VCS A Battery Temp (C),21.AGG_CONTEXT.block_A.avionics_battery_A.battery_temp_C
+VCS A Thread 0 Stack Bytes Used,21.AGG_CONTEXT.block_A.health_monitor_A.thread_statistics[0].thread_stack.used_stack_bytes
+VCS A Thread 0 Stack Bytes Total,21.AGG_CONTEXT.block_A.health_monitor_A.thread_statistics[0].thread_stack.total_stack_bytes
+VCS A Thread 0 Worst Remaining Budget Us,21.AGG_CONTEXT.block_A.health_monitor_A.thread_statistics[0].thread_budget.worst_remaining_budget_us
+VCS A Thread 0 Total Budget Us,21.AGG_CONTEXT.block_A.health_monitor_A.thread_statistics[0].thread_budget.thread_budget_us
+VCS A Module 0 Core Temp C,21.AGG_CONTEXT.block_A.health_monitor_A.hardware_statistics.module_statistics[0].module_temperature.interface_zync_core.current_temp_degC.value
+VCS A Motor 3 Good Packet Count,21.AGG_CONTEXT.block_A.motor_3.parser_metadata.good_packet_count
+VCS A Motor 3 Bad Packet Count,21.AGG_CONTEXT.block_A.motor_3.parser_metadata.bad_packet_count
+VCS A Motor 3 Max Buffer Count,21.AGG_CONTEXT.block_A.motor_3.parser_metadata.max_buffer_count
+VCS A Motor 3 Max Num Bytes Parsed,21.AGG_CONTEXT.block_A.motor_3.parser_metadata.max_num_bytes_parsed
+VCS A Motor 3 Command Count,21.AGG_CONTEXT.block_A.motor_3.commander_metadata.command_count
+VCS A Motor 4 Good Packet Count,21.AGG_CONTEXT.block_A.motor_4.parser_metadata.good_packet_count
+VCS A Motor 4 Bad Packet Count,21.AGG_CONTEXT.block_A.motor_4.parser_metadata.bad_packet_count
+VCS A Motor 4 Max Buffer Count,21.AGG_CONTEXT.block_A.motor_4.parser_metadata.max_buffer_count
+VCS A Motor 4 Max Num Bytes Parsed,21.AGG_CONTEXT.block_A.motor_4.parser_metadata.max_num_bytes_parsed
+VCS A Motor 4 Command Count,21.AGG_CONTEXT.block_A.motor_4.commander_metadata.command_count
+VCS A Motor 9 Good Packet Count,21.AGG_CONTEXT.block_A.motor_9.parser_metadata.good_packet_count
+VCS A Motor 9 Bad Packet Count,21.AGG_CONTEXT.block_A.motor_9.parser_metadata.bad_packet_count
+VCS A Motor 9 Max Buffer Count,21.AGG_CONTEXT.block_A.motor_9.parser_metadata.max_buffer_count
+VCS A Motor 9 Max Num Bytes Parsed,21.AGG_CONTEXT.block_A.motor_9.parser_metadata.max_num_bytes_parsed
+VCS A Motor 9 Command Count,21.AGG_CONTEXT.block_A.motor_9.commander_metadata.command_count
+VCS A Motor 10 Good Packet Count,21.AGG_CONTEXT.block_A.motor_10.parser_metadata.good_packet_count
+VCS A Motor 10 Bad Packet Count,21.AGG_CONTEXT.block_A.motor_10.parser_metadata.bad_packet_count
+VCS A Motor 10 Max Buffer Count,21.AGG_CONTEXT.block_A.motor_10.parser_metadata.max_buffer_count
+VCS A Motor 10 Max Num Bytes Parsed,21.AGG_CONTEXT.block_A.motor_10.parser_metadata.max_num_bytes_parsed
+VCS A Motor 10 Command Count,21.AGG_CONTEXT.block_A.motor_10.commander_metadata.command_count
+VCS A Bold Battery A Good Packet Count,21.AGG_CONTEXT.block_A.bold_battery_A.parser_metadata.good_packet_count
+VCS A Bold Battery A Bad Packet Count,21.AGG_CONTEXT.block_A.bold_battery_A.parser_metadata.bad_packet_count
+VCS A Bold Battery A Max Buffer Count,21.AGG_CONTEXT.block_A.bold_battery_A.parser_metadata.max_buffer_count
+VCS A Bold Battery A Max Num Bytes Parsed,21.AGG_CONTEXT.block_A.bold_battery_A.parser_metadata.max_num_bytes_parsed
+VCS A Bold Battery A Command Count,21.AGG_CONTEXT.block_A.bold_battery_A.commander_metadata.command_count
+VCS B Sync Context Synchronized,21.AGG_CONTEXT.block_B.sync_data_B.synchronized
+VCS B Sync Context Left Dist Value,21.AGG_CONTEXT.block_B.sync_data_B.left_dist.value
+VCS B Sync Context Left Dist Count,21.AGG_CONTEXT.block_B.sync_data_B.left_dist.count
+VCS B Sync Context Right Dist Value,21.AGG_CONTEXT.block_B.sync_data_B.right_dist.value
+VCS B Sync Context Right Dist Count,21.AGG_CONTEXT.block_B.sync_data_B.left_dist.count
+VCS B CCDL Meas Unanimous Vote Count,21.AGG_CONTEXT.block_B.cross_channel_context_B.measurement_reconcilliation_context.num_unanimous_votes
+VCS B CCDL Meas Discrepant Vote Count,21.AGG_CONTEXT.block_B.cross_channel_context_B.measurement_reconcilliation_context.num_discrepant_votes
+VCS B CCDL Meas Failed Vote Count,21.AGG_CONTEXT.block_B.cross_channel_context_B.measurement_reconcilliation_context.num_failed_votes
+VCS B CCDL Cmd Unanimous Vote Count,21.AGG_CONTEXT.block_B.cross_channel_context_B.command_reconcilliation_context.num_unanimous_votes
+VCS B CCDL Cmd Discrepant Vote Count,21.AGG_CONTEXT.block_B.cross_channel_context_B.command_reconcilliation_context.num_discrepant_votes
+VCS B CCDL Cmd Failed Vote Count,21.AGG_CONTEXT.block_B.cross_channel_context_B.command_reconcilliation_context.num_failed_votes
+VCS B UDP Max Cycle Reception Count,21.AGG_CONTEXT.block_B.vcs_udp_B.max_cycle_reception_count
+VCS B UDP Good Packet Count,21.AGG_CONTEXT.block_B.vcs_udp_B.parser_metadata.good_packet_count
+VCS B UDP Bad Packet Count,21.AGG_CONTEXT.block_B.vcs_udp_B.parser_metadata.bad_packet_count
+VCS B Inceptor Port X Voltage V,21.AGG_CONTEXT.block_B.inceptor_B.sidestick_port_X_voltage_V
+VCS B Inceptor Port Y Voltage V,21.AGG_CONTEXT.block_B.inceptor_B.sidestick_port_Y_voltage_V
+VCS B Inceptor Stbd X Voltage V,21.AGG_CONTEXT.block_B.inceptor_B.sidestick_stbd_X_voltage_V
+VCS B Inceptor Stbd Y Voltage V,21.AGG_CONTEXT.block_B.inceptor_B.sidestick_stbd_Y_voltage_V
+VCS B Inceptor Power Lever Voltage V,21.AGG_CONTEXT.block_B.inceptor_B.power_lever_voltage_V
+VCS B Switch Button Bitmap Value,21.AGG_CONTEXT.block_B.switch_B.switch_button_measurement.switch_button_feedback_bitmap.value
+VCS B Switch Button Bitmap Count,21.AGG_CONTEXT.block_B.switch_B.switch_button_measurement.switch_button_feedback_bitmap.count
+VCS B True Blue Battery Voltage (V),21.AGG_CONTEXT.block_B.avionics_battery_B.dc_voltage_V
+VCS B True Blue Battery Current (A),21.AGG_CONTEXT.block_B.avionics_battery_B.dc_current_A
+VCS B True Blue Battery SoC,21.AGG_CONTEXT.block_B.avionics_battery_B.battery_SOC
+VCS B True Blue Battery Life Remaining (%),21.AGG_CONTEXT.block_B.avionics_battery_B.percent_life_remaining
+VCS B True Blue Battery Fault Status,21.AGG_CONTEXT.block_B.avionics_battery_B.fault_status
+VCS B True Blue Battery Op Status,21.AGG_CONTEXT.block_B.avionics_battery_B.operational_status
+VCS B Battery Temp (C),21.AGG_CONTEXT.block_B.avionics_battery_B.battery_temp_C
+VCS B Thread 0 Stack Bytes Used,21.AGG_CONTEXT.block_B.health_monitor_B.thread_statistics[0].thread_stack.used_stack_bytes
+VCS B Thread 0 Stack Bytes Total,21.AGG_CONTEXT.block_B.health_monitor_B.thread_statistics[0].thread_stack.total_stack_bytes
+VCS B Thread 0 Worst Remaining Budget Us,21.AGG_CONTEXT.block_B.health_monitor_B.thread_statistics[0].thread_budget.worst_remaining_budget_us
+VCS B Thread 0 Total Budget Us,21.AGG_CONTEXT.block_B.health_monitor_B.thread_statistics[0].thread_budget.thread_budget_us
+VCS B Module 0 Core Temp C,21.AGG_CONTEXT.block_B.health_monitor_B.hardware_statistics.module_statistics[0].module_temperature.interface_zync_core.current_temp_degC.value
+VCS B Motor 1 Good Packet Count,21.AGG_CONTEXT.block_B.motor_1.parser_metadata.good_packet_count
+VCS B Motor 1 Bad Packet Count,21.AGG_CONTEXT.block_B.motor_1.parser_metadata.bad_packet_count
+VCS B Motor 1 Max Buffer Count,21.AGG_CONTEXT.block_B.motor_1.parser_metadata.max_buffer_count
+VCS B Motor 1 Max Num Bytes Parsed,21.AGG_CONTEXT.block_B.motor_1.parser_metadata.max_num_bytes_parsed
+VCS B Motor 1 Command Count,21.AGG_CONTEXT.block_B.motor_1.commander_metadata.command_count
+VCS B Motor 6 Good Packet Count,21.AGG_CONTEXT.block_B.motor_6.parser_metadata.good_packet_count
+VCS B Motor 6 Bad Packet Count,21.AGG_CONTEXT.block_B.motor_6.parser_metadata.bad_packet_count
+VCS B Motor 6 Max Buffer Count,21.AGG_CONTEXT.block_B.motor_6.parser_metadata.max_buffer_count
+VCS B Motor 6 Max Num Bytes Parsed,21.AGG_CONTEXT.block_B.motor_6.parser_metadata.max_num_bytes_parsed
+VCS B Motor 6 Command Count,21.AGG_CONTEXT.block_B.motor_6.commander_metadata.command_count
+VCS B Motor 7 Good Packet Count,21.AGG_CONTEXT.block_B.motor_7.parser_metadata.good_packet_count
+VCS B Motor 7 Bad Packet Count,21.AGG_CONTEXT.block_B.motor_7.parser_metadata.bad_packet_count
+VCS B Motor 7 Max Buffer Count,21.AGG_CONTEXT.block_B.motor_7.parser_metadata.max_buffer_count
+VCS B Motor 7 Max Num Bytes Parsed,21.AGG_CONTEXT.block_B.motor_7.parser_metadata.max_num_bytes_parsed
+VCS B Motor 7 Command Count,21.AGG_CONTEXT.block_B.motor_7.commander_metadata.command_count
+VCS B Motor 12 Good Packet Count,21.AGG_CONTEXT.block_B.motor_12.parser_metadata.good_packet_count
+VCS B Motor 12 Bad Packet Count,21.AGG_CONTEXT.block_B.motor_12.parser_metadata.bad_packet_count
+VCS B Motor 12 Max Buffer Count,21.AGG_CONTEXT.block_B.motor_12.parser_metadata.max_buffer_count
+VCS B Motor 12 Max Num Bytes Parsed,21.AGG_CONTEXT.block_B.motor_12.parser_metadata.max_num_bytes_parsed
+VCS B Motor 12 Command Count,21.AGG_CONTEXT.block_B.motor_12.commander_metadata.command_count
+VCS B Bold Battery B Good Packet Count,21.AGG_CONTEXT.block_B.bold_battery_B.parser_metadata.good_packet_count
+VCS B Bold Battery B Bad Packet Count,21.AGG_CONTEXT.block_B.bold_battery_B.parser_metadata.bad_packet_count
+VCS B Bold Battery B Max Buffer Count,21.AGG_CONTEXT.block_B.bold_battery_B.parser_metadata.max_buffer_count
+VCS B Bold Battery B Max Num Bytes Parsed,21.AGG_CONTEXT.block_B.bold_battery_B.parser_metadata.max_num_bytes_parsed
+VCS B Bold Battery B Command Count,21.AGG_CONTEXT.block_B.bold_battery_B.commander_metadata.command_count
+VCS B Bold Battery C Good Packet Count,21.AGG_CONTEXT.block_B.bold_battery_C.parser_metadata.good_packet_count
+VCS B Bold Battery C Bad Packet Count,21.AGG_CONTEXT.block_B.bold_battery_C.parser_metadata.bad_packet_count
+VCS B Bold Battery C Max Buffer Count,21.AGG_CONTEXT.block_B.bold_battery_C.parser_metadata.max_buffer_count
+VCS B Bold Battery C Max Num Bytes Parsed,21.AGG_CONTEXT.block_B.bold_battery_C.parser_metadata.max_num_bytes_parsed
+VCS B Bold Battery C Command Count,21.AGG_CONTEXT.block_B.bold_battery_C.commander_metadata.command_count
+VCS C Sync Context Synchronized,21.AGG_CONTEXT.block_C.sync_data_C.synchronized
+VCS C Sync Context Left Dist Value,21.AGG_CONTEXT.block_C.sync_data_C.left_dist.value
+VCS C Sync Context Left Dist Count,21.AGG_CONTEXT.block_C.sync_data_C.left_dist.count
+VCS C Sync Context Right Dist Value,21.AGG_CONTEXT.block_C.sync_data_C.right_dist.value
+VCS C Sync Context Right Dist Count,21.AGG_CONTEXT.block_C.sync_data_C.left_dist.count
+VCS C CCDL Meas Unanimous Vote Count,21.AGG_CONTEXT.block_C.cross_channel_context_C.measurement_reconcilliation_context.num_unanimous_votes
+VCS C CCDL Meas Discrepant Vote Count,21.AGG_CONTEXT.block_C.cross_channel_context_C.measurement_reconcilliation_context.num_discrepant_votes
+VCS C CCDL Meas Failed Vote Count,21.AGG_CONTEXT.block_C.cross_channel_context_C.measurement_reconcilliation_context.num_failed_votes
+VCS C CCDL Cmd Unanimous Vote Count,21.AGG_CONTEXT.block_C.cross_channel_context_C.command_reconcilliation_context.num_unanimous_votes
+VCS C CCDL Cmd Discrepant Vote Count,21.AGG_CONTEXT.block_C.cross_channel_context_C.command_reconcilliation_context.num_discrepant_votes
+VCS C CCDL Cmd Failed Vote Count,21.AGG_CONTEXT.block_C.cross_channel_context_C.command_reconcilliation_context.num_failed_votes
+VCS C UDP Max Cycle Reception Count,21.AGG_CONTEXT.block_C.vcs_udp_C.max_cycle_reception_count
+VCS C UDP Good Packet Count,21.AGG_CONTEXT.block_C.vcs_udp_C.parser_metadata.good_packet_count
+VCS C UDP Bad Packet Count,21.AGG_CONTEXT.block_C.vcs_udp_C.parser_metadata.bad_packet_count
+VCS C Inceptor Port X Voltage V,21.AGG_CONTEXT.block_C.inceptor_C.sidestick_port_X_voltage_V
+VCS C Inceptor Port Y Voltage V,21.AGG_CONTEXT.block_C.inceptor_C.sidestick_port_Y_voltage_V
+VCS C Inceptor Stbd X Voltage V,21.AGG_CONTEXT.block_C.inceptor_C.sidestick_stbd_X_voltage_V
+VCS C Inceptor Stbd Y Voltage V,21.AGG_CONTEXT.block_C.inceptor_C.sidestick_stbd_Y_voltage_V
+VCS C Inceptor Power Lever Voltage V,21.AGG_CONTEXT.block_C.inceptor_C.power_lever_voltage_V
+VCS C Switch Button Bitmap Value,21.AGG_CONTEXT.block_C.switch_C.switch_button_measurement.switch_button_feedback_bitmap.value
+VCS C Switch Button Bitmap Count,21.AGG_CONTEXT.block_C.switch_C.switch_button_measurement.switch_button_feedback_bitmap.count
+VCS C True Blue Battery Voltage (V),21.AGG_CONTEXT.block_C.avionics_battery_C.dc_voltage_V
+VCS C True Blue Battery Current (A),21.AGG_CONTEXT.block_C.avionics_battery_C.dc_current_A
+VCS C True Blue Battery SoC,21.AGG_CONTEXT.block_C.avionics_battery_C.battery_SOC
+VCS C True Blue Battery Life Remaining (%),21.AGG_CONTEXT.block_C.avionics_battery_C.percent_life_remaining
+VCS C True Blue Battery Fault Status,21.AGG_CONTEXT.block_C.avionics_battery_C.fault_status
+VCS C True Blue Battery Op Status,21.AGG_CONTEXT.block_C.avionics_battery_C.operational_status
+VCS C Thread 0 Stack Bytes Used,21.AGG_CONTEXT.block_C.health_monitor_C.thread_statistics[0].thread_stack.used_stack_bytes
+VCS C Thread 0 Stack Bytes Total,21.AGG_CONTEXT.block_C.health_monitor_C.thread_statistics[0].thread_stack.total_stack_bytes
+VCS C Thread 0 Worst Remaining Budget Us,21.AGG_CONTEXT.block_C.health_monitor_C.thread_statistics[0].thread_budget.worst_remaining_budget_us
+VCS C Thread 0 Total Budget Us,21.AGG_CONTEXT.block_C.health_monitor_C.thread_statistics[0].thread_budget.thread_budget_us
+VCS C Module 0 Core Temp C,21.AGG_CONTEXT.block_C.health_monitor_C.hardware_statistics.module_statistics[0].module_temperature.interface_zync_core.current_temp_degC.value
+VCS C Motor 2 Good Packet Count,21.AGG_CONTEXT.block_C.motor_2.parser_metadata.good_packet_count
+VCS C Motor 2 Bad Packet Count,21.AGG_CONTEXT.block_C.motor_2.parser_metadata.bad_packet_count
+VCS C Motor 2 Max Buffer Count,21.AGG_CONTEXT.block_C.motor_2.parser_metadata.max_buffer_count
+VCS C Motor 2 Max Num Bytes Parsed,21.AGG_CONTEXT.block_C.motor_2.parser_metadata.max_num_bytes_parsed
+VCS C Motor 2 Command Count,21.AGG_CONTEXT.block_C.motor_2.commander_metadata.command_count
+VCS C Motor 5 Good Packet Count,21.AGG_CONTEXT.block_C.motor_5.parser_metadata.good_packet_count
+VCS C Motor 5 Bad Packet Count,21.AGG_CONTEXT.block_C.motor_5.parser_metadata.bad_packet_count
+VCS C Motor 5 Max Buffer Count,21.AGG_CONTEXT.block_C.motor_5.parser_metadata.max_buffer_count
+VCS C Motor 5 Max Num Bytes Parsed,21.AGG_CONTEXT.block_C.motor_5.parser_metadata.max_num_bytes_parsed
+VCS C Motor 5 Command Count,21.AGG_CONTEXT.block_C.motor_5.commander_metadata.command_count
+VCS C Motor 8 Good Packet Count,21.AGG_CONTEXT.block_C.motor_8.parser_metadata.good_packet_count
+VCS C Motor 8 Bad Packet Count,21.AGG_CONTEXT.block_C.motor_8.parser_metadata.bad_packet_count
+VCS C Motor 8 Max Buffer Count,21.AGG_CONTEXT.block_C.motor_8.parser_metadata.max_buffer_count
+VCS C Motor 8 Max Num Bytes Parsed,21.AGG_CONTEXT.block_C.motor_8.parser_metadata.max_num_bytes_parsed
+VCS C Motor 8 Command Count,21.AGG_CONTEXT.block_C.motor_8.commander_metadata.command_count
+VCS C Motor 11 Good Packet Count,21.AGG_CONTEXT.block_C.motor_11.parser_metadata.good_packet_count
+VCS C Motor 11 Bad Packet Count,21.AGG_CONTEXT.block_C.motor_11.parser_metadata.bad_packet_count
+VCS C Motor 11 Max Buffer Count,21.AGG_CONTEXT.block_C.motor_11.parser_metadata.max_buffer_count
+VCS C Motor 11 Max Num Bytes Parsed,21.AGG_CONTEXT.block_C.motor_11.parser_metadata.max_num_bytes_parsed
+VCS C Motor 11 Command Count,21.AGG_CONTEXT.block_C.motor_11.commander_metadata.command_count
+VCS C Bold Battery D Good Packet Count,21.AGG_CONTEXT.block_C.bold_battery_D.parser_metadata.good_packet_count
+VCS C Bold Battery D Bad Packet Count,21.AGG_CONTEXT.block_C.bold_battery_D.parser_metadata.bad_packet_count
+VCS C Bold Battery D Max Buffer Count,21.AGG_CONTEXT.block_C.bold_battery_D.parser_metadata.max_buffer_count
+VCS C Bold Battery D Max Num Bytes Parsed,21.AGG_CONTEXT.block_C.bold_battery_D.parser_metadata.max_num_bytes_parsed
+VCS C Battery Temp (C),21.AGG_CONTEXT.block_C.avionics_battery_C.battery_temp_C
+Hydro Rudder Good Packet Count,21.AGG_CONTEXT.block_A.hydro_rudder.parser_metadata.good_packet_count
+Hydro Rudder Bad Packet Count,21.AGG_CONTEXT.block_A.hydro_rudder.parser_metadata.bad_packet_count
+Hydro Rudder Max Buffer Count,21.AGG_CONTEXT.block_A.hydro_rudder.parser_metadata.max_buffer_count
+Hydro Rudder Max Num Bytes Parsed,21.AGG_CONTEXT.block_A.hydro_rudder.parser_metadata.max_num_bytes_parsed
+Hydro Rudder Command Count,21.AGG_CONTEXT.block_A.hydro_rudder.commander_metadata.command_count
+Hydro Rudder Command Type,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.hydro_actuator_cmds.hydro_rudder_rad_cmd.command_type
+Hydro Elevator Good Packet Count,21.AGG_CONTEXT.block_B.hydro_elevator.parser_metadata.good_packet_count
+Hydro Elevator Bad Packet Count,21.AGG_CONTEXT.block_B.hydro_elevator.parser_metadata.bad_packet_count
+Hydro Elevator Max Buffer Count,21.AGG_CONTEXT.block_B.hydro_elevator.parser_metadata.max_buffer_count
+Hydro Elevator Max Num Bytes Parsed,21.AGG_CONTEXT.block_B.hydro_elevator.parser_metadata.max_num_bytes_parsed
+Hydro Elevator Command Count,21.AGG_CONTEXT.block_B.hydro_elevator.commander_metadata.command_count
+Hydro Elevator Command Type,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.hydro_actuator_cmds.hydro_elevator_rad_cmd.command_type
+Rear Foil Extension Good Packet Count,21.AGG_CONTEXT.block_A.rear_foil_extension.parser_metadata.good_packet_count
+Rear Foil Extension Bad Packet Count,21.AGG_CONTEXT.block_A.rear_foil_extension.parser_metadata.bad_packet_count
+Rear Foil Extension Max Buffer Count,21.AGG_CONTEXT.block_A.rear_foil_extension.parser_metadata.max_buffer_count
+Rear Foil Extension Max Num Bytes Parsed,21.AGG_CONTEXT.block_A.rear_foil_extension.parser_metadata.max_num_bytes_parsed
+Rear Foil Extension Command Count,21.AGG_CONTEXT.block_A.rear_foil_extension.commander_metadata.command_count
+Rear Foil Extension Command Type,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.hydro_actuator_cmds.rear_foil_extension_norm_cmd.command_type
+Rear Foil Lock Good Packet Count,21.AGG_CONTEXT.block_A.rear_foil_lock.parser_metadata.good_packet_count
+Rear Foil Lock Bad Packet Count,21.AGG_CONTEXT.block_A.rear_foil_lock.parser_metadata.bad_packet_count
+Rear Foil Lock Max Buffer Count,21.AGG_CONTEXT.block_A.rear_foil_lock.parser_metadata.max_buffer_count
+Rear Foil Lock Max Num Bytes Parsed,21.AGG_CONTEXT.block_A.rear_foil_lock.parser_metadata.max_num_bytes_parsed
+Rear Foil Lock Command Count,21.AGG_CONTEXT.block_A.rear_foil_lock.commander_metadata.command_count
+Rear Foil Lock Command Type,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.hydro_actuator_cmds.rear_foil_lock_norm_cmd.command_type
+Aero Port Upper Elev Command Type,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.aero_actuator_cmds.aero_port_elevator_upper_rad_cmd.command_type
+Aero Stbd Upper Elev Command Type,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.aero_actuator_cmds.aero_stbd_elevator_upper_rad_cmd.command_type
+Aero Port Lower Elev Command Type,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.aero_actuator_cmds.aero_port_elevator_lower_rad_cmd.command_type
+Aero Stbd Lower Elev Command Type,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.aero_actuator_cmds.aero_stbd_elevator_lower_rad_cmd.command_type
+Aero Port Rudder Command Type,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.aero_actuator_cmds.aero_port_rudder_rad_cmd.command_type
+Aero Stbd Rudder Command Type,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.aero_actuator_cmds.aero_stbd_rudder_rad_cmd.command_type
+VCC A Unanimous Selections,21.AGG_CONTEXT.block_A.selection_context_A.num_unanimous_selections
+VCC A Discrepant Selections,21.AGG_CONTEXT.block_A.selection_context_A.num_discrepant_selections
+VCC A Failed Selections,21.AGG_CONTEXT.block_A.selection_context_A.num_failed_selections
+VCC B Unanimous Selections,21.AGG_CONTEXT.block_B.selection_context_B.num_unanimous_selections
+VCC B Discrepant Selections,21.AGG_CONTEXT.block_B.selection_context_B.num_discrepant_selections
+VCC B Failed Selections,21.AGG_CONTEXT.block_B.selection_context_B.num_failed_selections
+VCC C Unanimous Selections,21.AGG_CONTEXT.block_C.selection_context_C.num_unanimous_selections
+VCC C Discrepant Selections,21.AGG_CONTEXT.block_C.selection_context_C.num_discrepant_selections
+VCC C Failed Selections,21.AGG_CONTEXT.block_C.selection_context_C.num_failed_selections
+Control Laws: Aero Roll Rate Ctrl Setpoint,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.aero_roll_rate_ctrl_debug.debug_pid_inputs.pid_input_setpoint
+Control Laws: Aero Roll Rate Ctrl Measured Ctrl Variable,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.aero_roll_rate_ctrl_debug.debug_pid_inputs.pid_u_meas
+Control Laws: Aero Roll Rate Ctrl Output Command,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.aero_roll_rate_ctrl_debug.debug_pid_outputs.pid_out_w_sat
+Control Laws: Aero Roll Ctrl Setpoint,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.aero_roll_ctrl_debug.debug_pid_inputs.pid_input_setpoint
+Control Laws: Aero Roll Ctrl Measured Derivative,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.aero_roll_ctrl_debug.debug_pid_inputs.pid_u_meas
+Control Laws: Aero Roll Ctrl Output Command,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.aero_roll_ctrl_debug.debug_pid_outputs.pid_out_w_sat
+Control Laws: Aero Roll Ctrl Measured Derivative,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.aero_roll_ctrl_debug.debug_pid_inputs.pid_dudt_meas
+Control Laws: Aero Pitch Rate Ctrl Setpoint,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.aero_pitch_rate_ctrl_debug.debug_pid_inputs.pid_input_setpoint
+Control Laws: Aero Pitch Rate Ctrl Measured,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.aero_pitch_rate_ctrl_debug.debug_pid_inputs.pid_u_meas
+Control Laws: Aero Pitch Rate Ctrl Output Command,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.aero_pitch_rate_ctrl_debug.debug_pid_outputs.pid_out_w_sat
+Control Laws: Aero Pitch Ctrl Setpoint,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.aero_pitch_ctrl_debug.debug_pid_inputs.pid_input_setpoint
+Control Laws: Aero Pitch Ctrl Measured Derivative,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.aero_pitch_ctrl_debug.debug_pid_inputs.pid_u_meas
+Control Laws: Aero Pitch Ctrl Output Command,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.aero_pitch_ctrl_debug.debug_pid_outputs.pid_out_w_sat
+Control Laws: Aero Pitch Ctrl Measured Derivative,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.aero_pitch_ctrl_debug.debug_pid_inputs.pid_dudt_meas
+Control Laws: Aero Vert Speed Ctrl Setpoint,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.aero_vert_speed_ctrl_debug.debug_pid_inputs_cei.pid_input_setpoint
+Control Laws: Aero Vert Speed Ctrl Measured Ctrl Variable,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.aero_vert_speed_ctrl_debug.debug_pid_inputs_cei.pid_u_meas
+Control Laws: Aero Vert Speed Ctrl Output Command,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.aero_vert_speed_ctrl_debug.debug_pid_outputs_cei.pid_out_w_sat
+Control Laws: Aero Altitude Ctrl Setpoint,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.aero_altitude_ctrl_debug.debug_pid_inputs.pid_input_setpoint
+Control Laws: Aero Altitude Ctrl Measured Derivative,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.aero_altitude_ctrl_debug.debug_pid_inputs.pid_u_meas
+Control Laws: Aero Altitude Ctrl Output Command,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.aero_altitude_ctrl_debug.debug_pid_outputs.pid_out_w_sat
+Control Laws: Aero Altitude Ctrl Measured Derivative,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.aero_altitude_ctrl_debug.debug_pid_inputs.pid_dudt_meas
+Control Laws: Aero Airspeed Ctrl Setpoint,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.airspeed_ctrl_debug.debug_pid_inputs.pid_input_setpoint
+Control Laws: Aero Airspeed Ctrl Measured Derivative,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.airspeed_ctrl_debug.debug_pid_inputs.pid_u_meas
+Control Laws: Aero Airspeed Ctrl Output Command,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.airspeed_ctrl_debug.debug_pid_outputs.pid_out_w_sat
+Control Laws: Aero Airspeed Ctrl Measured Derivative,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.airspeed_ctrl_debug.debug_pid_inputs.pid_dudt_meas
+Control Laws: Rear Foil State,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.foil_state_bus.rear_foil_state_debug
+Controller State: Roll rad,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_state_vect_f.roll_rad
+Controller State:Pitch rad,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_state_vect_f.pitch_rad
+Controller State: Heading rad,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_state_vect_f.heading_rad
+Controller State: Roll Rate radps,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_state_vect_f.roll_rate_rad
+Controller State: Pitch Rate radps,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_state_vect_f.pitch_rate_rad
+Controller State: Yaw Rate radps,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_state_vect_f.yaw_rate_rad
+Controller State: Accel_x ms2,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_state_vect_f.accel_x_ms2
+Controller State: Accel_y ms2,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_state_vect_f.accel_y_ms2
+Controller State: Accel_z ms2,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_state_vect_f.accel_z_ms2
+Controller State: Vel_body_x ms,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_state_vect_f.vel_body_x_ms
+Controller State: Vel_body_y ms,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_state_vect_f.vel_body_y_ms
+Controller State: Vel_body_z ms,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_state_vect_f.vel_body_z_ms
+Controller State: Vel_north ms,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_state_vect_f.vel_north_ms
+Controller State: Vel_east ms,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_state_vect_f.vel_east_ms
+Controller State: Vel_down ms,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_state_vect_f.vel_down_ms
+Controller State: Platform Turn Rate radps,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_state_vect_f.platform_turn_rate_radps
+Controller State: latitude rad,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_state_vect_f.latitude_rad
+Controller State: longitude rad,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_state_vect_f.longitude_rad
+Controller State: Computed Airspeed ms,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_state_vect_f.computed_airspeed_ms
+Controller State: True Airspeed ms,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_state_vect_f.true_airspeed_ms
+Controller State: HAMS Estimate m,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_state_vect_f.hams_altitude_estimate_m
+Controller State: Ground Speed ms,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_state_vect_f.ground_speed_ms
+Controller State: Front Foil On Water,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_state_vect_f.front_foil_on_water
+Controller State: Rear Foil On Water,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_state_vect_f.rear_foil_on_water
+Operator Cmds: Power Percent Cmd,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_operator_com.power_percent_cmd
+Operator Cmds:  Sidestick X Percent Cmd,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_operator_com.sidestick_X_percent_cmd
+Operator Cmds:  Sidestick Y Percent Cmd,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_operator_com.sidestick_Y_percent_cmd
+Operator Cmds: Mode Transition Request,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_operator_com.mode_transition_request
+Operator Cmds:  Reversionary Cmd,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_operator_com.reversionary_cmd
+Operator Cmds:  Operate Cmd,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_operator_com.operate_cmd
+Operator Cmds:  Motor Test Cmd,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_operator_com.motor_test_cmd
+Operator Cmds: Flap Mode,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_operator_com.flap_mode
+Operator Cmds: Foil Mode,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_operator_com.foil_mode
+Operator Cmds: Mode Down Cmd,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_operator_com.secondary_mode_down_cmd
+Operator Cmds: Sidestick Priority Cmd,21.AGG_FS_OUTPUT.payload.state_block.paladin_controller_operator_com.sidestick_priority_cmd
+Ctrl Effector Cmds: Hydro Port Flap Cmd rad,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.hydro_actuator_cmds.hydro_port_flaperon_rad_cmd.position_rad
+Ctrl Effector Cmds: Hydro Stbd Flap Cmd rad,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.hydro_actuator_cmds.hydro_stbd_flaperon_rad_cmd.position_rad
+Ctrl Effector Cmds: Hydro Elev Cmd rad,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.hydro_actuator_cmds.hydro_elevator_rad_cmd.position_rad
+Ctrl Effector Cmds: Hydro Rudder Cmd rad,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.hydro_actuator_cmds.hydro_rudder_rad_cmd.position_rad
+Ctrl Effector Cmds: Main Foil Exten Norm Cmd,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_primary_flight_instr.main_foil_setpoint_norm
+Ctrl Effector Cmds: Rear Foil Exten Norm Cmd,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_primary_flight_instr.rear_foil_setpoint_norm
+Ctrl Effector Cmds: Main Foil Lock Norm Cmd,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.hydro_actuator_cmds.main_foil_lock_norm_cmd.position_norm_engaged
+Ctrl Effector Cmds: Rear Foil Lock Norm Cmd,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.hydro_actuator_cmds.rear_foil_lock_norm_cmd.position_norm_engaged
+Ctrl Effector Cmds: Aero Port Aileron 1 Cmd rad,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.aero_actuator_cmds.aero_port_aileron_1_rad_cmd.position_rad
+Ctrl Effector Cmds: Aero Stbd Aileron 1 Cmd rad,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.aero_actuator_cmds.aero_stbd_aileron_1_rad_cmd.position_rad
+Ctrl Effector Cmds: Aero Port Aileron 2 Cmd rad,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.aero_actuator_cmds.aero_port_aileron_2_rad_cmd.position_rad
+Ctrl Effector Cmds: Aero Stbd Aileron 2 Cmd rad,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.aero_actuator_cmds.aero_stbd_aileron_2_rad_cmd.position_rad
+Ctrl Effector Cmds: Aero Port Upper Elev Cmd rad,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.aero_actuator_cmds.aero_port_elevator_upper_rad_cmd.position_rad
+Ctrl Effector Cmds: Aero Stbd Upper Elev Cmd rad,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.aero_actuator_cmds.aero_stbd_elevator_upper_rad_cmd.position_rad
+Ctrl Effector Cmds: Aero Port Lower Elev Cmd rad,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.aero_actuator_cmds.aero_port_elevator_lower_rad_cmd.position_rad
+Ctrl Effector Cmds: Aero Stbd Lower Elev Cmd rad,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.aero_actuator_cmds.aero_stbd_elevator_lower_rad_cmd.position_rad
+Ctrl Effector Cmds: Aero Port Rudder Cmd rad,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.aero_actuator_cmds.aero_port_rudder_rad_cmd.position_rad
+Ctrl Effector Cmds: Aero Stbd Rudder Cmd rad,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.aero_actuator_cmds.aero_stbd_rudder_rad_cmd.position_rad
+Ctrl Effector Cmds: Aero Port Outboard Flap Cmd rad,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.aero_actuator_cmds.aero_port_flap_outboard_rad_cmd.position_rad
+Ctrl Effector Cmds: Aero Stbd Outboard Flap Cmd rad,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.aero_actuator_cmds.aero_stbd_flap_outboard_rad_cmd.position_rad
+Ctrl Effector Cmds: Aero Port Inboard Flap Cmd rad,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.aero_actuator_cmds.aero_port_flap_inboard_rad_cmd.position_rad
+Ctrl Effector Cmds: Aero Stbd Inboard Flap Cmd rad,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_effector_cmd.aero_actuator_cmds.aero_stbd_flap_inboard_rad_cmd.position_rad
+Ctrl Effector Fdbk: Hydro Port Flap Pos rad,21.AGG_MEASUREMENTS.payload.hydro_port_flaperon_rad.position_rad.value
+Ctrl Effector Fdbk: Hydro Stbd Flap Pos rad,21.AGG_MEASUREMENTS.payload.hydro_stbd_flaperon_rad.position_rad.value
+Ctrl Effector Fdbk: Hydro Elev Pos rad,21.AGG_MEASUREMENTS.payload.hydro_elevator_rad.position_rad.value
+Ctrl Effector Fdbk: Hydro Rudder Pos rad,21.AGG_MEASUREMENTS.payload.hydro_rudder_rad.position_rad.value
+Ctrl Effector Fdbk: Main Foil Exten Norm Pos,21.AGG_MEASUREMENTS.payload.main_foil_extension_norm.position_norm_deployed.value
+Ctrl Effector Fdbk: Rear Foil Exten Norm Pos,21.AGG_MEASUREMENTS.payload.rear_foil_extension_norm.position_norm_deployed.value
+Ctrl Effector Fdbk: Main Foil Lock Norm Pos,21.AGG_MEASUREMENTS.payload.main_foil_lock_norm.position_norm_engaged.value
+Ctrl Effector Fdbk: Rear Foil Lock Norm Pos,21.AGG_MEASUREMENTS.payload.rear_foil_lock_norm.position_norm_engaged.value
+Ctrl Effector Fdbk: Aero Port Aileron 1 Pos rad,21.AGG_MEASUREMENTS.payload.aero_port_aileron_1_rad.position_rad.value
+Ctrl Effector Fdbk: Aero Stbd Aileron 1 Pos rad,21.AGG_MEASUREMENTS.payload.aero_stbd_aileron_1_rad.position_rad.value
+Ctrl Effector Fdbk: Aero Port Aileron 2 Pos rad,21.AGG_MEASUREMENTS.payload.aero_port_aileron_2_rad.position_rad.value
+Ctrl Effector Fdbk: Aero Stbd Aileron 2 Pos rad,21.AGG_MEASUREMENTS.payload.aero_stbd_aileron_2_rad.position_rad.value
+Ctrl Effector Fdbk: Aero Port Upper Elev Pos rad,21.AGG_MEASUREMENTS.payload.aero_port_elevator_upper_rad.position_rad.value
+Ctrl Effector Fdbk: Aero Stbd Upper Elev Pos rad,21.AGG_MEASUREMENTS.payload.aero_stbd_elevator_upper_rad.position_rad.value
+Ctrl Effector Fdbk: Aero Port Lower Elev Pos rad,21.AGG_MEASUREMENTS.payload.aero_port_elevator_lower_rad.position_rad.value
+Ctrl Effector Fdbk: Aero Stbd Lower Elev Pos rad,21.AGG_MEASUREMENTS.payload.aero_stbd_elevator_lower_rad.position_rad.value
+Ctrl Effector Fdbk: Aero Port Rudder Pos rad,21.AGG_MEASUREMENTS.payload.aero_port_rudder_rad.position_rad.value
+Ctrl Effector Fdbk: Aero Stbd Rudder Pos rad,21.AGG_MEASUREMENTS.payload.aero_stbd_rudder_rad.position_rad.value
+Ctrl Effector Fdbk: Aero Port Outboard Flap Pos rad,21.AGG_MEASUREMENTS.payload.aero_port_flap_outboard_rad.position_rad.value
+Ctrl Effector Fdbk: Aero Stbd Outboard Flap Pos rad,21.AGG_MEASUREMENTS.payload.aero_stbd_flap_outboard_rad.position_rad.value
+Ctrl Effector Fdbk: Aero Port Inboard Flap Pos rad,21.AGG_MEASUREMENTS.payload.aero_port_flap_inboard_rad.position_rad.value
+Ctrl Effector Fdbk: Aero Stbd Inboard Flap Pos rad,21.AGG_MEASUREMENTS.payload.aero_stbd_flap_inboard_rad.position_rad.value
+Bus A BMU01 Current,21.AGG_CONTEXT.nan
+Bus A BMU02 Current,21.AGG_CONTEXT.nan
+Bus A BMU03 Current,21.AGG_CONTEXT.nan
+Bus A BMU04 Current,21.AGG_CONTEXT.nan
+Bus A BMU05 Current,21.AGG_CONTEXT.nan
+Bus A BMU06 Current,21.AGG_CONTEXT.nan
+Bus A BMU07 Current,21.AGG_CONTEXT.nan
+Bus B BMU01 Current,21.AGG_CONTEXT.nan
+Bus B BMU02 Current,21.AGG_CONTEXT.nan
+Bus B BMU03 Current,21.AGG_CONTEXT.nan
+Bus B BMU04 Current,21.AGG_CONTEXT.nan
+Bus B BMU05 Current,21.AGG_CONTEXT.nan
+Bus B BMU06 Current,21.AGG_CONTEXT.nan
+Bus B BMU07 Current,21.AGG_CONTEXT.nan
+Bus C BMU01 Current,21.AGG_CONTEXT.nan
+Bus C BMU02 Current,21.AGG_CONTEXT.nan
+Bus A BMU03 Current,21.AGG_CONTEXT.nan
+Bus A BMU04 Current,21.AGG_CONTEXT.nan
+Bus A BMU05 Current,21.AGG_CONTEXT.nan
+Bus A BMU06 Current,21.AGG_CONTEXT.nan
+Bus A BMU07 Current,21.AGG_CONTEXT.nan
+Bus B BMU01 Current,21.AGG_CONTEXT.nan
+Bus B BMU02 Current,21.AGG_CONTEXT.nan
+Bus B BMU03 Current,21.AGG_CONTEXT.nan
+Bus B BMU04 Current,21.AGG_CONTEXT.nan
+Bus B BMU05 Current,21.AGG_CONTEXT.nan
+Bus B BMU06 Current,21.AGG_CONTEXT.nan
+Bus B BMU07 Current,21.AGG_CONTEXT.nan
+Bus A HVBS01 Current,21.AGG_CONTEXT.block_A.bold_battery_A.hvbs_context[0].data_2.current_A
+Bus A HVBS02 Current,21.AGG_CONTEXT.block_A.bold_battery_A.hvbs_context[1].data_2.current_A
+Bus B HVBS01 Current,21.AGG_CONTEXT.block_B.bold_battery_B.hvbs_context[0].data_2.current_A
+Bus B HVBS02 Current,21.AGG_CONTEXT.block_B.bold_battery_B.hvbs_context[1].data_2.current_A
+Bus C HVBS01 Current,21.AGG_CONTEXT.block_B.bold_battery_C.hvbs_context[0].data_2.current_A
+Bus C HVBS02 Current,21.AGG_CONTEXT.block_B.bold_battery_C.hvbs_context[1].data_2.current_A
+Bus D HVBS01 Current,21.AGG_CONTEXT.block_C.bold_battery_D.hvbs_context[0].data_2.current_A
+Bus D HVBS02 Current,21.AGG_CONTEXT.block_C.bold_battery_D.hvbs_context[1].data_2.current_A
+Bus A Current,21.AGG_CONTEXT.block_A.bold_battery_A.ess_context.voltage_and_current.total_current_A
+Bus B Current,21.AGG_CONTEXT.block_B.bold_battery_B.ess_context.voltage_and_current.total_current_A
+Bus C Current,21.AGG_CONTEXT.block_B.bold_battery_C.ess_context.voltage_and_current.total_current_A
+Bus D Current,21.AGG_CONTEXT.block_C.bold_battery_D.ess_context.voltage_and_current.total_current_A
+Bus A HVBS01 Voltage,21.AGG_CONTEXT.block_A.bold_battery_A.hvbs_context[0].data_2.voltage_V
+Bus A HVBS02 Voltage,21.AGG_CONTEXT.block_A.bold_battery_A.hvbs_context[1].data_2.voltage_V
+Bus B HVBS01 Voltage,21.AGG_CONTEXT.block_B.bold_battery_B.hvbs_context[0].data_2.voltage_V
+Bus B HVBS02 Voltage,21.AGG_CONTEXT.block_B.bold_battery_B.hvbs_context[1].data_2.voltage_V
+Bus C HVBS01 Voltage,21.AGG_CONTEXT.block_B.bold_battery_C.hvbs_context[0].data_2.voltage_V
+Bus C HVBS02 Voltage,21.AGG_CONTEXT.block_B.bold_battery_C.hvbs_context[1].data_2.voltage_V
+Bus D HVBS01 Voltage,21.AGG_CONTEXT.block_C.bold_battery_D.hvbs_context[0].data_2.voltage_V
+Bus D HVBS02 Voltage,21.AGG_CONTEXT.block_C.bold_battery_D.hvbs_context[1].data_2.voltage_V
+Bus A DC Link Voltage,21.AGG_CONTEXT.nan
+Bus B DC Link Voltage,21.AGG_CONTEXT.nan
+Bus C DC Link Voltage,21.AGG_CONTEXT.nan
+Bus D DC Link Voltage,21.AGG_CONTEXT.nan
+Bus A Maximum Cell Voltage,21.AGG_CONTEXT.block_A.bold_battery_A.ess_context.cell_voltages.max_cell_voltage_mV
+Bus A Minimum Cell Voltage,21.AGG_CONTEXT.block_A.bold_battery_A.ess_context.cell_voltages.min_cell_voltage_mV
+Bus B Maximum Cell Voltage,21.AGG_CONTEXT.block_B.bold_battery_B.ess_context.cell_voltages.max_cell_voltage_mV
+Bus B Minimum Cell Voltage,21.AGG_CONTEXT.block_B.bold_battery_B.ess_context.cell_voltages.min_cell_voltage_mV
+Bus C Maximum Cell Voltage,21.AGG_CONTEXT.block_B.bold_battery_C.ess_context.cell_voltages.max_cell_voltage_mV
+Bus C Minimum Cell Voltage,21.AGG_CONTEXT.block_B.bold_battery_C.ess_context.cell_voltages.min_cell_voltage_mV
+Bus D Maximum Cell Voltage,21.AGG_CONTEXT.block_C.bold_battery_D.ess_context.cell_voltages.max_cell_voltage_mV
+Bus D Minimum Cell Voltage,21.AGG_CONTEXT.block_C.bold_battery_D.ess_context.cell_voltages.min_cell_voltage_mV
+Bus A Maximum Cell Temperature,21.AGG_CONTEXT.block_A.bold_battery_A.ess_context.cell_temperatures.max_cell_temperature_degC
+Bus A Minimum Cell Temperature,21.AGG_CONTEXT.block_A.bold_battery_A.ess_context.cell_temperatures.min_cell_temperature_degC
+Bus B Maximum Cell Temperature,21.AGG_CONTEXT.block_B.bold_battery_B.ess_context.cell_temperatures.max_cell_temperature_degC
+Bus B Minimum Cell Temperature,21.AGG_CONTEXT.block_B.bold_battery_B.ess_context.cell_temperatures.min_cell_temperature_degC
+Bus C Maximum Cell Temperature,21.AGG_CONTEXT.block_B.bold_battery_C.ess_context.cell_temperatures.max_cell_temperature_degC
+Bus C Minimum Cell Temperature,21.AGG_CONTEXT.block_B.bold_battery_C.ess_context.cell_temperatures.min_cell_temperature_degC
+Bus D Maximum Cell Temperature,21.AGG_CONTEXT.block_C.bold_battery_D.ess_context.cell_temperatures.max_cell_temperature_degC
+Bus D Minimum Cell Temperature,21.AGG_CONTEXT.block_C.bold_battery_D.ess_context.cell_temperatures.min_cell_temperature_degC
+Bus A HVBS01 SOC,21.AGG_CONTEXT.block_A.bold_battery_A.hvbs_context[0].data_2.state_of_charge_percent
+Bus A HVBS02 SOC,21.AGG_CONTEXT.block_A.bold_battery_A.hvbs_context[1].data_2.state_of_charge_percent
+Bus B HVBS01 SOC,21.AGG_CONTEXT.block_B.bold_battery_B.hvbs_context[0].data_2.state_of_charge_percent
+Bus B HVBS02 SOC,21.AGG_CONTEXT.block_B.bold_battery_B.hvbs_context[1].data_2.state_of_charge_percent
+Bus C HVBS01 SOC,21.AGG_CONTEXT.block_B.bold_battery_C.hvbs_context[0].data_2.state_of_charge_percent
+Bus C HVBS02 SOC,21.AGG_CONTEXT.block_B.bold_battery_C.hvbs_context[1].data_2.state_of_charge_percent
+Bus D HVBS01 SOC,21.AGG_CONTEXT.block_C.bold_battery_D.hvbs_context[0].data_2.state_of_charge_percent
+Bus D HVBS02 SOC,21.AGG_CONTEXT.block_C.bold_battery_D.hvbs_context[1].data_2.state_of_charge_percent
+Bus A SOC,21.AGG_CONTEXT.block_A.bold_battery_A.ess_context.state.state_of_charge_connected_percent
+Bus B SOC,21.AGG_CONTEXT.block_B.bold_battery_B.ess_context.state.state_of_charge_connected_percent
+Bus C SOC,21.AGG_CONTEXT.block_B.bold_battery_C.ess_context.state.state_of_charge_connected_percent
+Bus D SOC,21.AGG_CONTEXT.block_C.bold_battery_D.ess_context.state.state_of_charge_connected_percent
+Bus A HVBS01 Isolation Quality,21.AGG_CONTEXT.block_A.bold_battery_A.hvbs_context[0].data_3.isolation_resistance_meas_quality_percent
+Bus A HVBS02 Isolation Quality,21.AGG_CONTEXT.block_A.bold_battery_A.hvbs_context[1].data_3.isolation_resistance_meas_quality_percent
+Bus B HVBS01 Isolation Quality,21.AGG_CONTEXT.block_B.bold_battery_B.hvbs_context[0].data_3.isolation_resistance_meas_quality_percent
+Bus B HVBS02 Isolation Quality,21.AGG_CONTEXT.block_B.bold_battery_B.hvbs_context[1].data_3.isolation_resistance_meas_quality_percent
+Bus C HVBS01 Isolation Quality,21.AGG_CONTEXT.block_B.bold_battery_C.hvbs_context[0].data_3.isolation_resistance_meas_quality_percent
+Bus C HVBS02 Isolation Quality,21.AGG_CONTEXT.block_B.bold_battery_C.hvbs_context[1].data_3.isolation_resistance_meas_quality_percent
+Bus D HVBS01 Isolation Quality,21.AGG_CONTEXT.block_C.bold_battery_D.hvbs_context[0].data_3.isolation_resistance_meas_quality_percent
+Bus D HVBS02 Isolation Quality,21.AGG_CONTEXT.block_C.bold_battery_D.hvbs_context[1].data_3.isolation_resistance_meas_quality_percent
+Bus A HVBS01 Warning Lower,bus_a_hvbs1_warning.0
+Bus A HVBS01 Warning Upper,bus_a_hvbs1_warning.1
+Bus A HVBS02 Warning Lower,bus_a_hvbs2_warning.0
+Bus A HVBS02 Warning Upper,bus_a_hvbs2_warning.1
+Bus B HVBS01 Warning Lower,bus_b_hvbs1_warning.0
+Bus B HVBS01 Warning Upper,bus_b_hvbs1_warning.1
+Bus B HVBS02 Warning Lower,bus_b_hvbs2_warning.0
+Bus B HVBS02 Warning Upper,bus_b_hvbs2_warning.1
+Bus C HVBS01 Warning Lower,bus_c_hvbs1_warning.0
+Bus C HVBS01 Warning Upper,bus_c_hvbs1_warning.1
+Bus C HVBS02 Warning Lower,bus_c_hvbs2_warning.0
+Bus C HVBS02 Warning Upper,bus_c_hvbs2_warning.1
+Bus D HVBS01 Warning Lower,bus_d_hvbs1_warning.0
+Bus D HVBS01 Warning Upper,bus_d_hvbs1_warning.1
+Bus D HVBS02 Warning Lower,bus_d_hvbs2_warning.0
+Bus D HVBS02 Warning Upper,bus_d_hvbs2_warning.1
+Bus A HVBS01 Error Lower,bus_a_hvbs1_error.0
+Bus A HVBS01 Error Upper,bus_a_hvbs1_error.1
+Bus A HVBS02 Error Lower,bus_a_hvbs2_error.0
+Bus A HVBS02 Error Upper,bus_a_hvbs2_error.1
+Bus B HVBS01 Error Lower,bus_b_hvbs1_error.0
+Bus B HVBS01 Error Upper,bus_b_hvbs1_error.1
+Bus B HVBS02 Error Lower,bus_b_hvbs2_error.0
+Bus B HVBS02 Error Upper,bus_b_hvbs2_error.1
+Bus C HVBS01 Error Lower,bus_c_hvbs1_error.0
+Bus C HVBS01 Error Upper,bus_c_hvbs1_error.1
+Bus C HVBS02 Error Lower,bus_c_hvbs2_error.0
+Bus C HVBS02 Error Upper,bus_c_hvbs2_error.1
+Bus D HVBS01 Error Lower,bus_d_hvbs1_error.0
+Bus D HVBS01 Error Upper,bus_d_hvbs1_error.1
+Bus D HVBS02 Error Lower,bus_d_hvbs2_error.0
+Bus D HVBS02 Error Upper,bus_d_hvbs2_error.1
+Bus A ESS Warning,21.AGG_CONTEXT.block_A.bold_battery_A.ess_context.warnings.ess_warnings_bitmap
+Bus B ESS Warning,21.AGG_CONTEXT.block_B.bold_battery_B.ess_context.warnings.ess_warnings_bitmap
+Bus C ESS Warning,21.AGG_CONTEXT.block_B.bold_battery_C.ess_context.warnings.ess_warnings_bitmap
+Bus D ESS Warning,21.AGG_CONTEXT.block_C.bold_battery_D.ess_context.warnings.ess_warnings_bitmap
+Bus A ESS Error,21.AGG_CONTEXT.block_A.bold_battery_A.ess_context.errors.ess_errors_bitmap
+Bus B ESS Error,21.AGG_CONTEXT.block_B.bold_battery_B.ess_context.errors.ess_errors_bitmap
+Bus C ESS Error,21.AGG_CONTEXT.block_B.bold_battery_C.ess_context.errors.ess_errors_bitmap
+Bus D ESS Error,21.AGG_CONTEXT.block_C.bold_battery_D.ess_context.errors.ess_errors_bitmap
+Bus A ESS Operation Mode,21.AGG_CONTEXT.block_A.bold_battery_A.ess_context.charge.mode
+Bus B ESS Operation Mode,21.AGG_CONTEXT.block_B.bold_battery_B.ess_context.charge.mode
+Bus C ESS Operation Mode,21.AGG_CONTEXT.block_B.bold_battery_C.ess_context.charge.mode
+Bus D ESS Operation Mode,21.AGG_CONTEXT.block_C.bold_battery_D.ess_context.charge.mode
+Bus A HVBS01 Isolation Resistance,21.AGG_CONTEXT.block_A.bold_battery_A.hvbs_context[0].data_3.isolation_resistance_kOhm
+Bus A HVBS02 Isolation Resistance,21.AGG_CONTEXT.block_A.bold_battery_A.hvbs_context[1].data_3.isolation_resistance_kOhm
+Bus B HVBS01 Isolation Resistance,21.AGG_CONTEXT.block_B.bold_battery_B.hvbs_context[0].data_3.isolation_resistance_kOhm
+Bus B HVBS02 Isolation Resistance,21.AGG_CONTEXT.block_B.bold_battery_B.hvbs_context[1].data_3.isolation_resistance_kOhm
+Bus C HVBS01 Isolation Resistance,21.AGG_CONTEXT.block_B.bold_battery_C.hvbs_context[0].data_3.isolation_resistance_kOhm
+Bus C HVBS02 Isolation Resistance,21.AGG_CONTEXT.block_B.bold_battery_C.hvbs_context[1].data_3.isolation_resistance_kOhm
+Bus D HVBS01 Isolation Resistance,21.AGG_CONTEXT.block_C.bold_battery_D.hvbs_context[0].data_3.isolation_resistance_kOhm
+Bus D HVBS02 Isolation Resistance,21.AGG_CONTEXT.block_C.bold_battery_D.hvbs_context[1].data_3.isolation_resistance_kOhm
+Bus A HVBS01 Status,21.AGG_CONTEXT.block_A.bold_battery_A.hvbs_context[0].data_2.status
+Bus A HVBS02 Status,21.AGG_CONTEXT.block_A.bold_battery_A.hvbs_context[1].data_2.status
+Bus B HVBS01 Status,21.AGG_CONTEXT.block_B.bold_battery_B.hvbs_context[0].data_2.status
+Bus B HVBS02 Status,21.AGG_CONTEXT.block_B.bold_battery_B.hvbs_context[1].data_2.status
+Bus C HVBS01 Status,21.AGG_CONTEXT.block_B.bold_battery_C.hvbs_context[0].data_2.status
+Bus C HVBS02 Status,21.AGG_CONTEXT.block_B.bold_battery_C.hvbs_context[1].data_2.status
+Bus D HVBS01 Status,21.AGG_CONTEXT.block_C.bold_battery_D.hvbs_context[0].data_2.status
+Bus D HVBS02 Status,21.AGG_CONTEXT.block_C.bold_battery_D.hvbs_context[1].data_2.status
+Bus A Status,21.AGG_CONTEXT.block_A.bold_battery_A.ess_context.state.state
+Bus B Status,21.AGG_CONTEXT.block_B.bold_battery_B.ess_context.state.state
+Bus C Status,21.AGG_CONTEXT.block_B.bold_battery_C.ess_context.state.state
+Bus D Status,21.AGG_CONTEXT.block_C.bold_battery_D.ess_context.state.state
+Bus A Number of HVBS Installed,21.AGG_CONTEXT.block_A.bold_battery_A.ess_context.state.num_hvbs_installed
+Bus B Number of HVBS Installed,21.AGG_CONTEXT.block_B.bold_battery_B.ess_context.state.num_hvbs_installed
+Bus C Number of HVBS Installed,21.AGG_CONTEXT.block_B.bold_battery_C.ess_context.state.num_hvbs_installed
+Bus D Number of HVBS Installed,21.AGG_CONTEXT.block_C.bold_battery_D.ess_context.state.num_hvbs_installed
+Bus A Charge Current Limit,21.AGG_CONTEXT.block_A.bold_battery_A.ess_context.current_limits.dcli_max_A
+Bus B Charge Current Limit,21.AGG_CONTEXT.block_B.bold_battery_B.ess_context.current_limits.dcli_max_A
+Bus C Charge Current Limit,21.AGG_CONTEXT.block_B.bold_battery_C.ess_context.current_limits.dcli_max_A
+Bus D Charge Current Limit,21.AGG_CONTEXT.block_C.bold_battery_D.ess_context.current_limits.dcli_max_A
+Bus A Discharge Current Limit,21.AGG_CONTEXT.block_A.bold_battery_A.ess_context.current_limits.dclo_max_A
+Bus B Discharge Current Limit,21.AGG_CONTEXT.block_B.bold_battery_B.ess_context.current_limits.dclo_max_A
+Bus C Discharge Current Limit,21.AGG_CONTEXT.block_B.bold_battery_C.ess_context.current_limits.dclo_max_A
+Bus D Discharge Current Limit,21.AGG_CONTEXT.block_C.bold_battery_D.ess_context.current_limits.dclo_max_A
+Bus A Number of HVBS Connected,21.AGG_CONTEXT.block_A.bold_battery_A.ess_context.state.num_hvbs_connected
+Bus B Number of HVBS Connected,21.AGG_CONTEXT.block_B.bold_battery_B.ess_context.state.num_hvbs_connected
+Bus C Number of HVBS Connected,21.AGG_CONTEXT.block_B.bold_battery_C.ess_context.state.num_hvbs_connected
+Bus D Number of HVBS Connected,21.AGG_CONTEXT.block_C.bold_battery_D.ess_context.state.num_hvbs_connected
+AHRS_a Data:  Filter Status,21.AGG_CONTEXT.block_A.ahrs_a.filter_status
+AHRS_a Data:  Unix Time sec,21.AGG_CONTEXT.block_A.ahrs_a.unix_time_seconds
+AHRS_a Data:  Unix Time micro_sec,21.AGG_CONTEXT.block_A.ahrs_a.unix_time_micro_seconds_part
+AHRS_a Data:  G Force,21.AGG_CONTEXT.block_A.ahrs_a.g_force
+AHRS_a Data:  WGS84 Alt m,21.AGG_CONTEXT.block_A.ahrs_a.gpahrs_measurement.wgs84_altitude.value
+AHRS_a Data:   Body Accel_x  mps2,21.AGG_CONTEXT.block_A.ahrs_a.gpahrs_measurement.body_accel_x.value
+AHRS_a Data:   Body Accel_y  mps2,21.AGG_CONTEXT.block_A.ahrs_a.gpahrs_measurement.body_accel_y.value
+AHRS_a Data:   Body Accel_z mps,21.AGG_CONTEXT.block_A.ahrs_a.gpahrs_measurement.body_accel_z.value
+AHRS_a Data:  Roll Rate radps,21.AGG_CONTEXT.block_A.ahrs_a.gpahrs_measurement.body_roll_rate.value
+AHRS_a Data:  Pitch Rate radps,21.AGG_CONTEXT.block_A.ahrs_a.gpahrs_measurement.body_pitch_rate.value
+AHRS_a Data:  Yaw Rate radps,21.AGG_CONTEXT.block_A.ahrs_a.gpahrs_measurement.body_yaw_rate.value
+AHRS_a Data:  Body Vel_x mps,21.AGG_CONTEXT.block_A.ahrs_a.gpahrs_measurement.body_velocity_x.value
+AHRS_a Data:  Body Vel_y mps,21.AGG_CONTEXT.block_A.ahrs_a.gpahrs_measurement.body_velocity_y.value
+AHRS_a Data:  Body Vel_z mps,21.AGG_CONTEXT.block_A.ahrs_a.gpahrs_measurement.body_velocity_z.value
+AHRS_a Data:  Heading Angle rad,21.AGG_CONTEXT.block_A.ahrs_a.gpahrs_measurement.heading_angle_rad.value
+AHRS_a Data:  Lattitude rad,21.AGG_CONTEXT.block_A.ahrs_a.gpahrs_measurement.latitude.value
+AHRS_a Data:  Longitude rad,21.AGG_CONTEXT.block_A.ahrs_a.gpahrs_measurement.longitude.value
+AHRS_a Data:  Roll Anlge rad,21.AGG_CONTEXT.block_A.ahrs_a.gpahrs_measurement.roll_angle_rad.value
+AHRS_a Data:  Pitch Anlge rad,21.AGG_CONTEXT.block_A.ahrs_a.gpahrs_measurement.pitch_angle_rad.value
+AHRS_a Data:  Velocity Down mps,21.AGG_CONTEXT.block_A.ahrs_a.gpahrs_measurement.velocity_D.value
+AHRS_a Data:  Velocity East mps,21.AGG_CONTEXT.block_A.ahrs_a.gpahrs_measurement.velocity_E.value
+AHRS_a Data:  Velocity North mps,21.AGG_CONTEXT.block_A.ahrs_a.gpahrs_measurement.velocity_N.value
+AHRS_b Data:  Filter Status,21.AGG_CONTEXT.block_B.ahrs_b.filter_status
+AHRS_b Data:  Unix Time sec,21.AGG_CONTEXT.block_B.ahrs_b.unix_time_seconds
+AHRS_b Data:  Unix Time micro_sec,21.AGG_CONTEXT.block_B.ahrs_b.unix_time_micro_seconds_part
+AHRS_b Data:  G Force,21.AGG_CONTEXT.block_B.ahrs_b.g_force
+AHRS_b Data:  WGS84 Alt m,21.AGG_CONTEXT.block_B.ahrs_b.gpahrs_measurement.wgs84_altitude.value
+AHRS_b Data:   Body Accel_x  mps2,21.AGG_CONTEXT.block_B.ahrs_b.gpahrs_measurement.body_accel_x.value
+AHRS_b Data:   Body Accel_y  mps2,21.AGG_CONTEXT.block_B.ahrs_b.gpahrs_measurement.body_accel_y.value
+AHRS_b Data:   Body Accel_z mps,21.AGG_CONTEXT.block_B.ahrs_b.gpahrs_measurement.body_accel_z.value
+AHRS_b Data:  Roll Rate radps,21.AGG_CONTEXT.block_B.ahrs_b.gpahrs_measurement.body_roll_rate.value
+AHRS_b Data:  Pitch Rate radps,21.AGG_CONTEXT.block_B.ahrs_b.gpahrs_measurement.body_pitch_rate.value
+AHRS_b Data:  Yaw Rate radps,21.AGG_CONTEXT.block_B.ahrs_b.gpahrs_measurement.body_yaw_rate.value
+AHRS_b Data:  Body Vel_x mps,21.AGG_CONTEXT.block_B.ahrs_b.gpahrs_measurement.body_velocity_x.value
+AHRS_b Data:  Body Vel_y mps,21.AGG_CONTEXT.block_B.ahrs_b.gpahrs_measurement.body_velocity_y.value
+AHRS_b Data:  Body Vel_z mps,21.AGG_CONTEXT.block_B.ahrs_b.gpahrs_measurement.body_velocity_z.value
+AHRS_b Data:  Heading Angle rad,21.AGG_CONTEXT.block_B.ahrs_b.gpahrs_measurement.heading_angle_rad.value
+AHRS_b Data:  Lattitude rad,21.AGG_CONTEXT.block_B.ahrs_b.gpahrs_measurement.latitude.value
+AHRS_b Data:  Longitude rad,21.AGG_CONTEXT.block_B.ahrs_b.gpahrs_measurement.longitude.value
+AHRS_b Data:  Roll Anlge rad,21.AGG_CONTEXT.block_B.ahrs_b.gpahrs_measurement.roll_angle_rad.value
+AHRS_b Data:  Pitch Anlge rad,21.AGG_CONTEXT.block_B.ahrs_b.gpahrs_measurement.pitch_angle_rad.value
+AHRS_b Data:  Velocity Down mps,21.AGG_CONTEXT.block_B.ahrs_b.gpahrs_measurement.velocity_D.value
+AHRS_b Data:  Velocity East mps,21.AGG_CONTEXT.block_B.ahrs_b.gpahrs_measurement.velocity_E.value
+AHRS_b Data:  Velocity North mps,21.AGG_CONTEXT.block_B.ahrs_b.gpahrs_measurement.velocity_N.value
+AHRS_c Data:  Filter Status,21.AGG_CONTEXT.block_C.ahrs_c.filter_status
+AHRS_c Data:  Unix Time sec,21.AGG_CONTEXT.block_C.ahrs_c.unix_time_seconds
+AHRS_c Data:  Unix Time micro_sec,21.AGG_CONTEXT.block_C.ahrs_c.unix_time_micro_seconds_part
+AHRS_c Data:  G Force,21.AGG_CONTEXT.block_C.ahrs_c.g_force
+AHRS_c Data:  WGS84 Alt m,21.AGG_CONTEXT.block_C.ahrs_c.gpahrs_measurement.wgs84_altitude.value
+AHRS_c Data:   Body Accel_x  mps2,21.AGG_CONTEXT.block_C.ahrs_c.gpahrs_measurement.body_accel_x.value
+AHRS_c Data:   Body Accel_y  mps2,21.AGG_CONTEXT.block_C.ahrs_c.gpahrs_measurement.body_accel_y.value
+AHRS_c Data:   Body Accel_z mps,21.AGG_CONTEXT.block_C.ahrs_c.gpahrs_measurement.body_accel_z.value
+AHRS_c Data:  Roll Rate radps,21.AGG_CONTEXT.block_C.ahrs_c.gpahrs_measurement.body_roll_rate.value
+AHRS_c Data:  Pitch Rate radps,21.AGG_CONTEXT.block_C.ahrs_c.gpahrs_measurement.body_pitch_rate.value
+AHRS_c Data:  Yaw Rate radps,21.AGG_CONTEXT.block_C.ahrs_c.gpahrs_measurement.body_yaw_rate.value
+AHRS_c Data:  Body Vel_x mps,21.AGG_CONTEXT.block_C.ahrs_c.gpahrs_measurement.body_velocity_x.value
+AHRS_c Data:  Body Vel_y mps,21.AGG_CONTEXT.block_C.ahrs_c.gpahrs_measurement.body_velocity_y.value
+AHRS_c Data:  Body Vel_z mps,21.AGG_CONTEXT.block_C.ahrs_c.gpahrs_measurement.body_velocity_z.value
+AHRS_c Data:  Heading Angle rad,21.AGG_CONTEXT.block_C.ahrs_c.gpahrs_measurement.heading_angle_rad.value
+AHRS_c Data:  Lattitude rad,21.AGG_CONTEXT.block_C.ahrs_c.gpahrs_measurement.latitude.value
+AHRS_c Data:  Longitude rad,21.AGG_CONTEXT.block_C.ahrs_c.gpahrs_measurement.longitude.value
+AHRS_c Data:  Roll Anlge rad,21.AGG_CONTEXT.block_C.ahrs_c.gpahrs_measurement.roll_angle_rad.value
+AHRS_c Data:  Pitch Anlge rad,21.AGG_CONTEXT.block_C.ahrs_c.gpahrs_measurement.pitch_angle_rad.value
+AHRS_c Data:  Velocity Down mps,21.AGG_CONTEXT.block_C.ahrs_c.gpahrs_measurement.velocity_D.value
+AHRS_c Data:  Velocity East mps,21.AGG_CONTEXT.block_C.ahrs_c.gpahrs_measurement.velocity_E.value
+AHRS_c Data:  Velocity North mps,21.AGG_CONTEXT.block_C.ahrs_c.gpahrs_measurement.velocity_N.value
+Sensor Data: Ultrasonic Wing Port Dist m,21.AGG_CONTEXT.block_B.ultrasonic_sensor_wing_port.distance_sensor_measurement.ultrasonic_distance_m.value
+Sensor Data: Ultrasonic Tail Dist m,21.AGG_CONTEXT.block_A.ultrasonic_sensor_tail.distance_sensor_measurement.ultrasonic_distance_m.value
+Sensor Data: Ultrasonic Wing Stbd Dist m,21.AGG_CONTEXT.block_C.ultrasonic_sensor_wing_stbd.distance_sensor_measurement.ultrasonic_distance_m.value
+Sensor Data: RadAlt Port m,21.AGG_CONTEXT.block_B.radalt_b.distance_sensor_measurement.radar_alt_distance_m.value
+Sensor Data: RadAlt Stbd m,21.AGG_CONTEXT.block_C.radalt_c.distance_sensor_measurement.radar_alt_distance_m.value
+Controller Config ID,21.AGG_FS_OUTPUT.payload.state_block.controller_config_readout
+[TIS][VDRe] host_uptime_sec,17.VEHICLE_DATA_RECORDER_CONTEXT.host_uptime_sec
+[TIS][VDRe] process_uptime_sec,17.VEHICLE_DATA_RECORDER_CONTEXT.process_uptime_sec
+[TIS][VDRe] process_cpu_util_max_percent,17.VEHICLE_DATA_RECORDER_CONTEXT.process_cpu_util_max_percent
+[TIS][VDRe] process_cpu_util_mean_percent,17.VEHICLE_DATA_RECORDER_CONTEXT.process_cpu_util_mean_percent
+[TIS][VDRe] current_recording_file,17.VEHICLE_DATA_RECORDER_CONTEXT.current_recording_file
+[TIS][VDRe] current_recording_file_size_MB,17.VEHICLE_DATA_RECORDER_CONTEXT.current_recording_file_size_MB
+[TIS][VDRe] recording_session_samples_per_second,17.VEHICLE_DATA_RECORDER_CONTEXT.recording_session_samples_per_second
+[TIS][VDRe] recording_session_MBps,17.VEHICLE_DATA_RECORDER_CONTEXT.recording_session_MBps
+[TIS][TIS VDRe] host_uptime_sec,17.TIS_DATA_RECORDER_CONTEXT.host_uptime_sec
+[TIS][TIS VDRe] process_uptime_sec,17.TIS_DATA_RECORDER_CONTEXT.process_uptime_sec
+[TIS][TIS VDRe] process_cpu_util_max_percent,17.TIS_DATA_RECORDER_CONTEXT.process_cpu_util_max_percent
+[TIS][TIS VDRe] process_cpu_util_mean_percent,17.TIS_DATA_RECORDER_CONTEXT.process_cpu_util_mean_percent
+[TIS][TIS VDRe] current_recording_file,17.TIS_DATA_RECORDER_CONTEXT.current_recording_file
+[TIS][TIS VDRe] current_recording_file_size_MB,17.TIS_DATA_RECORDER_CONTEXT.current_recording_file_size_MB
+[TIS][TIS VDRe] recording_session_samples_per_second,17.TIS_DATA_RECORDER_CONTEXT.recording_session_samples_per_second
+[TIS][TIS VDRe] recording_session_MBps,17.TIS_DATA_RECORDER_CONTEXT.recording_session_MBps
+[TIS][DiskInfo] root_fs total_space_MB,17.HARDWARE_HEALTH_INFO.disks[0].total_space_MB
+[TIS][DiskInfo] root_fs free_space_MB,17.HARDWARE_HEALTH_INFO.disks[0].free_space_MB
+[TIS][DiskInfo] root_fs used_space_MB,17.HARDWARE_HEALTH_INFO.disks[0].used_space_MB
+[TIS][DiskInfo] root_fs usage_perc,17.HARDWARE_HEALTH_INFO.disks[0].usage_perc
+[TIS][DiskInfo] /mnt/sdb1 total_space_MB,17.HARDWARE_HEALTH_INFO.disks[1].total_space_MB
+[TIS][DiskInfo] /mnt/sdb1 free_space_MB,17.HARDWARE_HEALTH_INFO.disks[1].free_space_MB
+[TIS][DiskInfo] /mnt/sdb1 used_space_MB,17.HARDWARE_HEALTH_INFO.disks[1].used_space_MB
+[TIS][DiskInfo] /mnt/sdb1 usage_perc,17.HARDWARE_HEALTH_INFO.disks[1].usage_perc
+[TIS][NetworkInfo] eno1 UP,17.HARDWARE_HEALTH_INFO.networks[0].up
+[TIS][NetworkInfo] eno1 thru_rx_MBps,17.HARDWARE_HEALTH_INFO.networks[0].thru_rx_MBps
+[TIS][NetworkInfo] eno1 thru_tx_MBps,17.HARDWARE_HEALTH_INFO.networks[0].thru_tx_MBps
+[TIS][NetworkInfo] eno1 thru_total_MBps,17.HARDWARE_HEALTH_INFO.networks[0].thru_total_MBps
+[TIS][NetworkInfo] eno1 thru_util_perc,17.HARDWARE_HEALTH_INFO.networks[0].thru_util_perc
+[TIS][NetworkInfo] enp2s0 UP,17.HARDWARE_HEALTH_INFO.networks[1].up
+[TIS][NetworkInfo] enp2s0 thru_rx_MBps,17.HARDWARE_HEALTH_INFO.networks[1].thru_rx_MBps
+[TIS][NetworkInfo] enp2s0 thru_tx_MBps,17.HARDWARE_HEALTH_INFO.networks[1].thru_tx_MBps
+[TIS][NetworkInfo] enp2s0 thru_total_MBps,17.HARDWARE_HEALTH_INFO.networks[1].thru_total_MBps
+[TIS][NetworkInfo] enp2s0 thru_util_perc,17.HARDWARE_HEALTH_INFO.networks[1].thru_util_perc
+[TIS] cpu_util_mean_percent,17.HARDWARE_HEALTH_INFO.cpu_util_mean_percent
+[TIS] ram_used_MB,17.HARDWARE_HEALTH_INFO.ram_used_MB
+[TIS] ram_available_MB,17.HARDWARE_HEALTH_INFO.ram_available_MB
+[TIS] VTC motherboard temp C,17.HARDWARE_HEALTH_INFO.system_temp.motherboard_temp_C
+[TIS] VTC Chipset temp C,17.HARDWARE_HEALTH_INFO.system_temp.chipset_temp_C
+[TIS] VTC CPU temp C,17.HARDWARE_HEALTH_INFO.system_temp.cpu_temp_C
+Bus A Command,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_hv_power_cmds.bold_battery_A.command
+Bus B Command,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_hv_power_cmds.bold_battery_B.command
+Bus C Command,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_hv_power_cmds.bold_battery_C.command
+Bus D Command,21.AGG_FS_OUTPUT.payload.command_block.paladin_controller_hv_power_cmds.bold_battery_D.command
+Control Laws: Main Foil State,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.foil_state_bus.main_foil_state_debug
+Control Laws: Foil Roll Ctrl Setpoint,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_roll_ctrl_debug.debug_pid_inputs.pid_input_setpoint
+Control Laws: Foil Roll Ctrl Measured Ctrl Variable,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_roll_ctrl_debug.debug_pid_inputs.pid_u_meas
+Control Laws: Foil Roll Ctrl Output Command,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_roll_ctrl_debug.debug_pid_outputs.pid_out_w_sat
+Control Laws: Foil Yaw Rate Ctrl Setpoint,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_yaw_rate_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_inputs.pid_input_setpoint
+Control Laws: Foil Yaw Rate Measured Ctrl Variable,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_yaw_rate_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_inputs.pid_u_meas
+Control Laws: Foil Yaw Rate Output Command,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_yaw_rate_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_outputs.pid_out_w_sat
+Control Laws: Foil Yaw Rate Derivative Setpoint,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_yaw_rate_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_inputs.pid_dudt_setpoint
+Control Laws: Foil Yaw Rate Measured Derivative,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_yaw_rate_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_inputs.pid_dudt_meas
+Control Laws: Foil Yaw Rate Feed Forward Output,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_yaw_rate_ctrl_debug.foil_ctrl_inverse_plant_debug.ff_out
+Control Laws (Cmd Model): Foil Yaw Rate Cmd Input,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_yaw_rate_ctrl_debug.foil_ctrl_cmd_model_debug.cmd_in
+Control Laws (Cmd Model): Foil Yaw Rate Cmd Out,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_yaw_rate_ctrl_debug.foil_ctrl_cmd_model_debug.cmd_out
+Control Laws (Cmd Model): Foil Yaw Rate Cmd Derivative Out,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_yaw_rate_ctrl_debug.foil_ctrl_cmd_model_debug.cmd_out_dot
+Control Laws (Cmd Model): Foil Yaw Rate Cmd Out Delayed,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_yaw_rate_ctrl_debug.foil_ctrl_cmd_model_debug.cmd_out_delayed
+Control Laws (Cmd Model): Foil Yaw Rate Cmd Derivative Out Delayed,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_yaw_rate_ctrl_debug.foil_ctrl_cmd_model_debug.cmd_out_dot_delayed
+Control Laws: Foil Yaw Rate Ground Speed (m/s),21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_yaw_rate_ctrl_debug.ground_speed_sched_val_mps
+Control Laws: Foil Ride Height Ctrl Setpoint,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_col_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_inputs.pid_input_setpoint
+Control Laws: Foil Ride Height Measured Ctrl Variable,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_col_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_inputs.pid_u_meas
+Control Laws: Foil Ride Height Output Command,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_col_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_outputs.pid_out_w_sat
+Control Laws: Foil Ride Height Derivative Setpoint,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_col_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_inputs.pid_dudt_setpoint
+Control Laws: Foil Ride Height Measured Derivative,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_col_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_inputs.pid_dudt_meas
+Control Laws: Foil Ride Height Feed Forward Output,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_col_ctrl_debug.foil_ctrl_inverse_plant_debug.ff_out
+Control Laws (Cmd Model): Foil Ride Height Cmd Input,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_col_ctrl_debug.foil_ctrl_cmd_model_debug.cmd_in
+Control Laws (Cmd Model): Foil Ride Height Cmd Out,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_col_ctrl_debug.foil_ctrl_cmd_model_debug.cmd_out
+Control Laws (Cmd Model): Foil Ride Height Cmd Derivative Out,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_col_ctrl_debug.foil_ctrl_cmd_model_debug.cmd_out_dot
+Control Laws (Cmd Model): Foil Ride Height Cmd Out Delayed,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_col_ctrl_debug.foil_ctrl_cmd_model_debug.cmd_out_delayed
+Control Laws (Cmd Model): Foil Ride Height Cmd Derivative Out Delayed,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_col_ctrl_debug.foil_ctrl_cmd_model_debug.cmd_out_dot_delayed
+Control Laws: Foil Ride Height Ground Speed (m/s),21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_col_ctrl_debug.ground_speed_sched_val_mps
+Control Laws: Foil Pitch Ctrl Setpoint,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_lon_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_inputs.pid_input_setpoint
+Control Laws: Foil Pitch Measured Ctrl Variable,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_lon_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_inputs.pid_u_meas
+Control Laws: Foil Pitch Output Command,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_lon_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_outputs.pid_out_w_sat
+Control Laws: Foil Pitch Derivative Setpoint,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_lon_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_inputs.pid_dudt_setpoint
+Control Laws: Foil Pitch Measured Derivative,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_lon_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_inputs.pid_dudt_meas
+Control Laws: Foil Pitch Feed Forward Output,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_lon_ctrl_debug.foil_ctrl_inverse_plant_debug.ff_out
+Control Laws (Cmd Model): Foil Pitch Cmd Input,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_lon_ctrl_debug.foil_ctrl_cmd_model_debug.cmd_in
+Control Laws (Cmd Model): Foil Pitch Cmd Out,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_lon_ctrl_debug.foil_ctrl_cmd_model_debug.cmd_out
+Control Laws (Cmd Model): Foil Pitch Cmd Derivative Out,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_lon_ctrl_debug.foil_ctrl_cmd_model_debug.cmd_out_dot
+Control Laws (Cmd Model): Foil Pitch Cmd Out Delayed,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_lon_ctrl_debug.foil_ctrl_cmd_model_debug.cmd_out_delayed
+Control Laws (Cmd Model): Foil Pitch Cmd Derivative Out Delayed,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_lon_ctrl_debug.foil_ctrl_cmd_model_debug.cmd_out_dot_delayed
+Control Laws: Foil Pitch Ground Speed (m/s),21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_lon_ctrl_debug.ground_speed_sched_val_mps
+Hydro Mixer Debug: dRud Input (rad),21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_mixer_allocator_debug.delta_rud_rad_in
+Hydro Mixer Debug: dLat Input (rad),21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_mixer_allocator_debug.delta_lat_rad_in
+Hydro Mixer Debug: dCol Input (rad),21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_mixer_allocator_debug.delta_col_rad_in
+Hydro Mixer Debug: dLon Input (rad),21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_mixer_allocator_debug.delta_lon_rad_in
+Hydro Mixer Debug: Heaveron Collective Trim (rad),21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_mixer_allocator_debug.heaveron_collective_trim_rad
+Hydro Mixer Debug: Hydro Elevator Trim (rad),21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_mixer_allocator_debug.hydrovator_trim_rad
+Hydro Mixer Debug: Max dRud (rad),21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_mixer_allocator_debug.max_delta_rud_rad
+Hydro Mixer Debug: Min dRud (rad),21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_mixer_allocator_debug.min_delta_rud_rad
+Hydro Mixer Debug: Heaveron Differential Out (rad),21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_mixer_allocator_debug.heaveron_differential_out_rad
+Hydro Mixer Debug: Hydro Rudder Out (rad),21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_mixer_allocator_debug.hydro_rudder_out_rad
+Hydro Mixer Debug: Heaveron Collective Out (rad),21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_mixer_allocator_debug.heaveron_collective_out_rad
+Hydro Mixer Debug: Hydro Elevator Out (rad),21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_mixer_allocator_debug.hydrovator_out_rad
+Hydro Mixer Debug: dCol Out (rad),21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_mixer_allocator_debug.delta_col_out_rad
+Hydro Mixer Debug: dLon Out (rad),21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_mixer_allocator_debug.delta_lon_out_rad
+Hydro Mixer Debug: dLat Saturated,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_mixer_allocator_debug.delta_lat_saturated
+Hydro Mixer Debug: dRud Saturated,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_mixer_allocator_debug.delta_rud_saturated
+Hydro Mixer Debug: dCol Saturated,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_mixer_allocator_debug.delta_col_saturated
+Hydro Mixer Debug: dLon Saturated,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_mixer_allocator_debug.delta_lon_saturated
+Chirp Debug: Chirp Trigger,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.chirp_debug.chirp_trigger
+Chirp Debug: Chirp Signal,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.chirp_debug.chirp_signal
+Chirp Debug: Input Signal,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.chirp_debug.input_signal
+Chirp Debug: Chirp Type,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.chirp_debug.chirp_type
+Control Laws: Foil Ride Height Ctrl Integral Contribution,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_col_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_outputs.pid_out_integral
+Control Laws: Foil Ride Height Ctrl Integral Upper Limit,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_col_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_integral.pid_input_integral_upper_limit
+Control Laws: Foil Ride Height Ctrl Integral Lower Limit,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_col_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_integral.pid_input_integral_lower_limit
+Control Laws: Foil Yaw Rate Ctrl Integral Contribution,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_yaw_rate_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_outputs.pid_out_integral
+Control Laws: Foil Yaw Rate Ctrl Integral Upper Limit,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_yaw_rate_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_integral.pid_input_integral_upper_limit
+Control Laws: Foil Yaw Rate Ctrl Integral Lower Limit,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_yaw_rate_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_integral.pid_input_integral_lower_limit
+Control Laws: Foil Pitch Ctrl Integral Contribution,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_lon_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_outputs.pid_out_integral
+Control Laws: Foil Pitch Ctrl Integral Upper Limit,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_lon_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_integral.pid_input_integral_upper_limit
+Control Laws: Foil Pitch Ctrl Integral Lower Limit,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_lon_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_integral.pid_input_integral_lower_limit
+Control Laws: Foil Roll Ctrl Integral Contribution,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_roll_ctrl_debug.debug_pid_outputs.pid_out_integral
+Control Laws: Foil Roll Ctrl Integral Upper Limit,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_roll_ctrl_debug.debug_pid_integral.pid_input_integral_upper_limit
+Control Laws: Foil Roll Ctrl Integral Lower Limit,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_roll_ctrl_debug.debug_pid_integral.pid_input_integral_lower_limit
+State Estimator: Tail Ultrasonic,21.AGG_FS_OUTPUT.payload.state_block.paladin_state_estimator_debug.hams_debug.altitude_sensors.senix_tail.value
+State Estimator: Port Ultrasonic,21.AGG_FS_OUTPUT.payload.state_block.paladin_state_estimator_debug.hams_debug.altitude_sensors.senix_wing_port.value
+State Estimator: Stbd Ultrasonic,21.AGG_FS_OUTPUT.payload.state_block.paladin_state_estimator_debug.hams_debug.altitude_sensors.senix_wing_stbd.value
+State Estimator: Port RadAlt,21.AGG_FS_OUTPUT.payload.state_block.paladin_state_estimator_debug.hams_debug.altitude_sensors.rad_alt_port.value
+State Estimator: Stbd RadAlt,21.AGG_FS_OUTPUT.payload.state_block.paladin_state_estimator_debug.hams_debug.altitude_sensors.rad_alt_stbd.value
+State Estimator: Tail Ultrasonic Used,21.AGG_FS_OUTPUT.payload.state_block.paladin_state_estimator_debug.hams_debug.altitude_sensors.senix_tail.valid
+State Estimator: Port Ultrasonic Used,21.AGG_FS_OUTPUT.payload.state_block.paladin_state_estimator_debug.hams_debug.altitude_sensors.senix_wing_port.valid
+State Estimator: Stbd Ultrasonic Used,21.AGG_FS_OUTPUT.payload.state_block.paladin_state_estimator_debug.hams_debug.altitude_sensors.senix_wing_stbd.valid
+State Estimator: Port RadAlt Used,21.AGG_FS_OUTPUT.payload.state_block.paladin_state_estimator_debug.hams_debug.altitude_sensors.rad_alt_port.valid
+State Estimator: Stbd RadAlt Used,21.AGG_FS_OUTPUT.payload.state_block.paladin_state_estimator_debug.hams_debug.altitude_sensors.rad_alt_stbd.valid
+State Estimator: Tail Ultrasonic Innovation,21.AGG_FS_OUTPUT.payload.state_block.paladin_state_estimator_debug.hams_debug.innovations.tail_senix_innovation
+State Estimator: Port Ultrasonic Innovation,21.AGG_FS_OUTPUT.payload.state_block.paladin_state_estimator_debug.hams_debug.innovations.port_senix_innovation
+State Estimator: Stbd Ultrasonic Innovation,21.AGG_FS_OUTPUT.payload.state_block.paladin_state_estimator_debug.hams_debug.innovations.stbd_senix_innovation
+State Estimator: Port RadAlt Innovation,21.AGG_FS_OUTPUT.payload.state_block.paladin_state_estimator_debug.hams_debug.innovations.port_radalt_innovation
+State Estimator: Stbd RadAlt Innovation,21.AGG_FS_OUTPUT.payload.state_block.paladin_state_estimator_debug.hams_debug.innovations.port_radalt_innovation
+State Estimator: Velocity Down Input,21.AGG_FS_OUTPUT.payload.state_block.paladin_state_estimator_debug.hams_debug.ahrs_channels.vel_down_ms.value
+State Estimator: Velocity Estimate,21.AGG_FS_OUTPUT.payload.state_block.paladin_state_estimator_debug.hams_debug.estimate_velocity_down_mps
+State Estimator: Velocity Innovation,21.AGG_FS_OUTPUT.payload.state_block.paladin_state_estimator_debug.hams_debug.innovations.velocity_down_innovation
+State Estimator: GNSS Height Bias,21.AGG_FS_OUTPUT.payload.state_block.paladin_state_estimator_debug.hams_debug.wgs84_altitude_bias_m
+State Estimator: AHRS A GNSS Height Innovation,21.AGG_FS_OUTPUT.payload.state_block.paladin_state_estimator_debug.hams_debug.innovations.wgs84_altitude_A_innovation
+State Estimator: AHRS B GNSS Height Innovation,21.AGG_FS_OUTPUT.payload.state_block.paladin_state_estimator_debug.hams_debug.innovations.wgs84_altitude_B_innovation
+State Estimator: AHRS C GNSS Height Innovation,21.AGG_FS_OUTPUT.payload.state_block.paladin_state_estimator_debug.hams_debug.innovations.wgs84_altitude_C_innovation
+State Estimator: HAMS Estimate Variance,21.AGG_FS_OUTPUT.payload.state_block.paladin_state_estimator_debug.hams_debug.state_variances.z_variance
+Controller State: Checkout mode built-in test,21.AGG_FS_OUTPUT.payload.state_block.checkout_mode_built_in_test
+HVLV_DCDC_B_temp [C],17.DAQ_B_AI222_2_topic.HVLV_DCDC_B_temp
+Electronics Bay Air Temp [C],17.DAQ_B_AI222_2_topic.electronics_bay_air_temp
+Control Laws: Foil Roll Ctrl Kp,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_roll_ctrl_debug.debug_pid_gains.k_p
+Control Laws: Foil Roll Ctrl Ki,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_roll_ctrl_debug.debug_pid_gains.k_i
+Control Laws: Foil Roll Ctrl Kd,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_roll_ctrl_debug.debug_pid_gains.k_d
+Control Laws: Foil Roll Ctrl Upper Limit,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_roll_ctrl_debug.debug_pid_parameters.ctrl_upper_limit
+Control Laws: Foil Roll Ctrl Lower Limit,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_roll_ctrl_debug.debug_pid_parameters.ctrl_lower_limit
+Control Laws: Foil Pitch Ctrl Kp,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_lon_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_gains.k_p
+Control Laws: Foil Pitch Ctrl Ki,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_lon_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_gains.k_i
+Control Laws: Foil Pitch Ctrl Kd,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_lon_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_gains.k_d
+Control Laws: Foil Pitch Ctrl Upper Limit,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_lon_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_parameters.ctrl_upper_limit
+Control Laws: Foil Pitch Ctrl Lower Limit,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_lon_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_parameters.ctrl_lower_limit
+Control Laws: Foil Yaw Rate Ctrl Kp,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_yaw_rate_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_gains.k_p
+Control Laws: Foil Yaw Rate Ctrl Ki,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_yaw_rate_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_gains.k_i
+Control Laws: Foil Yaw Rate Ctrl Kd,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_yaw_rate_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_gains.k_d
+Control Laws: Foil Yaw Rate Ctrl Upper Limit,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_yaw_rate_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_parameters.ctrl_upper_limit
+Control Laws: Foil Yaw Rate Ctrl Lower Limit,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_yaw_rate_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_parameters.ctrl_lower_limit
+Control Laws: Foil Ride Height Ctrl Kp,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_col_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_gains.k_p
+Control Laws: Foil Ride Height Ctrl Ki,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_col_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_gains.k_i
+Control Laws: Foil Ride Height Ctrl Kd,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_col_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_gains.k_d
+Control Laws: Foil Ride Height Ctrl Upper Limit,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_col_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_parameters.ctrl_upper_limit
+Control Laws: Foil Ride Height Ctrl Lower Limit,21.AGG_FS_OUTPUT.payload.state_block.primary_controller_debug.hydro_col_ctrl_debug.foil_ctrl_fdbk_debug.debug_pid_parameters.ctrl_lower_limit

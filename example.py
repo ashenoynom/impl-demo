@@ -1,0 +1,7 @@
+client = NominalClient.from_token("eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2F1dGguZ292Lm5vbWluYWwuaW8iLCJzdWIiOiJyaS5hdXRobi5jZXJ1bGVhbi1zdGFnaW5nLnVzZXIuZTkyYmI5OTctMDUwZC00OWYyLTg3OWYtZTI5ZjE2YTMxNTY4Iiwibm9taW5hbCI6eyJ1c2VyX3V1aWQiOiJlOTJiYjk5Ny0wNTBkLTQ5ZjItODc5Zi1lMjlmMTZhMzE1NjgiLCJvcmdhbml6YXRpb25fdXVpZCI6IjFlOTQ5N2I1LTEzY2ItNDExNy04ZGUyLTU0M2JjNTU3NTNlOCJ9LCJleHAiOjE3NTEwNjQ5OTMsImF1ZCI6Imh0dHBzOi8vYXBpLmdvdi5ub21pbmFsLmlvIn0.M0BcaNtuzghCnghQPUDzivNIeVodW1LiDDf3bzR2YgvfKUjwl1e-IenXq7L6skIfqeKKdWeQNxxb7vE2JJ2kaLU5vYHHIfL77oD_Hn829WYKErQZ8OMP0AKvXWhqiR68mchx9rx-7iiBkBZo64GO9NfFxt7NexG4LotL_9SZYwU5qa4tZa4OJhPPqBeibHDJDCvjR3ZTy0qBpC_g0vI3tnHaJ4Xwkuds-TAR43MbvX6ecpxAt79GPfWWRcbqeieK4rBDovEEOxUuwYO4Xa-PRcHb4JCm-dNwxs4-IKd-xe8pViq3-gBVMO75EK6624vFo_wSPD6zhdO3rLm9VigQ_A")
+
+dataset = client.get_dataset(rid="ri.catalog.cerulean-staging.dataset.bc53912d-a936-443e-b298-a3320888b4dc") # Find the dataset rid under "Data Sources > Test Dataset 1" in the UI
+
+channel = dataset.get_channel(name="S1FuelPressureFiltered_psi") # Sub with any channel string from the dataset
+s = channel_to_series(channel) # Should output a pandas series!
+print(s.name, "mean:", s.mean())
