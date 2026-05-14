@@ -1,0 +1,2 @@
+# Large telemetry export — store in Git LFS (install: https://git-lfs.com)
+data/goce_72h_anomalous_recent.csv filter=lfs diff=lfs merge=lfs -text
