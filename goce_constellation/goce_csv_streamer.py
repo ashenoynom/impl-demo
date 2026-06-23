@@ -78,6 +78,21 @@ SPACECRAFT_TIME_RESTART_INTERVAL = timedelta(hours=2)  # Time between flight com
 CREATE_SPACECRAFT_TIME_DATASET = True  # Whether to create a separate dataset with spacecraft time as timestamp
 SPACECRAFT_TIME_DATASET_PREFIX = "GOCE_SpacecraftTime"  # Prefix for spacecraft time dataset name
 
+# Geo (sub-satellite ground track) configuration
+# Emits one set of lat/long/alt channels per satellite so the fleet can be
+# plotted live in a geo map panel. Positions follow a smooth orbital ground
+# track (no random jumps) and are spread around the globe using the same
+# shell/plane layout as the constellation phase-shift above.
+EMIT_GEO_CHANNELS = True
+GEO_LAT_CHANNEL = "latitude"  # degrees, [-90, 90]
+GEO_LON_CHANNEL = "longitude"  # degrees, [-180, 180]
+GEO_ALT_CHANNEL = "altitude"  # kilometers above the surface
+GEO_ALTITUDE_KM = 550.0  # Starlink-like shell altitude
+GEO_ALTITUDE_JITTER_KM = 8.0  # gentle altitude "breathing" per orbit
+GEO_INCLINATION_DEG = 53.0  # Starlink-like orbital inclination
+GEO_ORBITAL_PERIOD_S = 5760.0  # ~96 min orbit (in simulated seconds)
+EARTH_ROTATION_PERIOD_S = 86400.0  # sidereal-ish day so ground tracks precess west
+
 # Debug configuration
 DEBUG_ORBIT_PRINT_FREQUENCY = 10  # Print debug output every N rows (set to 1 for every row, higher for less frequent)
 DEBUG_ORBIT_PRINT_NEAR_ZERO = True  # Also print when Z is near 0 (equatorial crossing)
@@ -296,7 +311,52 @@ class CSVStreamer:
         channels[POSITION_CHANNELS[2]] = z_final
         
         return channels
-    
+
+    def _geo_position(self, satellite_id: int, elapsed_sim_seconds: float) -> tuple:
+        """
+        Compute a smooth sub-satellite ground track (lat/long/alt) for one satellite.
+
+        Uses a simple spherical orbit model so the position moves continuously
+        (never jumps), and spreads the fleet around the globe by reusing the
+        shell -> orbital plane and position-within-shell layout. Earth rotation
+        is applied so successive orbits precess westward, like a real
+        constellation's ground tracks.
+
+        Args:
+            satellite_id: Satellite ID (1, 2, 3, ...)
+            elapsed_sim_seconds: Simulated seconds since this satellite started
+
+        Returns:
+            (latitude_deg, longitude_deg, altitude_km)
+        """
+        satellites_per_shell = max(1, NUM_SATELLITES // NUM_SHELLS)
+        shell_id = (satellite_id - 1) // satellites_per_shell
+        position_in_shell = (satellite_id - 1) % satellites_per_shell
+
+        # Right ascension of ascending node: one plane per shell, spread evenly.
+        raan = math.radians((360.0 / NUM_SHELLS) * shell_id)
+
+        # Argument of latitude: starting phase within the plane + motion over time.
+        phase0_deg = (360.0 / satellites_per_shell) * position_in_shell
+        mean_motion_deg_s = 360.0 / GEO_ORBITAL_PERIOD_S
+        arg = math.radians(phase0_deg + mean_motion_deg_s * elapsed_sim_seconds)
+        incl = math.radians(GEO_INCLINATION_DEG)
+
+        # Sub-satellite latitude/longitude from the inclined circular orbit.
+        latitude = math.degrees(math.asin(math.sin(incl) * math.sin(arg)))
+        lon_inertial = raan + math.atan2(math.cos(incl) * math.sin(arg), math.cos(arg))
+
+        # Earth turns underneath the orbit -> ground track drifts west over time.
+        earth_rotation = 2 * math.pi * (elapsed_sim_seconds / EARTH_ROTATION_PERIOD_S)
+        longitude = math.degrees(lon_inertial - earth_rotation)
+        # Wrap to [-180, 180].
+        longitude = (longitude + 180.0) % 360.0 - 180.0
+
+        # Gentle altitude breathing, phase-offset per satellite so they differ.
+        altitude = GEO_ALTITUDE_KM + GEO_ALTITUDE_JITTER_KM * math.sin(arg + satellite_id)
+
+        return latitude, longitude, altitude
+
     def _get_active_channels(self, row: Dict) -> Dict[str, float]:
         """
         Extract active channels (non-null values) from a row.
@@ -790,7 +850,10 @@ class CSVStreamer:
         
         # Orbit counter for LAN precession
         orbit_count = 0  # Track which orbit we're on
-        
+
+        # Reference time for the geo ground track (continuous, survives loops)
+        geo_epoch = datetime.now()
+
         try:
             if self.dry_run:
                 # In dry-run mode, create mock stream objects
@@ -862,7 +925,17 @@ class CSVStreamer:
                             # Ensure timestamp has microsecond precision to avoid duplicates
                             # Add a small offset based on row index to ensure uniqueness
                             current_time = current_time.replace(microsecond=(current_time.microsecond + (current_row_index % 1000)) % 1000000)
-                            
+
+                            # Add live geo ground-track channels (lat/long/alt) for this
+                            # satellite. Driven by wall-clock elapsed * speed_up so the
+                            # fleet visibly orbits the globe regardless of data cadence.
+                            if EMIT_GEO_CHANNELS:
+                                geo_t = (current_time - geo_epoch).total_seconds() * self.speed_up
+                                lat, lon, alt = self._geo_position(satellite_id, geo_t)
+                                active_channels[GEO_LAT_CHANNEL] = lat
+                                active_channels[GEO_LON_CHANNEL] = lon
+                                active_channels[GEO_ALT_CHANNEL] = alt
+
                             # Update spacecraft time (uptime)
                             if last_stream_time is None:
                                 # First row - spacecraft time starts at 0
