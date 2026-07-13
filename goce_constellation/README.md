@@ -126,6 +126,16 @@ Useful options:
 
 Press Ctrl+C to stop streaming.
 
+### Live geo channels
+
+Each satellite also streams `latitude`, `longitude`, and `altitude` (km) so the
+fleet can be plotted live in a geo map panel. Positions follow a smooth orbital
+ground track (Starlink-like 53° inclination, ~550 km), so they drift
+continuously rather than jumping. The fleet is spread around the globe using the
+same shell/plane layout as the constellation phase shift. Tune via the geo
+constants near the top of `goce_csv_streamer.py` (`GEO_*`), or set
+`EMIT_GEO_CHANNELS = False` to disable.
+
 ## Run the log streamer
 
 Simulated log lines tagged like the telemetry stream (`satellite`, `shell`, etc.):
