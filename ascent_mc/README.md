@@ -16,7 +16,7 @@ load, drag, and winds.
 | File | Contents |
 |---|---|
 | `generate_mc_data.py` | Simplified 2-DOF ascent simulator + dispersion sampling; regenerates both CSVs deterministically (seeded) |
-| `ascent_mc_build47.csv` | 11,610 rows, all 10 runs. Columns: `time_s` (relative seconds from liftoff), 7 numeric channels, `flight_phase` (enum), and tag columns `model_name`, `sim_number`, `run_number` |
+| `ascent_mc_build47.csv` | Generated, not committed — run `generate_mc_data.py` to produce it (byte-identical every time). 11,610 rows, all 10 runs. Columns: `time_s` (relative seconds from liftoff), 7 numeric channels, `flight_phase` (enum), and tag columns `model_name`, `sim_number`, `run_number` |
 | `ascent_mc_build47_run_metadata.csv` | Per-run dispersion inputs (seed, thrust/Isp/prop-load/drag factors, wind bias) and MECO/SECO/deploy times |
 | `stand_up.py` | Creates the `LV-2 GNC simulation` dataset, uploads the CSV (relative-seconds timestamps, 3 tag columns), creates the 10 runs with tag-filtered data scopes, labels, properties, and timeline events |
 | `analysis_setup.py` | Creates the analysis artifacts: overlay workbook, comparison workbook, checklist with threshold checks, and checklist executions (data reviews) on all 10 runs |
