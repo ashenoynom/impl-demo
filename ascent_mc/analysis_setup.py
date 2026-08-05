@@ -355,7 +355,9 @@ def _run_channel_variable(
         numeric=scout_compute_api.NumericSeries(
             channel=scout_compute_api.ChannelSeries(
                 run=scout_compute_api.RunChannel(
-                    run_rid=lit(literal=run_rid),
+                    # The frontend requires runRid as a *variable* whose name
+                    # is the run rid; the compute context resolves it.
+                    run_rid=lit(variable=run_rid),
                     data_scope_name=lit(literal=REF_NAME),
                     channel=lit(literal=channel),
                     additional_tags={},
