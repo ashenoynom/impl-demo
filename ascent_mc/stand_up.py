@@ -206,7 +206,7 @@ def main() -> None:
     workspace_rid = client._clients.resolve_default_workspace_rid()
     for ws in client.list_workspaces():
         if ws.rid == workspace_rid:
-            print(f"Target workspace: {ws.name} ({ws.rid})")
+            print(f"Target workspace: {ws.id} ({ws.rid})")
             break
     else:
         print(f"Target workspace rid (not listed?): {workspace_rid}")
