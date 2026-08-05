@@ -95,10 +95,9 @@ Two-stage LOX/RP-1 launch vehicle, payload deploy in LEO (~205 km, ~8.2 km/s).
 One sim build, **10 dispersions**: Run 1 is the nominal case; runs 2-10
 disperse stage thrust, Isp, propellant load, drag, and winds.
 
-**How to read the charts:** the bold trace is the primary run; the faded
-traces are the other dispersions (runs 2-10), overlaid via the run comparison
-layer. Toggle individual runs in the *Compare* section of each chart's layer
-tree.
+**How to read the charts:** every chart overlays all 10 dispersions, one
+colored trace per run (see the legend / layer tree on each chart). Toggle
+individual runs from the chart's layer list.
 
 | Tab | Contents |
 |---|---|
@@ -137,29 +136,14 @@ def _channel_locator(channel: str) -> scout_api.ChannelLocator:
     return scout_api.ChannelLocator(channel=channel, data_source_ref=REF_NAME, tags={})
 
 
-def _comparison_run_groups(run_rids: list[str]) -> list:
-    """Overlay every run after the primary (first) one, zero offset.
+RUN_PALETTE = [
+    "#4C79A8", "#F28E2B", "#E45756", "#76B7B2", "#59A14F",
+    "#EDC948", "#B07AA1", "#FF9DA7", "#9C755F", "#BAB0AC",
+]
 
-    All runs share the identical absolute window, so anchor=start-of-run with
-    offset 0 lines them up 1:1.
-    """
-    if len(run_rids) < 2:
-        return []
-    return [
-        scout_comparisonrun_api.ComparisonRunGroup(
-            uuid=str(uuid.uuid4()),
-            name="MC dispersions (runs 2-10)",
-            offset=scout_comparisonrun_api.Offset(unit=nominal_api_root.TimeUnit.SECONDS, value=0),
-            offset_anchor=scout_comparisonrun_api.OffsetAnchor(
-                run=scout_comparisonrun_api.OffsetRunAnchor()
-            ),
-            runs=[
-                scout_comparisonrun_api.ComparisonRun(run_rid=rid, enabled=True)
-                for rid in run_rids[1:]
-            ],
-            color=None,
-        )
-    ]
+
+def _run_var_name(channel: str, run_no: int) -> str:
+    return f"{channel}__r{run_no}"
 
 
 def _line_thresholds(axis_id: str, lines: list[tuple[float, str, str, bool]]):
@@ -190,16 +174,17 @@ def _line_thresholds(axis_id: str, lines: list[tuple[float, str, str, bool]]):
 
 def _time_series_chart(
     channel: str,
-    run_rids: list[str],
+    num_runs: int,
     title: str | None = None,
     thresholds: list[tuple[float, str, str, bool]] | None = None,
 ) -> scout_chartdefinition_api.VizDefinition:
+    """One chart, one plot per run — every dispersion overlaid on one panel."""
     axis_id = str(uuid.uuid4())
     return scout_chartdefinition_api.VizDefinition(
         time_series=scout_chartdefinition_api.TimeSeriesChartDefinition(
             v1=scout_chartdefinition_api.TimeSeriesChartDefinitionV1(
                 title=title or channel,
-                comparison_run_groups=_comparison_run_groups(run_rids),
+                comparison_run_groups=[],
                 value_axes=[_value_axis(axis_id, channel)],
                 thresholds=(
                     [_line_thresholds(axis_id, thresholds)] if thresholds else []
@@ -210,18 +195,19 @@ def _time_series_chart(
                         plots=[],
                         plots_v2=[
                             scout_chartdefinition_api.TimeSeriesPlotV2(
-                                variable_name=channel,
+                                variable_name=_run_var_name(channel, n),
                                 y_axis_id=axis_id,
                                 enabled=True,
                                 type=scout_chartdefinition_api.TimeSeriesPlotConfig(
                                     numeric=scout_chartdefinition_api.TimeSeriesNumericPlot(
-                                        color=PALETTE.get(channel, "#4C79A8"),
+                                        color=RUN_PALETTE[(n - 1) % len(RUN_PALETTE)],
                                         line_style=scout_chartdefinition_api.LineStyle(
                                             v1=scout_chartdefinition_api.LineStyleV1.SOLID
                                         ),
                                     )
                                 ),
                             )
+                            for n in range(1, num_runs + 1)
                         ],
                     )
                 ],
@@ -238,7 +224,7 @@ def _markdown_chart(content: str, title: str) -> scout_chartdefinition_api.VizDe
     )
 
 
-def _histogram_chart(channel: str, title: str) -> scout_chartdefinition_api.VizDefinition:
+def _histogram_chart(channel: str, num_runs: int, title: str) -> scout_chartdefinition_api.VizDefinition:
     return scout_chartdefinition_api.VizDefinition(
         histogram=scout_chartdefinition_api.HistogramChartDefinition(
             v1=scout_chartdefinition_api.HistogramChartDefinitionV1(
@@ -249,10 +235,11 @@ def _histogram_chart(channel: str, title: str) -> scout_chartdefinition_api.VizD
                 ),
                 plots=[
                     scout_chartdefinition_api.HistogramPlot(
-                        variable_name=channel,
-                        color=PALETTE.get(channel, "#4C79A8"),
+                        variable_name=_run_var_name(channel, n),
+                        color=RUN_PALETTE[(n - 1) % len(RUN_PALETTE)],
                         enabled=True,
                     )
+                    for n in range(1, num_runs + 1)
                 ],
             )
         )
@@ -260,14 +247,14 @@ def _histogram_chart(channel: str, title: str) -> scout_chartdefinition_api.VizD
 
 
 def _cartesian_chart(
-    x_channel: str, y_channel: str, run_rids: list[str], title: str
+    x_channel: str, y_channel: str, num_runs: int, title: str
 ) -> scout_chartdefinition_api.VizDefinition:
     x_axis, y_axis = str(uuid.uuid4()), str(uuid.uuid4())
     return scout_chartdefinition_api.VizDefinition(
         cartesian=scout_chartdefinition_api.CartesianChartDefinition(
             v1=scout_chartdefinition_api.CartesianChartDefinitionV1(
                 title=title,
-                comparison_run_groups=_comparison_run_groups(run_rids),
+                comparison_run_groups=[],
                 connect_points=True,
                 value_axes=[
                     _value_axis(x_axis, x_channel),
@@ -275,13 +262,14 @@ def _cartesian_chart(
                 ],
                 plots=[
                     scout_chartdefinition_api.CartesianPlot(
-                        color=PALETTE.get(y_channel, "#4C79A8"),
+                        color=RUN_PALETTE[(n - 1) % len(RUN_PALETTE)],
                         x_axis_id=x_axis,
-                        x_variable_name=x_channel,
+                        x_variable_name=_run_var_name(x_channel, n),
                         y_axis_id=y_axis,
-                        y_variable_name=y_channel,
+                        y_variable_name=_run_var_name(y_channel, n),
                         enabled=True,
                     )
+                    for n in range(1, num_runs + 1)
                 ],
             )
         )
@@ -353,27 +341,44 @@ def _tabbed_layout(tabs: list[scout_layout_api.SingleTab]) -> scout_layout_api.W
 # ------------------------------------------------------------ overlay workbook
 
 
-def _regular_channel_variable(channel: str) -> scout_channelvariables_api.ChannelVariable:
+def _run_channel_variable(
+    channel: str, run_rid: str, run_no: int
+) -> scout_channelvariables_api.ChannelVariable:
+    """A variable pinned to one run's 'default' data scope.
+
+    Pinning via a RunChannel compute node (rather than a bare reference) is
+    what routes the plot to that run — unpinned channels all resolve to the
+    first run in the workbook's data scope.
+    """
+    lit = scout_compute_api.StringConstant
+    node = scout_compute_api.ComputeNode(
+        numeric=scout_compute_api.NumericSeries(
+            channel=scout_compute_api.ChannelSeries(
+                run=scout_compute_api.RunChannel(
+                    run_rid=lit(literal=run_rid),
+                    data_scope_name=lit(literal=REF_NAME),
+                    channel=lit(literal=channel),
+                    additional_tags={},
+                    group_by_tags=[],
+                    tags_to_group_by=[],
+                )
+            )
+        )
+    )
     return scout_channelvariables_api.ChannelVariable(
-        variable_name=channel,
-        display_name=channel,
+        variable_name=_run_var_name(channel, run_no),
+        display_name=f"{channel} — Run {run_no}",
         compute_spec=scout_channelvariables_api.ComputeSpec(v1="{}"),
         compute_spec_v2=scout_channelvariables_api.ComputeNodeWithContext(
-            compute_node=_channel_compute_node(channel),
-            context=scout_channelvariables_api.WorkbookContext(
-                variables={
-                    channel: scout_channelvariables_api.VariableLocator(
-                        series=_channel_locator(channel)
-                    )
-                }
-            ),
+            compute_node=node,
+            context=scout_channelvariables_api.WorkbookContext(variables={}),
         ),
     )
 
 
 def _overlay_workbook_content(run_rids: list[str]):
     """Multi-tab overlay workbook. Returns (content_v2, layout)."""
-    variables = [
+    channels = [
         "altitude_m",
         "inertial_velocity_mps",
         "flight_path_angle_deg",
@@ -382,7 +387,12 @@ def _overlay_workbook_content(run_rids: list[str]):
         "thrust_kn",
         "acceleration_mps2",
     ]
-    channel_variables = {ch: _regular_channel_variable(ch) for ch in variables}
+    channel_variables = {
+        _run_var_name(ch, n): _run_channel_variable(ch, rid, n)
+        for ch in channels
+        for n, rid in enumerate(run_rids, start=1)
+    }
+    num_runs = len(run_rids)
 
     charts: dict[str, scout_chartdefinition_api.VizDefinition] = {}
 
@@ -394,15 +404,15 @@ def _overlay_workbook_content(run_rids: list[str]):
     overview = add(_markdown_chart(OVERVIEW_MARKDOWN, "Campaign overview"))
 
     trajectory = [
-        add(_time_series_chart("altitude_m", run_rids)),
-        add(_time_series_chart("inertial_velocity_mps", run_rids)),
-        add(_time_series_chart("flight_path_angle_deg", run_rids)),
+        add(_time_series_chart("altitude_m", num_runs)),
+        add(_time_series_chart("inertial_velocity_mps", num_runs)),
+        add(_time_series_chart("flight_path_angle_deg", num_runs)),
     ]
     aero = [
         add(
             _time_series_chart(
                 "dynamic_pressure_pa",
-                run_rids,
+                num_runs,
                 title="Max-Q vs design margins",
                 thresholds=[
                     (35_000.0, "35 kPa design margin", "#E4A11B", False),
@@ -410,16 +420,16 @@ def _overlay_workbook_content(run_rids: list[str]):
                 ],
             )
         ),
-        add(_histogram_chart("dynamic_pressure_pa", "Q distribution (primary run)")),
-        add(_cartesian_chart("altitude_m", "dynamic_pressure_pa", run_rids, "Q vs altitude")),
+        add(_histogram_chart("dynamic_pressure_pa", num_runs, "Q distribution by run")),
+        add(_cartesian_chart("altitude_m", "dynamic_pressure_pa", num_runs, "Q vs altitude")),
     ]
     propulsion = [
-        add(_time_series_chart("thrust_kn", run_rids, thresholds=[(2_950.0, "2950 kN qualification limit", "#D9534F", False)])),
-        add(_time_series_chart("mass_kg", run_rids)),
+        add(_time_series_chart("thrust_kn", num_runs, thresholds=[(2_950.0, "2950 kN qualification limit", "#D9534F", False)])),
+        add(_time_series_chart("mass_kg", num_runs)),
         add(
             _time_series_chart(
                 "acceleration_mps2",
-                run_rids,
+                num_runs,
                 thresholds=[(58.8, "6 g crew/structure limit", "#D9534F", True)],
             )
         ),
