@@ -528,31 +528,33 @@ def _comparison_table(run_rids: list[str]) -> scout_comparisonnotebook_api.VizDe
 
 
 def _comparison_scatter(run_rids: list[str]) -> scout_comparisonnotebook_api.VizDefinition:
+    """One point per run: x = max dynamic pressure, y = max acceleration.
+
+    The renderer treats variables[0] as X and variables[1] as Y, and looks up
+    the axes pair matching (variables[0].xAxisId, variables[1].yAxisId).
+    """
     cn = scout_comparisonnotebook_api
-    charts = [
-        ("dynamic_pressure_pa", "Max-Q per run"),
-        ("acceleration_mps2", "Peak acceleration per run"),
+    x_channel, y_channel = "dynamic_pressure_pa", "acceleration_mps2"
+    x_id, y_id = str(uuid.uuid4()), str(uuid.uuid4())
+    variables = [
+        cn.ComparisonScatterPlotVariable(
+            x_axis_id=x_id,
+            y_axis_id=y_id,
+            locator=cn.VariableLocator(series=_channel_locator(channel)),
+            aggregation_type=cn.AggregationType(max=cn.Max()),
+        )
+        for channel in (x_channel, y_channel)
     ]
-    variables, axes = [], []
-    for channel, _ in charts:
-        x_id, y_id = str(uuid.uuid4()), str(uuid.uuid4())
-        variables.append(
-            cn.ComparisonScatterPlotVariable(
-                x_axis_id=x_id,
-                y_axis_id=y_id,
-                locator=cn.VariableLocator(series=_channel_locator(channel)),
-                aggregation_type=cn.AggregationType(max=cn.Max()),
-            )
+    axes = [
+        cn.ScatterPlotValueAxes(
+            x_axis=_value_axis(x_id, f"max {x_channel}"),
+            y_axis=_value_axis(y_id, f"max {y_channel}"),
         )
-        axes.append(
-            cn.ScatterPlotValueAxes(
-                x_axis=_value_axis(x_id, "run"), y_axis=_value_axis(y_id, channel)
-            )
-        )
+    ]
     return cn.VizDefinition(
         scatter=cn.ComparisonScatterPlotDefinition(
             v1=cn.ComparisonScatterPlotDefinitionV1(
-                title="Dispersion extremes",
+                title="Max-Q vs peak acceleration (per run)",
                 range_aggregation=_full_flight_aggregation(run_rids),
                 variables=variables,
                 axes=axes,
