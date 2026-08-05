@@ -36,6 +36,7 @@ from nominal_api import (
     scout_compute_api,
     scout_layout_api,
     scout_notebook_api,
+    scout_rids_api,
     scout_workbookcommon_api,
 )
 
@@ -93,10 +94,16 @@ def _split_stack(panels: list[scout_layout_api.Panel]) -> scout_layout_api.Panel
 
 
 def _layout_for_viz_ids(viz_ids: list[str]) -> scout_layout_api.WorkbookLayout:
+    # The app only renders "chart" panels referencing the charts map by
+    # versioned id; the legacy "viz" panel type shows "Unknown panel type".
     chart_panels = [
         scout_layout_api.Panel(
-            viz=scout_layout_api.VizPanel(
-                v1=scout_layout_api.VizPanelV1(id=str(uuid.uuid4()), viz_id=viz_id, hide_legend=False)
+            chart=scout_layout_api.ChartPanel(
+                v1=scout_layout_api.ChartPanelV1(
+                    id=str(uuid.uuid4()),
+                    chart_rid=scout_rids_api.VersionedVizId(rid=viz_id, version=1),
+                    hide_legend=False,
+                )
             )
         )
         for viz_id in viz_ids
