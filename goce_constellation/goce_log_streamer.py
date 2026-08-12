@@ -16,14 +16,17 @@ from typing import Dict, Optional
 
 from nominal.core import NominalClient
 
+from goce_channels import LOG_CHANNEL
+from goce_limits import FAULT_SATELLITE, FaultManager
+
 
 # --- CONFIGURATION ---
 PROFILE_NAME = "goce_streamer"  # Change to your Nominal profile name
-DATASET_PREFIX = "GOCE_Streaming"  # Reuse the telemetry dataset prefix
+DATASET_PREFIX = "GOCE_Fleet_Streaming"  # Reuse the (clean, hierarchical-only) telemetry dataset prefix
 DATASET_NAME = None  # If None, will create a dataset with prefix + timestamp
 
 # Log streaming configuration
-LOG_CHANNEL_NAME = "satellite_logs"
+LOG_CHANNEL_NAME = LOG_CHANNEL  # fsw.event_log (hierarchical namespace)
 LOG_INTERVAL_SECONDS = 1.0  # Base interval per satellite (before speed-up)
 SPEED_UP = 1.0  # Speed multiplier (1.0 = real-time, 2.0 = 2x faster)
 
@@ -46,6 +49,7 @@ class LogStreamer:
         self.speed_up = speed_up
         self._active_satellites = NUM_SATELLITES
         self.random = random.Random(42)
+        self.fault_manager = FaultManager()
 
         if not dry_run:
             self.client = NominalClient.from_profile(profile=profile)
@@ -99,7 +103,56 @@ class LogStreamer:
             SHELL_TAG_KEY: f"shell-{shell_id + 1}",
         }
 
+    # HTR-2 runaway story (see goce_limits.py). Messages keyed by fault
+    # phase so the RCA log panel tells a coherent story.
+    FAULT_LOGS = [
+        ("ERROR", "HTR-2 heater duty cycle at 100% — DUTY_SET command timeout (3 retries)", "thermal"),
+        ("ERROR", "EPS bus overcurrent: load {current:.2f} A exceeds heater budget", "power"),
+        ("WARN", "Bus voltage sag detected: {voltage:.2f} V under continuous heater load", "power"),
+        ("WARN", "Bus temperature rising: {temp:.1f} C, radiator at capacity", "thermal"),
+        ("WARN", "HTR-2 controller not responding to duty-cycle commands", "thermal"),
+        ("ERROR", "Payload rail current {payload:.2f} A above nominal envelope", "power"),
+    ]
+    RECOVERY_LOGS = [
+        ("INFO", "CMD HTR2_PWR_CYCLE accepted — power-cycling heater controller", "thermal"),
+        ("INFO", "HTR-2 duty cycle restored to closed-loop control (12% duty)", "thermal"),
+        ("INFO", "Bus current recovering: {current:.2f} A and falling", "power"),
+        ("INFO", "Bus voltage recovering: {voltage:.2f} V and rising", "power"),
+    ]
+
+    def _fault_log_message(self, phase: str, envelope: float) -> tuple[str, str, str]:
+        """One fault/recovery log line with plausible live values."""
+        current = 2.35 + 1.00 * envelope
+        voltage = 3.80 - 0.25 * envelope
+        temp = 38.0 + 2.8 * envelope
+        payload = 0.20 + 0.22 * envelope
+        pool = self.FAULT_LOGS if phase == "fault" else self.RECOVERY_LOGS
+        level, template, subsystem = self.random.choice(pool)
+        return level, template.format(
+            current=current, voltage=voltage, temp=temp, payload=payload
+        ), subsystem
+
     def _generate_log_message(self, satellite_id: int, sequence: int) -> tuple[str, Dict[str, str]]:
+        # Fault-aware logging for the fault satellite: while the HTR-2
+        # runaway is active, half the log lines narrate the failure;
+        # while recovering, they narrate the recovery.
+        tag_value = f"GOCE-{satellite_id}"
+        if tag_value == FAULT_SATELLITE:
+            state = self.fault_manager.state()
+            envelope = self.fault_manager.envelope(tag_value)
+            phase = None
+            if state.get("state") in ("armed", "active") and envelope > 0.05:
+                phase = "fault"
+            elif state.get("state") == "recovering" and envelope > 0.02:
+                phase = "recovery"
+            if phase and self.random.random() < 0.5:
+                level, message, subsystem = self._fault_log_message(phase, envelope)
+                tags = self._tags_for_satellite(satellite_id)
+                tags.update(
+                    {"level": level, "sequence": str(sequence), "subsystem": subsystem}
+                )
+                return f"[{level}] {message}", tags
+
         level = self.random.choices(
             population=["INFO", "WARN", "ERROR"],
             weights=[0.8, 0.15, 0.05],
