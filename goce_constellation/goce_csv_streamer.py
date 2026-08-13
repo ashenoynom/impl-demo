@@ -15,6 +15,7 @@ Features:
 """
 
 import argparse
+import random
 import time
 import threading
 import math
@@ -24,6 +25,21 @@ from typing import Dict, List, Optional, Set
 import pandas as pd
 
 from nominal.core import NominalClient
+
+from goce_channels import (
+    BOOT_COUNT_CHANNEL,
+    CHANNEL_MAP,
+    UPTIME_CHANNEL,
+)
+from goce_limits import (
+    HTR_CHANNEL,
+    MONITORED_CHANNELS,
+    MONITORED_GAIN_RANGE,
+    MONITORED_DRIFT_AMPLITUDE,
+    FaultManager,
+    clamp_nominal,
+    htr_duty_with_fault,
+)
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -58,7 +74,10 @@ SHELL_TAG_KEY = "shell"  # Tag key for shell identification
 TIME_SHIFT_BETWEEN_SATELLITES = timedelta(minutes=5)  # Time shift between each satellite
 
 # Position phase shift configuration (for constellation simulation)
-POSITION_CHANNELS = ["SST03263", "SST03264", "SST03265"]  # x, y, z position channels (ECEF)
+# NOTE: raw CSV mnemonics are renamed to the hierarchical demo namespace
+# (goce_channels.CHANNEL_MAP) inside _get_active_channels, so everything
+# downstream — including these constants — uses the new names.
+POSITION_CHANNELS = ["gnc.orbit.ecef_x_m", "gnc.orbit.ecef_y_m", "gnc.orbit.ecef_z_m"]
 PHASE_SHIFT_DEGREES = 180.0  # Total phase shift range in degrees (distributed among satellites)
 # If PHASE_SHIFT_DEGREES = 360, satellites will be evenly distributed around a full orbit
 
@@ -76,7 +95,11 @@ XY_PERIOD_MULTIPLIER = 1.1  # X and Y complete this many periods per Z orbit per
 # Spacecraft time configuration
 SPACECRAFT_TIME_RESTART_INTERVAL = timedelta(hours=2)  # Time between flight computer restarts
 CREATE_SPACECRAFT_TIME_DATASET = True  # Whether to create a separate dataset with spacecraft time as timestamp
-SPACECRAFT_TIME_DATASET_PREFIX = "GOCE_SpacecraftTime"  # Prefix for spacecraft time dataset name
+# "Fleet" prefixes (2026-08-12): fresh datasets that only ever contained
+# the hierarchical channel namespace — the original GOCE_Streaming
+# dataset mixes pre-rename mnemonics and is left to the shared
+# demo-live-streaming service.
+SPACECRAFT_TIME_DATASET_PREFIX = "GOCE_Fleet_SpacecraftTime"  # Prefix for spacecraft time dataset name
 
 # Geo (sub-satellite ground track) configuration
 # Emits one set of lat/long/alt channels per satellite so the fleet can be
@@ -84,9 +107,7 @@ SPACECRAFT_TIME_DATASET_PREFIX = "GOCE_SpacecraftTime"  # Prefix for spacecraft 
 # track (no random jumps) and are spread around the globe using the same
 # shell/plane layout as the constellation phase-shift above.
 EMIT_GEO_CHANNELS = True
-GEO_LAT_CHANNEL = "latitude"  # degrees, [-90, 90]
-GEO_LON_CHANNEL = "longitude"  # degrees, [-180, 180]
-GEO_ALT_CHANNEL = "altitude"  # kilometers above the surface
+from goce_channels import GEO_LAT_CHANNEL, GEO_LON_CHANNEL, GEO_ALT_CHANNEL  # noqa: E402
 GEO_ALTITUDE_KM = 550.0  # Starlink-like shell altitude
 GEO_ALTITUDE_JITTER_KM = 8.0  # gentle altitude "breathing" per orbit
 GEO_INCLINATION_DEG = 53.0  # Starlink-like orbital inclination
@@ -96,6 +117,18 @@ EARTH_ROTATION_PERIOD_S = 86400.0  # sidereal-ish day so ground tracks precess w
 # Debug configuration
 DEBUG_ORBIT_PRINT_FREQUENCY = 10  # Print debug output every N rows (set to 1 for every row, higher for less frequent)
 DEBUG_ORBIT_PRINT_NEAR_ZERO = True  # Also print when Z is near 0 (equatorial crossing)
+
+# Per-satellite telemetry variance configuration
+# Each satellite applies a deterministic (seeded by satellite id + channel)
+# gain and slow sinusoidal drift to its telemetry so the fleet doesn't stream
+# 25 identical time-shifted copies. Satellite 1 stays exactly nominal.
+# Position channels are excluded (constellation geometry comes from the phase
+# shift), and geo channels are excluded (they come from the orbital model).
+APPLY_SATELLITE_VARIANCE = True
+VARIANCE_EXCLUDE_CHANNELS = set(POSITION_CHANNELS)
+VARIANCE_GAIN_RANGE = 0.06  # per-satellite fixed gain: value * (1 ± up to 6%)
+VARIANCE_DRIFT_AMPLITUDE = 0.03  # slow drift: up to ±3% of value over a drift period
+VARIANCE_DRIFT_PERIOD_S = 5400.0  # nominal drift period in simulated seconds (~1 orbit)
 
 
 class CSVStreamer:
@@ -134,6 +167,13 @@ class CSVStreamer:
         self.current_row_index = 0
         self.last_stream_time: Optional[datetime] = None
         self.stream_start_time: Optional[datetime] = None
+
+        # Per-(satellite, channel) variance parameters, computed lazily
+        self._variance_cache: Dict[tuple, tuple] = {}
+
+        # Command-state-driven fault injection (see goce_limits.py):
+        # polls command_state.json so a fault can be armed / cleared live.
+        self.fault_manager = FaultManager()
         
         # Load and prepare data
         self._load_csv()
@@ -357,6 +397,63 @@ class CSVStreamer:
 
         return latitude, longitude, altitude
 
+    def _variance_params(self, satellite_id: int, channel: str) -> tuple:
+        """
+        Deterministic variance parameters for one (satellite, channel) pair.
+
+        Returns:
+            (gain, drift_amplitude, drift_period_s, drift_phase_rad)
+        """
+        cached = self._variance_cache.get((satellite_id, channel))
+        if cached is not None:
+            return cached
+
+        if satellite_id == 1:
+            # Satellite 1 is the nominal reference: untouched source data.
+            params = (1.0, 0.0, VARIANCE_DRIFT_PERIOD_S, 0.0)
+        else:
+            rng = random.Random(f"goce-variance:{satellite_id}:{channel}")
+            # Channels with fleet-wide monitored limits get a tight
+            # variance clamp so a healthy fleet never crosses a warn
+            # band from dispersion alone (see goce_limits.py).
+            gain_range = (
+                MONITORED_GAIN_RANGE if channel in MONITORED_CHANNELS else VARIANCE_GAIN_RANGE
+            )
+            drift_ceiling = (
+                MONITORED_DRIFT_AMPLITUDE
+                if channel in MONITORED_CHANNELS
+                else VARIANCE_DRIFT_AMPLITUDE
+            )
+            gain = 1.0 + rng.uniform(-gain_range, gain_range)
+            drift_amp = rng.uniform(0.3, 1.0) * drift_ceiling
+            drift_period = VARIANCE_DRIFT_PERIOD_S * rng.uniform(0.8, 1.25)
+            drift_phase = rng.uniform(0.0, 2.0 * math.pi)
+            params = (gain, drift_amp, drift_period, drift_phase)
+
+        self._variance_cache[(satellite_id, channel)] = params
+        return params
+
+    def _apply_satellite_variance(
+        self, channels: Dict[str, float], satellite_id: int, elapsed_sim_seconds: float
+    ) -> Dict[str, float]:
+        """
+        Apply per-satellite gain + slow drift to telemetry channels in place.
+
+        Multiplicative only, so zero crossings and channel shape are preserved;
+        each satellite's traces sit visibly apart when overlaid in a workbook.
+        """
+        for channel, value in channels.items():
+            if channel in VARIANCE_EXCLUDE_CHANNELS:
+                continue
+            gain, drift_amp, drift_period, drift_phase = self._variance_params(
+                satellite_id, channel
+            )
+            drift = drift_amp * math.sin(
+                2.0 * math.pi * (elapsed_sim_seconds / drift_period) + drift_phase
+            )
+            channels[channel] = value * gain * (1.0 + drift)
+        return channels
+
     def _get_active_channels(self, row: Dict) -> Dict[str, float]:
         """
         Extract active channels (non-null values) from a row.
@@ -377,7 +474,9 @@ class CSVStreamer:
                     float_value = float(value)
                     # Check if the float value is actually NaN (not a valid number)
                     if not (isinstance(float_value, float) and math.isnan(float_value)):
-                        active_channels[channel] = float_value
+                        # Rename raw GOCE mnemonics into the hierarchical
+                        # demo namespace (system.subsystem.measure).
+                        active_channels[CHANNEL_MAP.get(channel, channel)] = float_value
                 except (ValueError, TypeError):
                     # Skip if can't convert to float
                     pass
@@ -505,10 +604,10 @@ class CSVStreamer:
         # Create or get dataset
         if dataset_name is None:
             timestamp_str = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
-            dataset_name = f"GOCE_Streaming_{timestamp_str}"
+            dataset_name = f"GOCE_Fleet_Streaming_{timestamp_str}"
         
         # Search for existing dataset by prefix
-        prefix = "GOCE_Streaming"
+        prefix = "GOCE_Fleet_Streaming"
         print(f"🔍 Searching for existing dataset with prefix: {prefix}")
         dataset = self._find_dataset_by_prefix(prefix)
         
@@ -926,6 +1025,33 @@ class CSVStreamer:
                             # Add a small offset based on row index to ensure uniqueness
                             current_time = current_time.replace(microsecond=(current_time.microsecond + (current_row_index % 1000)) % 1000000)
 
+                            # Per-satellite telemetry variance (before geo channels are
+                            # added, so lat/long/alt stay on the orbital model).
+                            # The raw replay embeds native anomalies (it's the
+                            # "anomalous" GOCE export) — clamp monitored
+                            # channels into their nominal band so only the
+                            # commanded fault below can cross a limit.
+                            clamp_nominal(active_channels)
+
+                            if APPLY_SATELLITE_VARIANCE:
+                                variance_t = (current_time - geo_epoch).total_seconds() * self.speed_up
+                                active_channels = self._apply_satellite_variance(
+                                    active_channels, satellite_id, variance_t
+                                )
+
+                            # Command-state fault injection (GOCE-7 HTR-2
+                            # runaway story): additive deltas scaled by the
+                            # live fault envelope from command_state.json.
+                            fault_env = self.fault_manager.apply(tag_value, active_channels)
+
+                            # Synthetic heater duty-cycle channel — the
+                            # smoking gun for the RCA story. Nominal
+                            # closed-loop 6-18%; latched to 100% at fault.
+                            htr_t = (current_time - geo_epoch).total_seconds() * self.speed_up
+                            active_channels[HTR_CHANNEL] = htr_duty_with_fault(
+                                htr_t, satellite_id, fault_env
+                            )
+
                             # Add live geo ground-track channels (lat/long/alt) for this
                             # satellite. Driven by wall-clock elapsed * speed_up so the
                             # fleet visibly orbits the globe regardless of data cadence.
@@ -968,8 +1094,8 @@ class CSVStreamer:
                             if sc_stream:
                                 # Add spacecraft_time and boot_up_count to the data
                                 sc_channels = active_channels.copy()
-                                sc_channels["spacecraft_time"] = spacecraft_time.total_seconds()
-                                sc_channels["boot_up_count"] = float(boot_up_count)
+                                sc_channels[UPTIME_CHANNEL] = spacecraft_time.total_seconds()
+                                sc_channels[BOOT_COUNT_CHANNEL] = float(boot_up_count)
                                 
                                 # Use spacecraft_time as timestamp (epoch seconds from 0)
                                 # Convert to datetime by using a base epoch time
@@ -1128,6 +1254,7 @@ def _build_arg_parser() -> argparse.ArgumentParser:
 
 
 def main() -> None:
+    global NUM_SATELLITES
     args = _build_arg_parser().parse_args()
     if args.test:
         test_phase_shift()
@@ -1138,6 +1265,10 @@ def main() -> None:
     speed_up = args.speed_up if args.speed_up is not None else SPEED_UP
     connection_rid = args.connection_rid if args.connection_rid is not None else CONNECTION_RID
     num_satellites = args.num_satellites if args.num_satellites is not None else NUM_SATELLITES
+    # The shell/plane layout and geo ground-track math read the module-global
+    # NUM_SATELLITES; without this, --num-satellites N streams N sats but they
+    # collapse onto the 3-satellite constellation geometry (overlapping planes).
+    NUM_SATELLITES = num_satellites
 
     print("=" * 60)
     print("GOCE CSV Streamer to Nominal")

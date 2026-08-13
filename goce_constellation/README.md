@@ -147,6 +147,46 @@ python goce_log_streamer.py --profile goce_streamer
 
 Options: `--speed-up`, `--num-satellites`, `--dry-run`.
 
+## Constellation + zoom-down workbooks
+
+`constellation_workbook.py` creates (or converges in place) two asset-scoped,
+multi-tab workbooks. Run it after the CSV streamer has created the assets
+(~2s after launch):
+
+```bash
+python constellation_workbook.py --profile goce_streamer --num-satellites 25 --satellite 1
+```
+
+1. **Constellation workbook** over all `GOCE-1` … `GOCE-N` assets: earth-view
+   geo map (one live ground track per satellite), a 3D earth view driven by
+   the same latitude/longitude/altitude channels as the 2D map (WGS84
+   positions, so both panels always agree; the ECEF `SST0326x` channels are a
+   different orbit — the raw replay + phase shift — and are kept for the
+   Orbit charts), fleet altitude overlay, ECEF orbit phase-spread charts, and
+   thermal / power fleet overlays.
+2. **Single-satellite zoom-down** (`--satellite N`, default GOCE-1):
+   3D orbit + ground track + altitude, fast/slow bus temperatures, bus
+   voltages and unit currents, AOCS sensors, and a live spacecraft log panel
+   (the `satellite_logs` channel from the log streamer).
+
+Channel variables are pinned per satellite via `AssetChannel` compute nodes
+whose `assetRid` is a variable named by the asset rid (the same frontend
+convention as `RunChannel` in run-scoped workbooks); log channels use the same
+pinning inside a `LogSeries` compute node.
+
+## Per-satellite variance
+
+`goce_csv_streamer.py` applies a deterministic per-satellite gain and slow
+sinusoidal drift (seeded by satellite id + channel) to telemetry channels so
+the fleet doesn't stream identical time-shifted copies. GOCE-1 is the
+untouched nominal reference. Position channels (`SST0326x`) and the geo
+channels are excluded — constellation geometry comes from the phase shift and
+the orbital ground-track model. Tune via the `VARIANCE_*` constants or disable
+with `APPLY_SATELLITE_VARIANCE = False`.
+
+Note: `--num-satellites` also drives the shell/plane layout globals, so the
+25-sat fleet spreads across 5 planes × 5 slots on the earth view.
+
 ## Adding or updating the LFS file (maintainers)
 
 After changing the large CSV, from the **impl-demo** repo root:
