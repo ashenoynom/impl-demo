@@ -79,7 +79,27 @@ python3 goce_log_streamer.py --profile goce_streamer --num-satellites 25
 ```
 
 ```bash
-# Terminal 3: ground-segment command bridge (leave visible — it's part of Act 4)
+# Terminal 3: webhook receiver — the "ground segment" (leave visible — it's part of Act 4)
+python3 goce_webhook_receiver.py --profile space_demo_prod
+```
+
+```bash
+# Terminal 4: public tunnel for the webhook (URL changes on every restart!)
+cloudflared tunnel --url http://localhost:8765
+```
+
+```bash
+# EVERY time the tunnel (re)starts: point the "procedures" integration at
+# the new trycloudflare URL (grab it from Terminal 4's output):
+python3 -c "
+from nominal.core import NominalClient
+from goce_webhook_receiver import update_integration_url
+update_integration_url(NominalClient.from_profile('space_demo_prod'), '<TUNNEL-URL>')"
+```
+
+```bash
+# Terminal 5: command bridge — now only close-out (bounds recovery run,
+# runs the checklist) + silent fallback if the webhook path is down
 python3 goce_command_bridge.py --profile space_demo_prod
 ```
 
@@ -87,7 +107,8 @@ python3 goce_command_bridge.py --profile space_demo_prod
 # Clean state + fresh comparison window (run ~15 min before start):
 python3 goce_fault_injector.py reset
 
-# Live checklist evaluation on GOCE-7 (violations -> events, no clicks needed):
+# Live checklist evaluation on GOCE-7 (violations -> events + Slack
+# #demo-notifications page; add --no-slack to keep it quiet):
 python3 goce_streaming_checks.py start --satellites 7
 
 # Create today's procedure execution + pin it into the deep-dive's
@@ -142,6 +163,14 @@ during a trial."*
    namespace `eps.* / tcs.* / aocs.* / gnc.* / fsw.*`. *Talking point*:
    your existing mnemonic database maps in at ingestion — engineers browse
    by subsystem, not by memorized telemetry IDs.
+   **Data-architecture point (say it here, at the tree)**: all 25
+   satellites stream into **one dataset** — every point tagged
+   `satellite=GOCE-N` at ingestion. An asset is a *view*: GOCE-7's data
+   scope filters the fleet firehose down to the points that spacecraft
+   actually produced. That's why discovery is seamless — same channel
+   names on every bird, one place to look, and satellite 26 is a new tag
+   value, not a new pipeline, schema, or dashboard. Every workbook you'll
+   see today is built on those asset-scoped views.
 3. **Fleet status tab** — the money shot: 25 asset-named rows (GOCE-1…25
    row headers) × 4 limit-colored columns, with the fleet EPS traces and
    GOCE-7's live log stacked beside the grid. Wall of green.
@@ -162,6 +191,24 @@ python3 goce_fault_injector.py arm --event
    to Slack or Jira so the on-call engineer gets paged in the tools you
    already use. Three sources, one timeline: automated checklist
    violations, operator annotations, and process milestones."
+5. **The Slack hop (the Act 1 → Act 2 transition — play the on-call
+   engineer)**: the same violations page **#demo-notifications** in
+   Slack. Switch to Slack on screen, let the alert land, and click its
+   link — it opens the violation/alert view in Nominal, already on
+   GOCE-7. *"I wasn't watching a dashboard. Slack told me, and one click
+   put me on the spacecraft with the offending channel in front of me."*
+6. **Show the source checklist** (from the alert view, follow the
+   checklist provenance — or open the pre-staged tab): **GOCE satellite
+   bus health limits**, 10 checks. *Talking point*: "This checklist IS
+   the alarm database — the same limits color the fleet grid, page
+   Slack, and gate the recovery procedure you'll see later. It's
+   versioned like code: a limit change is a reviewed, published
+   revision, not someone editing a config file on a console. And it runs
+   everywhere — continuously against this live stream, and on demand
+   against any archived run" (which is exactly what Act 3 does with the
+   flight anomaly run and Act 4 does with the recovery run).
+   From the alert view / asset context, open **GOCE-7: bus health
+   deep-dive** → Act 2.
 
 ### Act 2 — Drill-down & root cause (9 min) · deep-dive workbook
 
@@ -235,13 +282,16 @@ telemetry on one screen*. Walk it as the operator:
    Click GO: a decision event lands on the timeline (flight-director
    accountability, for free).
 3. **Corrective commanding**: complete **"Transmit HTR2_PWR_CYCLE
-   command"**. Point at Terminal 3: the **command bridge** sees the step
-   complete within ~5 s and radiates the command — *this is the
+   command"**. Point at Terminal 3: the step's **Send-notification action
+   fires Nominal's webhook integration**, and the ground-segment receiver
+   logs the POST and radiates the command within ~3 s — *this is the
    complementary-integration moment*:
-   > "Nominal doesn't pretend to be your command system. The procedure
-   > exposes the decision over our API; your ground segment — here, 40
-   > lines of Python — picks it up and commands through the stack you've
-   > already qualified. Same pattern wires into Jira, Slack, or your MPS."
+   > "Nominal doesn't pretend to be your command system. Completing the
+   > step pushes a webhook through our integration layer — the same rail
+   > that pages Slack or Opsgenie — and your ground segment (here, a
+   > 100-line HTTP receiver) commands through the stack you've already
+   > qualified. No polling, no glue code on our side: the procedure step
+   > IS the uplink trigger."
    Watch: CMD-transmitted event (from the procedure) + CMD-accepted ACK
    event (from the "spacecraft") + the fault log printing
    `CMD HTR2_PWR_CYCLE accepted`.
@@ -283,7 +333,10 @@ wiring, multi-tenant/workspace controls.
 ## Dry-run checklist
 
 1. [ ] Both streamers up ≥ 10 min (fleet table fully populated, 25 rows)
-2. [ ] Bridge running in a visible terminal
+2. [ ] Webhook receiver + tunnel up; "procedures" integration repointed at
+       today's tunnel URL; bridge running (close-out + fallback)
+2b.[ ] Webhook smoke test: `curl -X POST <tunnel-url>` → Terminal 3 logs
+       "WEBHOOK RECEIVED" (nominal state → no side effects)
 3. [ ] `goce_fault_injector.py status` → `nominal`, envelope 0.000
 4. [ ] Fleet status tab: all 25 rows green (give it one full live window)
 5. [ ] Six browser tabs pre-opened (order above), live windows ~15 min
@@ -303,7 +356,8 @@ wiring, multi-tenant/workspace controls.
 |---|---|
 | Fleet table looks stale | Streamer died (network blip) — relaunch Terminal 1; data resumes into the same datasets in ~60 s |
 | Fault won't show | `python3 goce_fault_injector.py status` — if `nominal`, re-arm; ramp is 2 min |
-| Bridge missed the transmit step | It polls every 5 s and is idempotent — check Terminal 3; worst case `python3 goce_fault_injector.py clear` simulates the command and the story continues |
+| Webhook didn't fire on transmit | Bridge fallback heals it within ~5 s anyway (audience sees nothing). Post-demo: tunnel died or integration URL stale — repoint it |
+| Both webhook AND bridge missed | `python3 goce_fault_injector.py clear` simulates the command and the story continues |
 | Recovery gate won't pass | Telemetry needs ~60–90 s under 3.0 A after recovery starts; narrate the soak, flip to Fleet status while waiting |
 | Need a hard reset mid-demo | `python3 goce_fault_injector.py reset` → row green in ~1 min; re-arm any time |
 
@@ -322,8 +376,17 @@ its data review, and the alert/decision/command/recovery events on GOCE-7
 ## Mechanics reference (for whoever runs this next)
 
 - `command_state.json` is the "spacecraft": streamers poll it every ~2 s.
-  The injector writes it manually; the bridge writes it when the
-  procedure's transmit step completes.
+  The injector writes it manually; the **webhook receiver** writes it when
+  the transmit step's Send-notification action POSTs through the
+  "procedures" integration (`integration.d142937d…`, URL = the cloudflared
+  tunnel). The polling bridge is the fallback: if the webhook path is down
+  it heals within ~5 s instead of ~3 s, and its state check makes the two
+  paths idempotent (whoever arrives second sees "recovering" and no-ops).
+- **Tunnel URL is ephemeral** — every `cloudflared` restart mints a new
+  `trycloudflare.com` URL and the integration must be repointed (command in
+  the setup section). A dead tunnel is invisible until the transmit step
+  silently falls back to the bridge — check Terminal 3 logs the POST during
+  the dry run.
 - Fault envelope: 0→1 ramp over 120 s from arm; exponential decay
   (tau 45 s) from command receipt. Deltas: `goce_limits.FAULT_DELTAS`.
 - The 72 h GOCE replay is *natively anomalous* (bus temp to 58 °C, wheels

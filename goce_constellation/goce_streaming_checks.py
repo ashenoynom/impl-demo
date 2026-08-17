@@ -24,6 +24,9 @@ import argparse
 from nominal.core import NominalClient
 
 CHECKLIST_RID = "ri.scout.cerulean-staging.check-collection.25800248-86a1-49f5-8c52-d6f91f26f992"
+# "Slack - #demo-notifications" (swap for #alert-nominal:
+# integration.f9723981-9439-44a6-86a4-703860d62825)
+SLACK_INTEGRATION_RID = "ri.scout.cerulean-staging.integration.11b0ac03-b667-4578-92bd-198f51163de1"
 
 
 def resolve_assets(client: NominalClient, sat_nos: list[int]):
@@ -44,6 +47,8 @@ def main() -> None:
     parser.add_argument("--satellites", default="7",
                         help="comma-separated satellite numbers (default: 7)")
     parser.add_argument("--profile", default="space_demo_prod")
+    parser.add_argument("--no-slack", action="store_true",
+                        help="start: don't page Slack on violations")
     args = parser.parse_args()
 
     client = NominalClient.from_profile(args.profile)
@@ -52,14 +57,17 @@ def main() -> None:
     checklist = client.get_checklist(CHECKLIST_RID)
 
     if args.action == "start":
+        integrations = [] if args.no_slack else [SLACK_INTEGRATION_RID]
         checklist.execute_streaming(
             assets=assets,
-            integration_rids=[],
+            integration_rids=integrations,
             auto_create_events=True,
         )
         names = ", ".join(a.name for a in assets)
         print(f"▶️  Streaming checklist armed on: {names}")
         print("    Violations now generate events on the asset timeline live.")
+        if integrations:
+            print("    Violations also page Slack (#demo-notifications).")
         print(f"    Checklist: {checklist.nominal_url}")
     else:
         checklist.stop_streaming_for_assets(assets=assets)

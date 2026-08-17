@@ -60,6 +60,7 @@ from goce_channels import (
     GEO_ALT_CHANNEL,
     GEO_LAT_CHANNEL,
     GEO_LON_CHANNEL,
+    GROUND_STATIONS,
     HTR_CHANNEL,
     LOG_CHANNEL,
     MAG_CHANNELS,
@@ -388,12 +389,28 @@ def _value_table(channels: list[str], title: str, columns: int = 3) -> cd.VizDef
     )
 
 
+def _ground_station_features() -> list:
+    """Ground-station markers (radio-tower icons) for the geo panel."""
+    return [
+        cd.GeoCustomFeature(
+            point=cd.GeoPoint(
+                icon="radio-tower",
+                latitude=lat,
+                longitude=lon,
+                label=name,
+                variables=[],
+            )
+        )
+        for name, lat, lon in GROUND_STATIONS
+    ]
+
+
 def _geo(title: str) -> cd.VizDefinition:
     return cd.VizDefinition(
         geo=cd.GeoVizDefinition(
             v1=cd.GeoVizDefinitionV1(
                 title=title,
-                custom_features=[],
+                custom_features=_ground_station_features(),
                 base_tileset=cd.GeoBaseTileset.SATELLITE,
                 unit_system=cd.GeoUnitSystem.METRIC,
                 plots=[

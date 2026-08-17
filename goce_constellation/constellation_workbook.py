@@ -59,6 +59,7 @@ from goce_channels import (
     GEO_ALT_CHANNEL,
     GEO_LAT_CHANNEL,
     GEO_LON_CHANNEL,
+    GROUND_STATIONS,
     HTR_CHANNEL,
     LOG_CHANNEL,
     MAG_CHANNELS,
@@ -271,6 +272,23 @@ def _fleet_time_series(
     )
 
 
+def _ground_station_features() -> list:
+    """Ground-station markers (radio-tower icons) for the geo panels."""
+    cd = scout_chartdefinition_api
+    return [
+        cd.GeoCustomFeature(
+            point=cd.GeoPoint(
+                icon="radio-tower",
+                latitude=lat,
+                longitude=lon,
+                label=name,
+                variables=[],
+            )
+        )
+        for name, lat, lon in GROUND_STATIONS
+    ]
+
+
 def _earth_view_chart(sat_nos: list[int], title: str) -> scout_chartdefinition_api.VizDefinition:
     """Geo map: one live ground track per satellite."""
     cd = scout_chartdefinition_api
@@ -278,7 +296,7 @@ def _earth_view_chart(sat_nos: list[int], title: str) -> scout_chartdefinition_a
         geo=cd.GeoVizDefinition(
             v1=cd.GeoVizDefinitionV1(
                 title=title,
-                custom_features=[],
+                custom_features=_ground_station_features(),
                 base_tileset=cd.GeoBaseTileset.SATELLITE,
                 unit_system=cd.GeoUnitSystem.METRIC,
                 plots=[

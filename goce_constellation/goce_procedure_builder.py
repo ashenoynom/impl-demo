@@ -46,6 +46,10 @@ WORKSPACE_URL = "https://app.gov.nominal.io/w/ri.security.cerulean-staging.works
 COMPARE_WB_URL = f"{WORKSPACE_URL}/workbooks/ri.scout.cerulean-staging.notebook.79d27e88-dacc-4380-bfd1-497577ebb8c4"
 DEEPDIVE_WB_URL = f"{WORKSPACE_URL}/workbooks/ri.scout.cerulean-staging.notebook.8013b267-e951-4aaa-8059-b842a367287f"
 CHECKLIST_RID = "ri.scout.cerulean-staging.check-collection.25800248-86a1-49f5-8c52-d6f91f26f992"
+# "procedures" simple-webhook integration — the transmit step fires a
+# send_notification through it; goce_webhook_receiver.py (exposed via
+# ngrok) receives the POST and heals the live fault.
+WEBHOOK_INTEGRATION_RID = "ri.scout.cerulean-staging.integration.d142937d-63de-4998-b1fa-f8744a3528fd"
 RECOVERY_RUN_NAME = "GOCE-7 | HTR-2 recovery verification"
 DATA_REF = "data"
 
@@ -307,7 +311,32 @@ def build_nested(asset_rid: str) -> p.NestedProcedure:
                                 labels=["GOCE", "command", "HTR-2"],
                                 asset_references=[goce7],
                             )
-                        )
+                        ),
+                        # The uplink itself: fires the "procedures" webhook
+                        # integration -> goce_webhook_receiver.py (ngrok) ->
+                        # command_state.json -> streamers heal GOCE-7.
+                        p.CompletionActionConfig(
+                            send_notification=p.SendNotificationConfig(
+                                integrations=p.MultiIntegrationReference(
+                                    list=p.MultiIntegrationReference.IntegrationReferenceList(
+                                        references=[
+                                            p.IntegrationReference(
+                                                rid=WEBHOOK_INTEGRATION_RID
+                                            )
+                                        ]
+                                    )
+                                ),
+                                title=p.StringReference(
+                                    constant=f"CMD {COMMAND_NAME} — {FAULT_SATELLITE}"
+                                ),
+                                message=p.StringReference(
+                                    constant=(
+                                        f"UPLINK {COMMAND_NAME} sat={FAULT_SATELLITE} "
+                                        "src=anomaly_response_procedure"
+                                    )
+                                ),
+                            )
+                        ),
                     ],
                 ),
             ),
@@ -352,19 +381,20 @@ def build_nested(asset_rid: str) -> p.NestedProcedure:
         [
             _step(
                 "Recovery soak",
-                "Hold for the recovery time constant (exponential decay, "
-                "tau ~45 s) before judging telemetry.",
+                "Brief hold so the power-cycle takes effect before judging "
+                "telemetry (recovery tau ~45 s; the gate below does the "
+                "actual waiting).",
                 p.NestedProcedureNode.NestedStepNode(
                     wait=p.WaitStep(),
                     success_condition=p.SuccessCondition(
-                        timer=p.TimerSuccessCondition(duration_seconds=120)
+                        timer=p.TimerSuccessCondition(duration_seconds=30)
                     ),
                     completion_action_configs=[
                         p.CompletionActionConfig(
                             create_event=p.CreateEventConfig(
                                 name=f"Recovery soak complete — {FAULT_SATELLITE}",
-                                description="120 s hold elapsed (~2.5 recovery "
-                                "time constants) — telemetry ready to judge.",
+                                description="30 s hold elapsed — telemetry "
+                                "ready to judge.",
                                 labels=["GOCE", "recovery"],
                                 asset_references=[goce7],
                             )

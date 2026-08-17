@@ -109,6 +109,16 @@ PCDU_TEMP = "tcs.pcdu.temp_c"
 POSITION_CHANNELS = ["gnc.orbit.ecef_x_m", "gnc.orbit.ecef_y_m", "gnc.orbit.ecef_z_m"]
 VELOCITY_CHANNELS = ["gnc.orbit.ecef_vx_ms", "gnc.orbit.ecef_vy_ms", "gnc.orbit.ecef_vz_ms"]
 
+# Ground-station network — rendered as radio-tower custom features on the
+# geo panels; matches the procedure's ground-station dropdown.
+# (name, latitude_deg, longitude_deg)
+GROUND_STATIONS = [
+    ("Svalbard", 78.2306, 15.3894),
+    ("Troll", -72.0117, 2.5350),
+    ("Kiruna", 67.8570, 20.9640),
+    ("Wallops", 37.9402, -75.4664),
+]
+
 # ------------------------------------------------------- builder groupings
 
 BUS_TEMP_CHANNELS = [
