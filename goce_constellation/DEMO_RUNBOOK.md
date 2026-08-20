@@ -104,6 +104,14 @@ python3 goce_command_bridge.py --profile space_demo_prod
 ```
 
 ```bash
+# Terminal 6: stream watchdog — the write stream can silently wedge after
+# ~2-3 h (0% CPU, no errors, points stop landing; the app shows
+# "DISCONNECTED DATA SOURCE"). This auto-restarts both streamers when the
+# newest GOCE-7 point is > 4 min old. ALWAYS run it for a real demo.
+./goce_stream_watchdog.sh
+```
+
+```bash
 # Clean state + fresh comparison window (run ~15 min before start):
 python3 goce_fault_injector.py reset
 
@@ -354,7 +362,7 @@ wiring, multi-tenant/workspace controls.
 
 | Symptom | Action |
 |---|---|
-| Fleet table looks stale | Streamer died (network blip) — relaunch Terminal 1; data resumes into the same datasets in ~60 s |
+| Fleet table looks stale / "DISCONNECTED DATA SOURCE" | The write stream wedged (recurs every ~2-3 h: 0% CPU, log frozen, no errors). The watchdog (Terminal 6) auto-restarts within ~5 min; manual fix is relaunch Terminal 1+2 — data resumes in ~2 min |
 | Fault won't show | `python3 goce_fault_injector.py status` — if `nominal`, re-arm; ramp is 2 min |
 | Webhook didn't fire on transmit | Bridge fallback heals it within ~5 s anyway (audience sees nothing). Post-demo: tunnel died or integration URL stale — repoint it |
 | Both webhook AND bridge missed | `python3 goce_fault_injector.py clear` simulates the command and the story continues |
