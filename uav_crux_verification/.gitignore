@@ -1,0 +1,4 @@
+# runtime state shared between streamer / receiver / orchestrator
+uav_command_state.json
+.uav_command_state.lock
+__pycache__/
