@@ -43,10 +43,17 @@ PRINT_FREQUENCY = 25  # Print progress every N logs per satellite
 class LogStreamer:
     """Streams simulated logs to Nominal with satellite tags."""
 
-    def __init__(self, profile: str, dry_run: bool = False, speed_up: float = SPEED_UP):
+    def __init__(
+        self,
+        profile: str,
+        dry_run: bool = False,
+        speed_up: float = SPEED_UP,
+        dataset_prefix: str = DATASET_PREFIX,
+    ):
         self.profile = profile
         self.dry_run = dry_run
         self.speed_up = speed_up
+        self.dataset_prefix = dataset_prefix
         self._active_satellites = NUM_SATELLITES
         self.random = random.Random(42)
         self.fault_manager = FaultManager()
@@ -70,7 +77,7 @@ class LogStreamer:
             return None
 
     def _get_or_create_dataset(self, dataset_name: Optional[str]):
-        prefix = DATASET_PREFIX
+        prefix = self.dataset_prefix
         print(f"🔍 Searching for existing dataset with prefix: {prefix}")
         dataset = self._find_dataset_by_prefix(prefix)
 
@@ -283,6 +290,11 @@ def _build_arg_parser() -> argparse.ArgumentParser:
         help=f"Number of concurrent satellite log streams (script default: {NUM_SATELLITES})",
     )
     parser.add_argument(
+        "--dataset-prefix",
+        default=DATASET_PREFIX,
+        help="Dataset name prefix to find/create (default: %(default)s)",
+    )
+    parser.add_argument(
         "--dry-run",
         "-d",
         action="store_true",
@@ -304,7 +316,12 @@ def main() -> None:
     print("=" * 60)
     print()
 
-    streamer = LogStreamer(profile=args.profile, dry_run=dry_run, speed_up=speed_up)
+    streamer = LogStreamer(
+        profile=args.profile,
+        dry_run=dry_run,
+        speed_up=speed_up,
+        dataset_prefix=args.dataset_prefix,
+    )
     streamer.start_streaming(dataset_name=DATASET_NAME, num_satellites=num_satellites)
 
 
