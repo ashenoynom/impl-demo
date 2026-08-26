@@ -9,11 +9,13 @@ come from goce_limits.FAULT_DELTAS, so flight and ground can't drift
 apart). An HTR2_PWR_CYCLE command at T+120 min breaks the latch and the
 bus recovers.
 
-Timeline (3 h at 1 Hz bench instrumentation):
+Timeline (45 min at 1 Hz bench instrumentation — sized to match the
+flight anomaly-investigation run window so the comparison overlays read
+as a qualitative trace-to-trace match):
     T+0     nominal closed-loop heater control
-    T+45m   latch event: duty -> 100%, EPS signature ramps in (~20 min)
-    T+120m  HTR2_PWR_CYCLE command -> exponential recovery (tau 8 min)
-    T+150m  back to nominal, hold to T+180m
+    T+8m    latch event: duty -> 100%, EPS signature ramps in (~3 min)
+    T+30m   HTR2_PWR_CYCLE command -> exponential recovery (tau 2 min)
+    T+37m   back to nominal, hold to T+45m
 
 Output: data/goce7_eps_tvac_ground_test.csv (channels use the same
 names as flight telemetry, plus TVAC context channels).
@@ -38,12 +40,14 @@ from goce_limits import FAULT_DELTAS, htr_duty_nominal
 
 OUT_PATH = Path(__file__).resolve().parent / "data" / "goce7_eps_tvac_ground_test.csv"
 
-START = datetime(2026, 3, 14, 8, 0, 0, tzinfo=timezone.utc)
-DURATION_S = 3 * 3600
-LATCH_S = 45 * 60
-CMD_S = 120 * 60
-FAULT_RAMP_S = 20 * 60      # TVAC thermal mass: slower ramp than flight wall-clock
-RECOVERY_TAU_S = 8 * 60
+# 14:00 UTC afternoon plateau — the original 3 h morning session
+# (08:00-11:00) is still in the dataset; the run window selects this one.
+START = datetime(2026, 3, 14, 14, 0, 0, tzinfo=timezone.utc)
+DURATION_S = 45 * 60
+LATCH_S = 8 * 60
+CMD_S = 30 * 60
+FAULT_RAMP_S = 3 * 60       # TVAC thermal mass: slightly slower than flight's 2 min
+RECOVERY_TAU_S = 2 * 60
 
 # Bench-nominal base values (bench PSU is steadier than orbit: small
 # noise, slow drift, no orbital oscillation). Bases match the flight

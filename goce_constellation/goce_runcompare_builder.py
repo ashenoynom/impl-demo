@@ -91,7 +91,7 @@ the time-series overlays, switch the time axis to *relative to run
 start*.
 
 **Ground-test conclusion (2026-03)**: latch clears with a controller
-power cycle — `HTR2_PWR_CYCLE`. Recovery tau ~8 min in TVAC, faster on
+power cycle — `HTR2_PWR_CYCLE`. Recovery tau ~2 min in TVAC, faster on
 orbit. Execute the corrective action via the **GOCE anomaly response**
 procedure.
 """
