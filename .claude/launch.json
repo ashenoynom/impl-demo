@@ -1,0 +1,14 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "part-traceability",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": [
+        "-c",
+        "cd /Users/ashenoy/Code/labs && exec node_modules/.bin/nova dev apps/part-traceability --profile anish_staging_default --port 5191 --mock-kv /private/tmp/claude-501/-Users-ashenoy-Code-impl-demo/c70a2140-0c06-4dd5-be69-856f4527ce99/scratchpad/part-traceability-kv.json"
+      ],
+      "port": 5191
+    }
+  ]
+}

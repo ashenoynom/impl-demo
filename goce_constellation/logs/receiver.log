@@ -1,0 +1,17 @@
+Authenticated as: anish.shenoy@nominal.io
+Asset loaded: GOCE-7 (ri.scout.cerulean-staging.asset.a661d95e-0885-43eb-b7f3-884b2b1c6f8a)
+
+Webhook receiver listening on :8765
+  Expose:  ngrok http 8765
+  Then:    python3 goce_webhook_receiver.py --public-url <ngrok-url>
+  Bridge:  python3 goce_command_bridge.py  (close-out only)
+
+
+============================================================
+[13:35:53] ⚡ WEBHOOK RECEIVED — CMD HTR2_PWR_CYCLE
+{
+  "smoke": "poll"
+}
+[13:35:53] No active fault (state: nominal) — healing skipped; returning 200
+============================================================
+

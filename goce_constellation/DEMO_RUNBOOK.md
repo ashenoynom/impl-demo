@@ -66,7 +66,11 @@ talking point).
 
 ## Pre-demo setup (T-30 min)
 
-From `goce_constellation/` — three long-lived terminals + prep commands:
+**One-shot**: `./demo_up.sh` starts everything below (nohup'd, logs in
+`logs/`), resets the fault, repoints the webhook integration at the fresh
+tunnel URL, and smoke-tests it. `./demo_up.sh status` shows process /
+fault / tunnel state. The individual pieces, if you want them in visible
+terminals for the demo itself:
 
 ```bash
 # Terminal 1: telemetry streamer (25 satellites; ~2 GB RSS; takes ~90 s to load the CSV)
